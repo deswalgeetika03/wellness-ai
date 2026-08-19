@@ -112,29 +112,91 @@ def check_eating_disorder_numeric(user_input: str) -> bool:
         return True
     return False
 
+# ---------------------------------------------------------------------
+# 3. MEDICATION REQUEST DETECTION
+# ---------------------------------------------------------------------
+# Medication requests are routed away from Granite so the LLM cannot
+# select or recommend a specific medication. The user can still receive
+# general information through the pre-written response.
+#
+# Patterns deliberately require medication-related language. Avoid broad
+# phrases such as "what should I take" on their own because they can
+# match harmless questions about college, travel, hiking, etc.
+
+MEDICATION_PATTERNS = [
+    r"\bwhat\s+medication\b",
+    r"\bwhat\s+medicine\b",
+    r"\bwhich\s+medication\b",
+    r"\bwhich\s+medicine\b",
+    r"\bwhat\s+drug\b",
+    r"\bwhich\s+drug\b",
+    r"\bmedication\s+for\b",
+    r"\bmedicine\s+for\b",
+    r"\bdrug\s+for\b",
+    r"\bshould\s+i\s+take\s+(?:a\s+)?(?:medication|medicine|drug)\b",
+    r"\bcan\s+i\s+take\s+(?:a\s+)?(?:medication|medicine|drug)\b",
+    r"\bis\s+it\s+(?:okay|safe)\s+to\s+take\s+(?:a\s+)?(?:medication|medicine|drug)\b",
+    r"\bshould\s+i\s+take\s+(?:antidepressants?|anti[-\s]?anxiety\s+(?:medication|meds?|drugs?))\b",
+    r"\bcan\s+i\s+take\s+(?:antidepressants?|anti[-\s]?anxiety\s+(?:medication|meds?|drugs?))\b",
+    r"\bshould\s+i\s+take\s+(?:xanax|alprazolam|prozac|fluoxetine|sertraline|zoloft)\b",
+    r"\bcan\s+i\s+take\s+(?:xanax|alprazolam|prozac|fluoxetine|sertraline|zoloft)\b",
+]
+
+_MEDICATION_REGEX = re.compile(
+    "|".join(MEDICATION_PATTERNS),
+    re.IGNORECASE
+)
+
+MEDICATION_RESPONSE = (
+    "I can't recommend or select a specific medication. "
+    "A qualified healthcare professional can assess your situation "
+    "and discuss appropriate treatment options, including potential "
+    "benefits, risks, and side effects. If your symptoms are severe, "
+    "worsening, or interfering with daily life, consider seeking "
+    "professional support."
+)
+
+
+def check_medication_request(user_input: str) -> bool:
+    """Returns True when the user appears to be asking for medication
+    selection or advice."""
+    return bool(_MEDICATION_REGEX.search(user_input))
 
 # ---------------------------------------------------------------------
-# 3. ROUTER
+# 4. ROUTER
 # ---------------------------------------------------------------------
 def route_query(user_input: str) -> dict:
     """
-    Runs the deterministic safety checks in priority order and returns
-    a routing decision. This should be called BEFORE any retrieval or
-    LLM generation step.
+    Runs deterministic safety checks in priority order.
 
-    Returns:
-        {
-            "route": "crisis" | "eating_disorder_restricted" | "normal",
-            "response": str or None   # pre-written response if not "normal"
-        }
+    Priority:
+        1. crisis
+        2. medication request
+        3. eating-disorder numeric request
+        4. normal RAG route
     """
     if check_crisis(user_input):
-        return {"route": "crisis", "response": CRISIS_RESPONSE}
+        return {
+            "route": "crisis",
+            "response": CRISIS_RESPONSE
+        }
+
+    if check_medication_request(user_input):
+        return {
+            "route": "medication_restricted",
+            "response": MEDICATION_RESPONSE
+        }
 
     if check_eating_disorder_numeric(user_input):
-        return {"route": "eating_disorder_restricted", "response": EATING_DISORDER_RESTRICTED_RESPONSE}
+        return {
+            "route": "eating_disorder_restricted",
+            "response": EATING_DISORDER_RESTRICTED_RESPONSE
+        }
 
-    return {"route": "normal", "response": None}
+    return {
+        "route": "normal",
+        "response": None
+    }
 
 
 if __name__ == "__main__":
