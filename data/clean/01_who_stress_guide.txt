@@ -1,0 +1,3273 @@
+[Page 1]
+Doing What Matters
+in Times of Stress:
+An Illustrated Guide
+GROUNDING UNHOOKING
+ACTING ON YOUR VALUES MAKING ROOM
+ENGAGING BEING KIND
+
+[Page 3]
+Doing What Matters
+in Times of Stress:
+An Illustrated Guide
+
+[Page 4]
+Doing what matters in times of stress: an illustrated guide
+ISBN 978-92-4-000391-0 (electronic version)
+ISBN 978-92-4-000392-7 (print version)
+© World Health Organization 2020
+Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-ShareAlike
+3.0 IGO licence (CC BY-NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo).
+Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes,
+provided the work is appropriately cited, as indicated below. In any use of this work, there should be no suggestion
+that WHO endorses any specific organization, products or services. The use of the WHO logo is not permitted. If
+you adapt the work, then you must license your work under the same or equivalent Creative Commons licence. If
+you create a translation of this work, you should add the following disclaimer along with the suggested citation:
+"This translation was not created by the World Health Organization (WHO). WHO is not responsible for the content
+or accuracy of this translation. The original English edition shall be the binding and authentic edition" .
+Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation
+rules of the World Intellectual Property Organization.
+Suggested citation. Doing what matters in times of stress: an illustrated guide. Geneva: World Health Organization;
+2020. Licence: CC BY-NC-SA 3.0 IGO.
+Cataloguing-in-Publication (CIP) data. CIP data are available at http://apps.who.int/iris.
+Sales, rights and licensing. To purchase WHO publications, see http://apps.who.int/bookorders. To submit
+requests for commercial use and queries on rights and licensing, see http://www.who.int/about/licensing.
+Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as
+tables, figures or images, it is your responsibility to determine whether permission is needed for that reuse and
+to obtain permission from the copyright holder. The risk of claims resulting from infringement of any third-partyowned component in the work rests solely with the user.
+General disclaimers. The designations employed and the presentation of the material in this publication do not
+imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country,
+territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted
+and dashed lines on maps represent approximate border lines for which there may not yet be full agreement.
+
+The mention of specific companies or of certain manufacturers' products does not imply that they are endorsed
+or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions
+excepted, the names of proprietary products are distinguished by initial capital letters.
+All reasonable precautions have been taken by WHO to verify the information contained in this publication.
+However, the published material is being distributed without warranty of any kind, either expressed or implied.
+The responsibility for the interpretation and use of the material lies with the reader. In no event shall WHO be liable
+for damages arising from its use.
+
+[Page 5]
+Contents
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Part 1: GROUNDING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Part 2: UNHOOKING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Part 3: ACTING ON YOUR VALUES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Part 4: BEING KIND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+Part 5: MAKING ROOM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Tool 1: GROUNDING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Tool 2: UNHOOKING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Tool 3: ACTING ON YOUR VALUES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Tool 4: BEING KIND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+Tool 5: MAKING ROOM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+
+[Page 7]
+5
+Preface
+Doing What Matters in Times of Stress is a WHO stress management guide for coping with
+adversity. This illustrated guide supports implementation of WHO's recommendation for
+stress management.
+There are many causes of stress, including personal difficulties (e.g. conflict with loved ones,
+being alone, lack of income, worries about the future), problems at work (e.g. conflict with
+colleagues, an extremely demanding or insecure job) or major threats in your community (e.g.
+violence, disease, lack of economic opportunity).
+This guide is for anyone who experiences stress, ranging from parents and other carers to health
+professionals working in dangerous situations. It is for both people who flee war, losing all they
+have, and well protected people living in communities at peace. Anyone living anywhere can
+experience high levels of stress.
+Informed by available evidence and extensive field testing, the guide provides information
+and practical skills to help people cope with adversity. While the causes of adversity must be
+addressed, there is also a need to support people's mental health.
+I hope that you will find this WHO guide useful, and that it helps all readers in their efforts to
+cope with stress.
+
+Dévora Kestel
+Director
+Department of Mental Health and Substance Use
+World Health Organization
+
+
+
+
+(This version of Doing What Matters in Times of Stress is a field test version.
+Please provide any feedback to: psych_interventions@who.int)
+
+[Page 8]
+6
+Acknowledgements
+Doing What Matters in Times of Stress: An Illustrated Guide is a component of a forthcoming WHO
+stress management course, Self-Help Plus (SH+), 1-2 initiated by Mark van Ommeren (Mental
+Health Unit, Department of Mental Health and Substance Use, WHO) as part of the WHO Series
+on Low-Intensity Psychological Interventions.
+Content creation
+Inspired by his previous work,3 Russ Harris (Melbourne, Australia) created the content of SH+,
+including Doing What Matters in Times of Stress: An Illustrated Guide. This comprised both writing
+the text and making initial sketches to inform illustrations.
+Project coordination and management
+Kenneth Carswell (WHO) (2015–2020) and JoAnne Epping-Jordan (Seattle, USA) (2014–2015)
+have managed the SH+ project, including the editing and design of this book.
+Project development group (alphabetical, with affiliations at time of contributions)
+At different stages of this project, Teresa Au (WHO), Felicity Brown (WHO), Kenneth Carswell
+(WHO), JoAnne Epping-Jordan (Seattle, USA), Claudette Foley (Melbourne, Australia), Claudia
+Garcia-Moreno (WHO), Russ Harris (Melbourne, Australia), Cary Kogan (WHO) and Mark van
+Ommeren (WHO) contributed to the conceptualization and development of the SH+ project,
+including this book.
+Illustrations
+Julie Smith (Melbourne, Australia) provided all illustrations and artwork.
+Book production
+David Wilson (Oxford, United Kingdom) was responsible for text editing, and Alessandro
+Mannocchi (Rome, Italy) for graphic design.
+Narration of audio exercises
+Sanjo Ogunseye (Lagos, Nigeria) narrated the audio exercises that accompany the book.
+Administrative support
+Ophel Riano (WHO).
+1 Epping-Jordan JE, Harris R, Brown FL, Carswell K, Foley C, García-Moreno C, Kogan C, van Ommeren M. Self-Help Plus (SH+): a new WHO stress
+management package. World Psychiatry. 2016 Oct;15(3):295-6.
+2 Tol WA, Leku MR, Lakin DP , Carswell K, Augustinavicius J, Adaku A, Au TM, Brown FL, Bryant RA, Garcia-Moreno C, Musci RJ, Ventevogel
+P , White RG, van Ommeren M. Guided self-help to reduce psychological distress in South Sudanese female refugees in Uganda: a cluster ran -
+domised trial. The Lancet Global Health. 2020 Feb;8(2):e254-e263.
+3 Harris R, Aisbett B. The Illustrated Happiness Trap. Boston: Shambhala, 2013.
+
+[Page 9]
+7
+Book review (with affiliation at time of review)
+Book reviewers included Mona Alqazzaz (WHO), Ebert Beate (Aschaffenburg, Germany), Cécile
+Bizouerne (Action Contre la Faim), Margriet Blaauw (War Trauma Foundation), Kate Cavanagh,
+(University of Sussex), Rachel Cohen (Geneva, Switzerland), Elizabeth De Castro (Children's Rights
+Resource Center), Manuel De Lara (WHO), Rabih El Chammay (Ministry of Public Health, Lebanon),
+Mohamed El Nawawi (Wintherthur, Switzerland), Boaz Feldman (Geneva, Switzerland), Kenneth
+Fung (UHN – Toronto Western Hospital), Anna Goloktionova (IMC), Brandon Gray (WHO), Elise
+Griede (War Child Holland), Jennifer Hall (WHO), Fahmy Hanna (WHO), Louise Hayes (Melbourne,
+Australia), Tiina Hokkanen (Fida International), Rebecca Horn (Queen Margaret University),
+Lynne Jones (Harvard School of Public Health), Mark Jordans, (Healthnet TPO), Dévora Kestel
+(WHO), Bianca King (Geneva, Switzerland), Nils Kolstrup (UiT The Arctic University of Norway),
+Aiysha Malik (WHO), Carmen Martinez (Médecins Sans Frontières), Ken Miller (War Child Holland),
+Mirjam Fagerheim Moiba (Njala University), Lynette Monteiro (University of Ottawa), Eva Murino
+(WHO), Sebastiana Da Gama Nkomo (WHO), Brian Ogallo (WHO), Patricia Omidian (Focusing
+International), Andrea Pereira (Geneva, Switzerland), Bhava Poudyal (Kathmandu, Nepal), Beatrice
+Pouligny (Washington DC, USA), Megin Reijnders (WHO), Patricia Robinson (Mountainview
+Consulting Group), Shekhar Saxena (WHO), Alison Schafer (World Vision Australia), Pratap Sharan
+(All India Institute of Medical Sciences), Marian Schilperoord (UNHCR), Andrew Thomson (Car
+Gomm), Mikai and Hana van Ommeren (Divonne-les-Bains, France), Peter Ventevogel (UNHCR),
+Matthieu Villatte (Evidence-Based Practice Institute), Sarah Watts (WHO), Wietse Tol (HealthRight
+International's Peter C. Alderman Program), Nana Wiedemann (International Federation of Red
+Cross and Red Crescent Societies), Inka Weissbecker (International Medical Corps), Mike Wessells
+(Columbia University), Ross White (University of Glasgow), Eyad Yanes (WHO) and Diana Zandi
+(WHO), and all emergency-affected people in Syria, Turkey, Uganda and Ukraine who participated
+in adaptation and field-testing of the book and its images.
+Testing (alphabetical)
+The following organizations supported development of this book through field testing: HealthRight
+International's Peter C. Alderman Program (in collaboration with Ministry of Health Uganda,
+UNHCR, WHO Country Office in Uganda), International Medical Corps, Johns Hopkins Bloomberg
+School of Public Health, Médecins du Monde, the University of Verona and other members of the
+RE-DEFINE consortium, and the WHO Country Office in Syria. Acknowledgements of the
+contributions of colleagues involved in the testing of the SH+ course will be included in the
+publication of the course and articles describing its evaluation.
+Funding (alphabetical)
+European Commission; Research for Health in Humanitarian Crises (R2HC) Programme (managed
+by Elrha); United Nations Fund for Action Against Sexual Violence in Conflict; and the WHO
+Country Office in Syria.
+Note on translation and adaptation of this guide
+WHO will publish a translation of this work into Arabic, Chinese, French, Russian, and Spanish.
+To avoid duplication of translations, please consider contacting WHO at
+http://www.who.int/about/licensing prior to starting an adaptation.
+
+[Page 10]
+8
+If you are experiencing stress, you are not alone.
+Right now, there are many other people in your community
+and all around the world who are also struggling with stress.
+We will help you to learn practical skills for dealing with stress.
+You will see us throughout this book, as we teach you
+the skills you need.
+Enjoy your journey of learning how to do what matters
+in times of stress!
+
+[Page 11]
+9
+How to use this book
+This book has five sections, each containing a new idea and technique.
+These are easy to learn and can be used for just a few minutes each day to
+help you reduce stress. You can read one section every few days and take
+time to practise the exercises and use the learning in the days in between.
+Or, you can read the book through once, applying whatever you can, and
+then read it again, taking more time to appreciate the ideas and practise the
+techniques. Practising and applying the ideas to your life is key for reducing
+stress. You can read the guide at home, during break or rest periods at
+work, before you go to sleep or any other time when you might have a few
+moments to concentrate on taking care of yourself.
+If you find that doing the exercises in this book is not enough for you to
+cope with intolerable stress, then please seek help from relevant health or
+social services, or from trusted people in your community.
+If you have a device for accessing the Internet and storing audio files, when
+you see the symbol  in the book you can download an audio version of
+the exercise from https://www.who.int/publications-detail/9789240003927
+to support your practice.
+If you are not able to access the online audio files, you can still get similar
+benefit from reading and carefully following the instructions and exercises
+in this book.
+
+[Page 12]
+Part 1
+GROUNDING
+10
+
+[Page 13]
+11
+This book is to help you manage STRESS.
+Stress can be due to major threats…
+"Stress" means
+feeling troubled
+or threatened
+by life.
+1A
+1C
+1D
+1F
+Part 1: GROUNDING
+1E
+FAMILY
+VIOLENCE
+NO SCHOOLILLNESS
+One man did
+something really bad
+to me
+1B
+
+[Page 14]
+12
+…or smaller problems.
+1G
+1H
+1J
+1K 1L
+Part 1: GROUNDING
+PROBLEMS
+PROVIDING FOR YOUR
+FAMILY
+DISPLACED FROM HOME
+VIOLENCE
+IN YOUR
+COMMUNITY
+ARGUMENTS WITH
+YOUR FAMILY
+UNCERTAINTY ABOUT
+THE FUTURE
+1I
+
+[Page 15]
+13
+But very high stress often affects the body.
+Many people get unpleasant feelings.
+Everyone experiences
+stress at times.
+A little bit of stress
+is not a problem.
+Other people find their body
+gets sick – skin rashes, infections,
+illnesses or bowel problems.
+2A
+2B
+2C
+Part 1: GROUNDING
+HEADACHES
+NECK AND
+SHOULDER
+PAIN
+BACK PAIN
+UPSET
+STOMACH
+NOT FEELING
+HUNGRY
+LUMP IN THE
+THROAT
+HEAVY
+CHEST
+TIGHT MUSCLES
+
+[Page 16]
+14
+When they are stressed, many people …
+…have changes in appetite.
+3B 3C 3D 3E
+3F 3G 3H 3I
+...cannot focus …get angry
+easily
+…cannot
+sit still
+…have
+difficulty
+sleeping
+…feel sad
+or guilty
+…worry …cry …feel very
+tired
+And many of us think a lot about bad things from the past
+or bad things we fear in the future.
+3J
+3K
+Part 1: GROUNDING
+
+[Page 17]
+15
+These powerful thoughts and feelings are a natural part of stress.
+But problems can occur if we get "hooked" by them.
+What does "hooked" mean?
+Well, there are many types of hooks.
+3L
+3M
+THOUGHTS
+AND
+FEELINGS
+Part 1: GROUNDING
+
+[Page 18]
+16
+4A
+4B
+4C
+When something is on a hook,
+it cannot get away.
+The hook traps it.
+In the same way, we can get
+hooked by our difficult thoughts
+and feelings.
+One moment, you might be
+playing with children…
+THOUGHTS
+
+AND
+FEELINGS
+Part 1: GROUNDING
+
+[Page 19]
+17
+…and the next moment,
+you might be hooked by difficult
+thoughts and feelings.
+4D
+THOUGHTS
+AND
+FEELINGS
+Part 1: GROUNDING
+
+[Page 20]
+18
+One moment, you might be enjoying sharing a meal…
+5A
+5B
+… and the next moment, you might be hooked
+by angry thoughts and feelings. You may feel as if you are being
+pulled away by anger, even if you are still there.
+Part 1: GROUNDING
+
+[Page 21]
+19
+So these difficult
+thoughts and feelings
+"hook" us and pull us
+away from our VALUES.
+Values are your deepest desires
+for the sort of person you want to be.
+5C
+5D
+What are values?
+VALUES
+Part 1: GROUNDING
+
+[Page 22]
+20
+For example, if you are a parent
+or if you have responsibilities
+caring for others, what kind of
+person do you want to be?
+• Loving
+• Wise
+• Attentive
+• Committed
+• Persistent
+• Responsible
+• Calm
+• Caring
+• Protective
+• Courageous
+So values describe the
+sort of person you want
+to be; how you want
+to treat yourself and
+others and the world
+around you.
+6A
+6B
+6D
+CARING
+Part 1: GROUNDING
+
+[Page 23]
+21
+Just reading this book means you are likely acting
+on some of your values. Do you see how?
+6E
+That is correct. So likely
+you are acting on one
+value that is important
+to many people:
+CARING.
+6F
+CARING FOR YOURSELF,
+CARING FOR OTHERS
+Yes, and I care
+about my well-being.
+Yes, I am reading this
+book because I care
+about my family.
+Part 1: GROUNDING
+
+[Page 24]
+22
+In stressful
+situations, difficult
+thoughts and feelings
+hook us, and we are
+pulled away from our
+values.
+7B
+7A
+THOUGHTS
+AND
+FEELINGS
+STRESSFUL
+SITUATION
+AWAY FROM VALUES
+TOWARDS VALUES
+Part 1: GROUNDING
+
+[Page 25]
+23
+There are many kinds of difficult thoughts and feelings that
+can hook us. Thoughts about giving up…
+7.5A
+7.5D 7.5E
+Thoughts that blame others… Harsh judgements about
+ourselves…
+Memories, especially about
+difficult events…
+Thoughts about the future,
+especially about what we fear…
+7.5B 7.5C
+It is all
+too
+hard.
+I give
+up!
+He should
+not have
+done that.
+It is
+his
+fault.
+And
+I am
+crazy.
+I am
+weak.
+Part 1: GROUNDING
+
+[Page 26]
+24
+Thoughts where we worry
+about others.
+7.5F
+When we get hooked,
+our behaviour changes.
+We often start doing
+things that make our lives
+worse.
+We might get into fights,
+arguments
+or disagreements.
+7.5H
+7.5G
+Is she okay?
+Where is he
+now?
+Part 1: GROUNDING
+
+[Page 27]
+25
+Or we might withdraw
+and stay away from people
+we love.
+7.5I
+Or we might spend
+a lot of time lying in bed.
+7.5J
+7.5K
+We call these behaviours
+"AWAY MOVES" because
+when we act this way, we
+are moving AWAY from our
+values.
+Part 1: GROUNDING
+
+[Page 28]
+26
+8A
+8B
+Have patience!
+I will explain.
+8C
+When we are
+stressed, we find
+it hard to engage
+in life.
+8D
+So what can we do? This book is here
+to help you!
+First you learn how to
+focus, engage and pay
+attention better.
+How will
+that help us?
+And what do you mean
+by "focus" and "engage"?
+Part 1: GROUNDING
+
+[Page 29]
+27
+When you listen to music,
+do you give it your full
+attention? Do you listen to it
+and enjoy it?
+To "engage" in
+something means
+to give it your full
+attention.
+8F
+8G
+8H
+I do not understand
+what you mean
+by "engage" .
+8E
+Part 1: GROUNDING
+When you are drinking
+something, do you give it
+your full attention? Do you
+savour the smell and the
+taste?
+
+[Page 30]
+28
+When you give your full
+attention to any activity, we
+say you are "engaged" with it.
+But when hooked by
+thoughts or feelings,
+you are "disengaged"
+or "distracted" .
+9B
+9A
+When you give your full
+attention to any activity, we
+say you are "focused" .
+But when hooked by thoughts
+or feelings, you are unfocused.
+
+And when we do things in an
+unfocused way, we often do
+them poorly, or are unable
+to enjoy the activity and feel
+dissatisfied.
+9C
+9D
+THOUGHTS
+AND
+FEELINGS
+Part 1: GROUNDING
+
+[Page 31]
+29
+So, if you can learn to be more engaged,
+and focus better, then you will handle
+stress better.
+For example, you will find your
+relationships with others more
+satisfying.
+And, you will be able
+to do important things
+much better.
+9G
+9F
+9E
+Part 1: GROUNDING
+
+[Page 32]
+30
+There are many ways
+to practise engaging
+in life or focusing on
+what you are doing
+10A
+10B
+You can practise these skills with any
+activity you do. For example, if you
+are drinking tea or coffee…
+…focus your full attention
+on it. You notice the drink
+with curiosity, as if you have
+never encountered
+such a drink
+before. You notice
+its colour.
+You savour the
+smell of it.
+You sip it SLOWLY .
+Let it sit on your
+tongue, feel it on
+your teeth and
+savour
+the taste.
+10C
+10E
+10F
+10G 10H
+How can
+we learn
+to do
+this?
+Part 1: GROUNDING
+
+[Page 33]
+31
+You drink
+it as slowly
+as possible,
+savouring
+the taste,
+noticing the
+temperature.
+You notice the
+movements of
+your throat as you
+swallow.
+You notice the
+taste fading
+from your
+tongue,
+as you
+swallow.
+And you drink
+each mouthful
+in the same way:
+slowly, noticing
+and savouring.
+11A
+11C
+11B
+11D
+And whenever
+you get hooked by thoughts
+and feelings …
+11E
+Exactly! What other
+activities could
+you use to practise
+engaging or
+focusing?
+11F
+11G
+THOUGHTS
+
+AND
+FEELINGS
+I refocus on
+the drink.
+
+Go ahead and practise this
+now. Get some water, tea
+or coffee, and follow the pictures
+and instructions above. Y ou can
+also go to this LINK and listen to,
+or download the Awareness of
+Drinking exercise.
+Part 1: GROUNDING
+
+[Page 34]
+32
+You could practise while talking to
+family or friends. Notice what others
+are saying, their tones of voice and their
+facial expressions. Give them your full
+attention.
+You could practise this while playing a
+game or doing some other activity with
+children, like teaching them to read. You
+simply give your full attention to the
+children and to the game.
+You could practise this while washing,
+cooking or doing chores. You simply give
+your full attention to the activity.
+And whenever you notice
+you get hooked…
+12A
+12B
+12C
+12D
+Part 1: GROUNDING
+
+[Page 35]
+33
+12F
+12E
+We unhook
+by refocusing
+and engaging in what
+we are doing.
+Okay!
+I can do that when
+my thoughts
+and feelings
+are not
+too difficult.
+Part 1: GROUNDING
+
+[Page 36]
+34
+An "emotional storm" means
+that you experience intensely
+difficult thoughts and feelings.
+They are so strong they are like a
+mighty storm, and they can easily
+overpower you.
+13A
+13B
+13C
+But
+sometimes
+my feelings
+and stories
+are just so
+painful.
+Yes, sometimes
+they are so
+overpowering
+they turn into
+"emotional
+storms" .
+PAINFUL MEMORIES
+FEAR OF THE FUTURE
+THOUGHTS ABOUT BEING WEAK, STUPID OR BAD
+PAINFUL FEELINGS
+ANGER
+FEAR
+SADNESS
+GUILT
+When an
+emotional
+storm appears
+we must learn
+how to "ground
+ourselves" .
+What
+does
+that
+mean?
+Part 1: GROUNDING
+
+[Page 37]
+35
+Imagine you are high in a tree
+when a storm begins.
+Would you want to stay
+in the tree?
+While you are in the tree,
+you are in great danger!
+You need to get down to the
+ground as quickly as possible!
+14A
+14B
+14C
+14D
+Part 1: GROUNDING
+
+[Page 38]
+36
+And on the ground, you can help others.
+For example, you could comfort others
+while the storm rages.
+15B
+15A
+On the ground, you are much safer.
+And if there is somewhere safe for you to hide,
+you can only get there after you are on the ground.
+Part 1: GROUNDING
+
+[Page 39]
+37
+16A
+Again, through engaging
+with the world around you,
+and focusing on what you
+are doing.
+16B
+16C
+The first step is to NOTICE
+how you are feeling and
+what you are thinking.
+So we need
+to "ground
+ourselves"
+when our
+emotional
+storms appear.
+How?
+Part 1: GROUNDING
+
+[Page 40]
+38
+Slowly press your feet into the floor.
+Slowly stretch your arms, or slowly press your hands together.
+17A
+17B 17C 17D
+17E
+17F
+17G 17H
+Next, SLOW DOWN and CONNECT with your body.
+Slow your breathing. Empty your lungs completely.
+Then let them refill as slowly as possible.
+Part 1: GROUNDING
+
+[Page 41]
+39
+18A 18B
+18C 18D
+The next step in
+grounding is to REFOCUS
+on the world around you.
+Notice where you are.
+What are five things you
+can see?
+What are three or four
+things you can hear?
+Breathe the air. What can
+you smell?
+Notice where you are and
+what you are doing.
+Touch your knees, or the surface beneath you, or any object you
+can reach. Notice what it feels like under your fingers.
+18F 18G
+Part 1: GROUNDING
+18E
+
+[Page 42]
+40
+And you can also move your arms
+and legs and mouth – so if you want
+to, you can act in line with your
+values.
+So notice there are difficult thoughts and
+feelings appearing…
+19A
+19C
+…and there is also a
+world around you that
+you can see and hear
+and touch and taste
+and smell.
+19B
+
+Y ou can go to this LINK
+and listen to, or download
+Grounding Exercise 1. Or, you can
+simply follow the pictures and
+instructions in this book.
+Part 1: GROUNDING
+
+[Page 43]
+41
+Some storms last a long time.
+Others pass quickly.
+Grounding does not make your
+emotional storms disappear.
+It just keeps you safe, until the
+storm passes.
+20A
+20B 20C
+20D
+Do you mean these
+unhooking and
+grounding exercises
+will not get rid of my
+difficult thoughts
+and feelings?
+Correct!
+That is not
+their
+purpose.
+Part 1: GROUNDING
+
+[Page 44]
+42
+21A
+21C
+21D
+21E
+21B
+The purpose of the unhooking and
+grounding exercises is to help you "engage"
+in life. For example, to help you give your
+full attention to family and friends.
+It is also to help you move towards
+your values; to help you behave more
+like the kind of person you want to be.
+And to help you focus on what you
+are doing, so you can do it well.
+
+When you pay attention and engage
+fully in any activity you may also find it
+more satisfying. This is true even with activities that are boring
+or frustrating.
+But for now, please just
+keep practising those new
+skills. And remember they
+are not supposed to get
+rid of your anger, fear or
+sadness.
+Good
+question! We
+will come to
+that in the
+next section
+of the book.
+But I am in so
+much pain.
+Can I get rid
+of my anger,
+fear and
+sadness?
+Part 1: GROUNDING
+
+[Page 45]
+43
+When we engage in life, pay
+attention to others, focus on
+what we're doing and live by
+our values, we manage stress
+much better.
+It is like building your muscles
+to run faster or to lift heavier
+loads. With practice, your
+muscles get bigger!
+22A
+22B
+22C
+22D
+Engaging, focusing and
+grounding help us do
+all those things.
+But it seems so hard…
+Like any
+new skill,
+it requires
+practice.
+And the
+more we
+practise…
+…the
+better
+we get!
+Part 1: GROUNDING
+
+[Page 46]
+44
+There are many ways to
+practise these engaging and
+grounding skills. We will
+practise them now!
+As you read this book,
+follow the instructions.
+Do not simply read
+about it; actually do it!
+First, NOTICE how you are feeling and what you are thinking.
+Then, SLOW DOWN and CONNECT with your body. Slowly breathe out.
+Slowly stretch. Slowly push your feet into the floor.
+Now REFOCUS on the world around you.
+Pay attention with curiosity to what you can …
+22.5A
+22.5B
+22.5C
+22.5D
+OKAY!
+SEE HEAR TASTE SMELL TOUCH
+Part 1: GROUNDING
+
+[Page 47]
+45
+That exercise should take
+you about 30 seconds.
+You can do it anytime,
+anywhere.
+22.5E
+22.5F
+22.5G
+Now have a good stretch.
+Engage with the world. Notice
+where you are, who is with you,
+and what you are doing.
+
+Y ou can go to this LINK
+and listen to, or download
+Grounding Exercise 2. Or, you can
+simply follow the pictures and
+instructions in this book.
+Yes, and the
+more I practise,
+the better!
+That is great.
+I can practise it
+anytime.
+Part 1: GROUNDING
+
+[Page 48]
+46
+Now here is a longer
+grounding exercise to
+practise. First, NOTICE how
+you are feeling and what
+you are thinking.
+If you breathe too hard
+or too quickly,
+it could make
+you feel panicky,
+anxious, dizzy
+or short of
+breath.
+If you start to feel dizzy
+or light-headed,
+you are breathing
+too deeply,
+too hard
+or too quickly.
+23A
+23C
+23D
+23E
+23G
+23F
+23B
+Now slow your breathing even
+more. Slowly and gently, empty
+your lungs.
+Next, SLOW DOWN and CONNECT
+with your body.
+Slowly breathe
+out. Slowly
+stretch. Slowly
+push your feet
+into the
+ground.
+Make sure
+you breathe
+SLOWLY and
+GENTLY .
+And as you
+breath IN,
+also do so
+SLOWLY and
+GENTLY .
+SLOWLY
+GENTLY
+Part 1: GROUNDING
+
+[Page 49]
+47
+Now notice your
+breathing with
+CURIOSITY – as
+if it is the first
+time you have
+ever encountered
+breathing.
+Now breathe out even more
+SLOWLY . And after your lungs
+are empty, silently count to
+three before you breathe
+in again. Then let
+your lungs refill
+as SLOWLY
+AS POSSIBLE.
+You are training
+your ability to
+stay engaged
+and focused.
+Can you keep
+your attention
+on your breath?
+As you do this, from time to time
+thoughts and feelings will hook
+you and pull
+you out of
+the exercise.
+23H
+23I 23J
+23K 23L
+So if you ever start to feel dizzy,
+or light-headed, or tight-chested,
+SLOW your breathing. Breathe out
+GENTLY and breathe in as SLOWLY
+and SHALLOWLY as possible. (DO
+NOT take deep breaths. This will
+worsen your dizziness!)
+Part 1: GROUNDING
+
+[Page 50]
+48
+As soon as you realize this has
+happened, REFOCUS on your
+breathing. Give it your full
+attention.
+Notice the air as it flows in and
+out of your nostrils.
+Notice the gentle movements of
+your shoulders.
+Notice your chest moving in and
+out.
+Notice how your belly moves in
+and out.
+Again and again and again, you
+will get hooked.
+24A 24B
+24C 24D
+24E 24F
+So as soon
+as you realize
+this has
+happened …
+Part 1: GROUNDING
+
+[Page 51]
+49
+24F
+…refocus on your breathing.
+And if your
+thoughts and
+feelings hook you
+1000 times…
+That is correct!
+And then you
+refocus on your
+breath.
+Again and again
+and again, you
+bring your
+attention back
+to your breath,
+noticing it with
+curiosity.
+Like any skill,
+the more you
+practise, the
+better. So…
+You could do some
+shorter practices that
+last for one or two
+minutes, and some longer
+practices that last for
+five to ten minutes.
+25A 25B
+25C 25D
+25E 25F
+25G
+25H
+Then we
+unhook
+ourselves
+1000 times!
+How long do we do this?
+Part 1: GROUNDING
+
+[Page 52]
+50
+To finish the exercise,
+once again ground
+yourself.
+SLOW down.
+Slowly breathe out.
+Slowly stretch.
+Slowly push your feet into the
+floor.
+Then
+REFOCUS and
+ENGAGE with
+the world.
+Pay attention
+with curiosity
+to what you
+can…
+Notice where you
+are, who is with
+you and what you
+are doing.
+And take a
+moment to
+acknowledge that
+each time you
+practise this…
+26A 26B
+26C
+26D
+26E
+26F
+
+Y ou can go to this LINK
+and listen to, or download Grounding Exercise 3.
+Or, you can simply follow the
+pictures and instructions in
+this book.
+SEE
+HEAR
+TASTE
+SMELL
+TOUCH
+I am living by
+my values of
+caring…
+…for the health of
+myself, others and
+my community.
+Part 1: GROUNDING
+
+[Page 53]
+51
+That's right! Because
+these skills help you to
+engage, focus and unhook
+from difficult thoughts
+and feelings…
+26G
+... so you can move towards your values.
+26H
+So remember, practise these skills throughout
+the day, at every chance you get.
+It can help to make a plan. For example, think
+about when, where and how many times each
+day you will practise grounding. Practising
+does not need to be inconvenient! You can
+practise anytime, anywhere, even just for 1–2
+minutes. Ideally, take at least a day or two to
+practise the skills from this section, before
+going on to the next section.
+At the end of the book you'll find brief
+descriptions of every skill, which can remind
+you of the key points.
+26I
+DIFFICULT
+SITUATION
+TOWARDS VALUES
+AWAY FROM VALUES
+Part 1: GROUNDING
+
+[Page 54]
+Part 2
+UNHOOKING
+52
+
+[Page 55]
+53
+Welcome back. I hope you practised
+engaging in life, focusing on your
+activities and grounding yourself during
+emotional storms.
+27A
+27B
+Part 2: UNHOOKING
+Earlier,
+you may
+remember, we
+talked about
+"towards"
+and "away"
+moves.
+VALUES
+TOWARDS AWAY
+
+[Page 56]
+54
+When we get hooked by difficult thoughts and feelings,
+we tend to make "away moves" – moving away from our values.
+We might get into fights, arguments or disagreements.
+27C
+27D
+Part 2: UNHOOKING
+THOUGHTS
+
+AND
+
+FEELINGS
+
+[Page 57]
+55
+Or we might withdraw and stay away from people we love.
+Or we might spend a lot of time lying in bed.
+27E
+27F
+27G
+Part 2: UNHOOKING
+So today, we are going
+to learn more about
+unhooking ourselves
+from difficult thoughts
+and feelings.
+
+[Page 58]
+56
+28F
+Can we burn them like rubbish? Can we lock them up, hide them
+away?
+Can we bury them in a hole?
+Can we
+run off and
+leave them
+behind?
+28A
+28B 28C
+28D
+28E
+Take a moment to think
+about all the ways you have
+tried to get rid of these
+thoughts and feelings.
+THOUGHTS
+AND
+FEELINGS
+My life is so hard
+now. Will my
+difficult thoughts
+and feelings ever
+go away?
+Good question.
+It makes sense
+that you would
+want them to go
+away.
+But is it realistic to think we can simply get rid of them?
+Part 2: UNHOOKING
+29A
+
+[Page 59]
+57
+Most people try at least some of these strategies:
+Yelling! Trying not to think
+about it
+Avoiding people,
+places or situations
+Staying in bed Isolating yourself Giving up
+Alcohol Tobacco Illicit drugs
+Starting arguments Blaming or
+criticizing oneself
+What else have
+you tried?
+29B 29C 29D
+29E 29F 29G
+29H 29I 29J
+29K 29L
+29M
+Part 2: UNHOOKING
+29A
+
+[Page 60]
+58
+30B
+30C
+Take a moment to
+think about or write
+down the things
+you have tried for
+getting rid of difficult
+thoughts and feelings.
+29N
+30A
+Of course,
+many of these
+methods make
+thoughts and
+feelings go
+away. But not
+for long!
+They soon
+come
+back!
+DIFFICULT
+SITUATION
+TOWARDS
+
+VALUES
+AWAY FROM
+
+VALUES
+And how
+many of these
+methods pull
+away from your
+values?
+Most
+of
+them!
+Exactly! So when we try to get rid
+of thoughts and feelings…
+…our life
+usually gets
+worse!
+So are you
+open to a
+new way?
+Part 2: UNHOOKING
+
+[Page 61]
+59
+It is a new way
+of handling
+difficult
+thoughts
+and feelings.
+Instead of trying to push them
+away…
+You stop struggling with them. And whenever
+you get
+hooked by
+them…
+31A 31B
+31C 31D
+…you unhook yourself
+again.
+31E
+31F
+THOUGHTS
+AND
+FEELINGS
+A NEW WAY
+THOUGHTS
+AND
+FEELINGS
+THOUGHTS
+AND
+FEELINGS
+How do we
+do that?
+I will show you soon. But first let us
+identify – what thoughts and feelings
+are hooking you?
+Part 2: UNHOOKING
+
+[Page 62]
+60
+Are you being hooked by thoughts about…
+Write some of
+the thoughts
+that hook you:
+32A
+32B
+32C
+Are you being hooked
+by feelings in your
+body? Mark where these
+feelings are located:
+Bad things
+that happened
+in the past
+Bad things
+that might happen
+in the future
+Not being good
+enough – being weak
+or crazy or bad
+FRONT BACK
+Part 2: UNHOOKING
+
+[Page 63]
+61
+32B
+The first two steps in unhooking are:
+33A
+33B
+33C
+33D
+First you NOTICE that a thought or feeling has hooked you.
+Then you NAME it. To name it, you silently say
+to yourself something like…
+1. NOTICE
+2. NAME
+Here is
+tightness in
+my chest.
+Here is
+pressure in
+my forehead.
+Here is a
+painful
+memory.
+Here are
+fears about
+the future.
+Part 2: UNHOOKING
+
+[Page 64]
+62
+33E
+33F
+33G
+Here is a difficult
+thought about the
+past.
+Here is
+anger.
+Here is a difficult
+thought about my
+family.
+Part 2: UNHOOKING
+
+[Page 65]
+63
+However, if we then add the phrase, "I notice" , we usually find it
+unhooks us a bit more.
+Try this now
+and see what
+happens.
+So naming begins by silently saying,
+"Here is a thought" or "Here is a feeling" .
+34A
+34B
+34C
+34D
+34E
+34F
+I NOTICE
+I notice here is a
+heaviness in my
+chest.
+I notice
+here is a
+painful
+memory.
+I notice
+here is
+anger.
+Part 2: UNHOOKING
+
+[Page 66]
+64
+Well, thoughts
+and feelings hook
+us when we are
+unaware of them.
+35A
+Please try this now before you read
+any more. NOTICE and NAME a
+thought or feeling that has been
+present for you today.
+One moment you are
+talking to a friend,
+interested in what
+she is saying…
+35B
+35C
+35D
+35E
+
+Y ou can go to this LINK and
+listen to, or download the
+Notice and Name exercise. Or, you
+can simply follow the pictures and
+instructions in this book.
+I notice
+here is a
+knot in my
+stomach.
+I notice here
+is a thought
+about what
+I fear.
+THOUGHTS
+AND
+FEELINGS
+How does noticing and
+naming help us?
+Part 2: UNHOOKING
+
+[Page 67]
+65
+…and then in the next moment, you are hooked.
+35F
+THOUGHTS
+
+AND
+FEELINGS
+Part 2: UNHOOKING
+
+[Page 68]
+66
+Suddenly, you are no longer really listening to your friend.
+…but you are not really "engaged" in the conversation.
+You are only half-listening.
+You are not giving her your full attention.
+Why? Because you are hooked
+by your thoughts or feelings.
+36A
+36B
+You might still be talking to your friend…
+THOUGHTS
+
+AND
+FEELINGS
+SO PRETTY.
+Part 2: UNHOOKING
+
+[Page 69]
+67
+The first step in "unhooking" yourself is to
+NOTICE that you have been hooked. The
+second step is to NAME what hooked you.
+You silently say to yourself…
+The next step is to REFOCUS on what you are doing – whether you are
+cooking, or eating, or playing or washing, or chatting with friends – and
+to ENGAGE fully in that activity; to PAY FULL ATTENTION to whoever is
+with you and whatever you are doing.
+37A
+37B
+37C
+37D
+I notice I have
+been hooked by
+memories.
+Here is a
+difficult
+thought. I notice a heavy
+feeling in
+my chest.
+THOUGHTS
+
+AND
+
+FEELINGS
+I am noticing a
+painful feeling in
+my throat.
+Part 2: UNHOOKING
+
+[Page 70]
+68
+We can do the same thing every time we get
+hooked and stop engaging in life.
+38A
+38B
+38C
+I am noticing
+feelings of anger.
+And even though I am having feelings of anger,
+I choose to act on my value of caring by refocusing and
+engaging with my family.
+Part 2: UNHOOKING
+
+[Page 71]
+69
+38D
+38E
+THOUGHTS
+AND
+FEELINGS
+Here is a difficult
+thought.
+THOUGHTS
+AND
+FEELINGS
+And even with this difficult thought,
+I choose to act on my values of being
+attentive and caring towards my children.
+Part 2: UNHOOKING
+
+[Page 72]
+70
+So to unhook from thoughts and feelings…
+The more you practise this, the better
+you will get. See if you can practise this
+over and over again, all day long as
+you're going about your daily activities.
+Every time you notice that you have
+been hooked, run through these steps.
+39A
+39B
+THOUGHTS
+
+AND
+
+FEELINGS
+1. NOTICE YOUR
+DIFFICULT
+THOUGHTS AND
+FEELINGS
+2. NAME THE
+THOUGHTS
+AND FEELINGS
+(SILENTLY).
+3. REFOCUS ON
+WHAT YOU ARE
+DOING.
+Part 2: UNHOOKING
+
+[Page 73]
+71
+And remember it is natural
+to have difficult thoughts and feelings
+appear when we are stressed.
+
+This happens to everyone!
+40A
+THOUGHTS
+AND FEELINGS
+STRESSFUL SITUATION
+Part 2: UNHOOKING
+
+[Page 74]
+72
+There are many ways
+to NAME a thought or
+feeling, after
+we NOTICE it.
+41A
+41B
+41C
+Here is a
+thought
+about…
+Here is a
+memory
+of…
+I notice
+here is
+sadness.
+I notice
+here is a
+heaviness
+in my
+chest.
+I notice I
+have been
+hooked by
+a pain in
+my belly.
+Part 2: UNHOOKING
+
+[Page 75]
+73
+And after we have NOTICED and NAMED,
+we can REFOCUS on the world around us.
+
+We ENGAGE in life by noticing what we can…
+41D
+NAME AND NOTICE THEN...
+SEE
+SMELL
+TASTE
+TOUCH
+HEAR
+Part 2: UNHOOKING
+
+[Page 76]
+74
+42A
+So now you have
+your first two tools
+for your tool kit.
+TOOL 1
+GROUND
+YOURSELF
+DURING "EMOTIONAL
+STORMS". NOTICE HOW
+YOU ARE FEELING.
+SLOW DOWN AND
+CONNECT WITH YOUR
+BODY. REFOCUS AND
+ENGAGE WITH THE
+WORLD AROUND
+YOU.
+TOOL 2
+UNHOOK
+YOURSELF
+FROM THOUGHTS
+AND FEELINGS
+BY NOTICING
+AND NAMING
+THEN REFOCUSING
+ON WHAT
+YOU ARE DOING.
+And we can practise
+using these tools at
+any time and in any
+place.
+Part 2: UNHOOKING
+
+[Page 77]
+75
+So set times aside to regularly practise these skills.
+For example, in bed, or before or after a meal.
+Of course,
+some people
+forget to
+practise.
+Think of some times, places or
+activities for regular practice.
+And whenever you are lying
+awake in bed at night, and cannot
+sleep, then practise slowing down
+and connecting with your body.
+
+It probably will not make you
+sleep (although sometimes it
+does), but it will help you feel
+rested.
+42B
+42C
+42D
+42E
+
+Y ou can go to this LINK to
+listen to, or download all of the
+exercises you have learned so far. Or,
+you can simply follow the pictures and
+instructions in this book.
+Part 2: UNHOOKING
+
+[Page 78]
+76
+Maybe you feel too tired...
+Other things can
+also get in the way
+of practising with
+these tools.
+Maybe you feel too sad or angry
+or scared…
+Maybe you just
+can't be bothered…
+43A
+43B
+43C
+43D
+Too
+tired!
+This is
+useless!
+Part 2: UNHOOKING
+
+[Page 79]
+77
+So remind
+yourself over and
+over…
+43E
+This is like learning a new language.
+It takes a lot of practice!
+43F
+You can also be hooked by unhelpful thoughts.
+43G
+THIS IS ALL SO STUPID!
+IT IS NOT IMPORTANT!
+IT WILL NOT HELP!
+I AM TOO BUSY!
+THERE IS NO POINT!
+IT IS A WASTE OF TIME!
+I CANNOT DO IT!
+Part 2: UNHOOKING
+
+[Page 80]
+78
+44A
+44B
+44C
+44D
+Yes, that's right. And
+in the next part of
+this book, we will
+explore values in
+more depth.
+But before
+continuing with the
+next part, please
+take a day or two
+to practise what
+we've covered in this
+chapter.
+And remember, at the end of the
+book you'll find short descriptions
+of every skill you learn.
+So as soon as you realize
+you have been hooked by
+these feelings…
+NOTICE, NAME AND REFOCUS
+Every little bit of practice
+you do will make a
+difference.
+And every time we practise,
+we are acting on our values
+of caring!
+Part 2: UNHOOKING
+
+[Page 81]
+79
+44B
+NOTICE, NAME AND REFOCUS
+Part 3
+ACTING ON YOUR VALUES
+TOWARDS VALUES
+AWAY FROM VALUES
+79
+
+[Page 82]
+80
+Welcome back.
+Have you been
+practising
+unhooking and
+grounding?
+Remember, doing these exercises
+is like learning any new skill.
+With practice, you get better
+and it becomes easier.
+Now we are
+going to look at
+values in more
+depth.
+Your values describe what
+kind of person you want to
+be; how you want to treat
+yourself and others and the
+world around you.
+Goals describe what
+you are trying to get.
+Values describe the
+sort of person you
+want to be.
+45A
+45B
+45C
+45D
+45E
+45F
+Part 3: ACTING ON YOUR VALUES
+Are values
+the same
+goals?
+No!
+
+[Page 83]
+81
+45D
+45F
+Suppose your goal
+is to get a job so
+you can support
+the people you
+care about.
+And suppose your values – the way you want to be with your
+family, friends or people around you – are to be kind, to be
+caring, to be loving and to be supportive.
+45G
+45H
+Part 3: ACTING ON YOUR VALUES
+
+[Page 84]
+82
+It might be impossible
+to achieve your goal…
+…but you can still live your
+values of being kind, caring,
+loving and supportive
+towards your family, friends
+or people around you.
+Many of your goals might
+be impossible right now.
+46A 46B
+46C
+46D
+46E
+And even if you are facing a very
+difficult situation and are separated
+from your family and friends, you can
+still live your values of being kind,
+caring, loving and supportive. You can
+find little ways to act on these values
+with the people around you.
+NO JOBS
+GOALS
+But you can
+always find
+ways to act on
+your values.
+Why
+does
+that
+matter?
+Part 3: ACTING ON YOUR VALUES
+
+[Page 85]
+83
+46C
+46F
+Because the way you
+influence the world
+around you is through
+your ACTIONS.
+"ACTIONS" are what you do with your
+arms and hands and legs and feet, and
+what you say with your mouth.
+46G
+The more you focus on your own actions…
+…the more you can influence the immediate
+world around you: the people and situations
+you encounter every day.
+47A
+Part 3: ACTING ON YOUR VALUES
+
+[Page 86]
+84
+If your country is at war, you
+can't stop all the fighting…
+…but you can stop arguing
+with people in your community…
+…and instead, act on your values
+And notice: you may
+influence the people
+around you through your
+ACTIONS.
+47B 47C
+47D
+47E
+Fighting
+Collaboration
+Part 3: ACTING ON YOUR VALUES
+
+[Page 87]
+85
+47C
+47E
+To help you clarify your values, here is a list. These are not the "right"
+values or the "best" ones – they are simply some common ones.
+To be kind
+To be caring
+To be generous
+To be supportive
+To be helpful
+To be patient
+To be responsible
+To be protective
+To be disciplined
+To be hardworking
+To be committed
+To be brave
+To be persistent
+To be forgiving
+To be grateful
+To be loyal
+To be respectable/honourable
+To be respectful
+To be trustworthy
+To be fair/just
+To be…
+To be…
+48A
+48B
+Yes. Are your actions
+moving you towards or away
+from your values? 48C
+48D
+So we need
+to keep
+asking
+ourselves
+this question:
+Do my
+actions
+support my
+values?
+DIFFICULT
+SITUATION
+TOWARDS
+VALUES
+AWAY
+FROM VALUES
+Part 3: ACTING ON YOUR VALUES
+
+[Page 88]
+86
+Now we will do another
+exercise. Think of a role model
+in your community; someone
+you look up to.
+Now select three or four
+of those values that
+seem most important to
+you, and write them in
+the box below.
+What does this
+person say or do
+that you admire?
+What values
+does the person
+demonstrate
+through his or her
+actions?
+Does this person
+treat others in
+admirable ways?
+Which of those
+values would you
+like to model for
+others around
+you?
+Now think of the people around you.
+What values do you want to live by, in
+the way you treat those people?
+49A
+49B
+49C
+49D
+49E 49F
+49G
+RELATIONSHIPS
+MOVING AWAY
+FROM YOUR VALUES
+LIVING BY
+YOUR VALUES
+Part 3: ACTING ON YOUR VALUES
+
+[Page 89]
+87
+49B
+49F
+So if your
+values are
+caring and
+kindness…
+50A
+50B
+50C
+Values go both ways: towards yourself and towards others.
+VALUES
+OTHERSSELF
+OTHERSSELF
+CARING AND KINDNESS
+Part 3: ACTING ON YOUR VALUES
+
+[Page 90]
+88
+…then you aim to live those values towards both yourself and others.
+So now it is time to put your
+values into action.
+What values
+do you want to live
+by in this relationship?
+50D
+50E
+Pick an important relationship;
+choose someone you care about a lot,
+who you see on a regular basis.
+50F
+50G
+…then
+it will be
+hard for us
+to care for
+others!
+ACTION
+PLAN
+VALUES
+This is
+important!
+If you do
+not take
+care of
+yourself…
+Part 3: ACTING ON YOUR VALUES
+
+[Page 91]
+89
+For example, suppose you
+choose your child.
+51A
+And the values you want to act
+on are:
+Then a small step might be to
+play with or to read to your
+child for 10 minutes every day.
+And the values you want
+to act on are:
+Then a small step might be to
+greet that person warmly and
+express your gratitude.
+51B
+51C
+Or suppose you choose
+a relative.
+51D 51E
+51F
+TO BE KIND
+TO BE RESPONSIBLE
+TO BE GRATEFUL
+TO BE FRIENDLY
+Thank you Uncle, for all the help
+you have given me.
+Part 3: ACTING ON YOUR VALUES
+
+[Page 92]
+90
+Remember, even the tiniest actions matter.
+A giant tree grows from a tiny seed. And
+even in the hardest or most stressful of
+times, you can take small ACTIONS to live
+by your values.
+When you act on your values,
+you will begin to create a more satisfying
+and fulfilling life.
+51G
+SEED
+Part 3: ACTING ON YOUR VALUES
+
+[Page 93]
+91
+Think in terms of ACTIONS.
+What will you say with your mouth?
+What will you do with your hands
+and arms and legs and feet?
+52C
+52A
+52B
+ACTIONS
+So create
+your action plan
+now.
+What will you do in
+the next week to act
+on your values?
+Pick something
+that seems realistic
+to you.
+Do you
+believe you
+can do this?
+No! Yes!
+Part 3: ACTING ON YOUR VALUES
+
+[Page 94]
+92
+52D
+Please make this
+action plan now,
+before reading
+further. It is
+important!
+53A
+Does your plan seem realistic to you? If not,
+choose something smaller, simpler and easier.
+Pick an important relationship. Who is
+someone you care about, who you see on
+a regular basis?
+What values do you want to live by in this
+relationship? You can look at page 85
+for some examples of common values.
+With this person, what one or more
+ACTIONS could you take over the next
+week to act on your values? What
+specifically will you do, or what will you
+say to this person?
+If your plan seems too
+difficult – if you do not
+believe you can do it –
+pick something smaller
+and easier. OKAY!
+Part 3: ACTING ON YOUR VALUES
+
+[Page 95]
+93
+Now notice: are
+difficult thoughts
+and feelings
+starting to hook you
+and stop you from
+following your
+action plan?
+Often, as soon as
+we start thinking
+about taking
+action, difficult
+thoughts and
+feelings appear,
+and easily hook us.
+Will these actions take you towards
+or away from your values?
+53D
+53F
+53E
+53B
+IMPORTANT
+RELATIONSHIPS
+LIVING BY
+YOUR
+VALUES
+MOVING AWAY
+FROM YOUR
+VALUES
+53C
+Do you feel a sense
+of meaning or
+purpose, of being
+more like the sort
+of person you want
+to be?
+Yes, we do. This is one of the benefits of
+living by your values.
+Part 3: ACTING ON YOUR VALUES
+
+[Page 96]
+94
+And ENGAGE with the world around you.
+53I
+SEE
+TASTE
+SMELL
+HEAR
+TOUCH
+NOTICE and NAME them.
+53H
+I notice here is a
+painful feeling in
+my belly.
+I notice here is a
+difficult thought that
+it is all too hard.
+If so, you know what to do.
+53G
+It is too
+hard!
+There is
+no point!
+It will
+not work
+Fears
+Part 3: ACTING ON YOUR VALUES
+
+[Page 97]
+95
+Aim to start each
+day thinking
+of two or three
+values you want
+to live by.
+While you are still in bed, or while
+you are getting up.
+This is the next tool in your
+toolkit.
+The journey of 1000 miles begins
+with one step!
+And
+throughout
+the day…
+54A 54B
+54C
+54D 54E
+54F
+Yes! Even tiny
+actions matter!
+Look for ways to act on
+those values.
+TOOL 3
+ACT ON
+YOUR
+VALUES
+AND EVERY TIME YOU ACT ON YOUR VALUES…
+I AM BEHAVING
+LIKE THE SORT
+OF PERSON I
+WANT TO BE
+I AM ACTING
+ON MY
+VALUES.
+…ACKNOWLEDGE IT TO YOURSELF.
+Part 3: ACTING ON YOUR VALUES
+
+[Page 98]
+96
+1. LEAVE.
+2. CHANGE WHAT CAN BE
+CHANGED, ACCEPT THE PAIN
+THAT CANNOT BE CHANGED, AND
+LIVE BY YOUR VALUES.
+3. GIVE UP AND MOVE AWAY FROM
+YOUR VALUES.
+55A
+55B
+55C
+SO YOU NOW HAVE
+THREE POWERFUL
+TOOLS:
+* UNHOOKING
+* GROUNDING
+* ACTING ON YOUR
+VALUES.
+But we
+have so
+many
+problems!
+What are they?
+But sometimes you cannot leave…
+for example, if you are in prison, or if
+leaving is worse than staying.
+True! If so, you must
+choose between
+options two and three.
+You do!
+And there are
+three approaches
+to any
+difficult situation.
+Part 3: ACTING ON YOUR VALUES
+
+[Page 99]
+97
+So then
+option two
+is what is
+left.
+CHANGE WHAT CAN BE CHANGED,
+ACCEPT THE PAIN THAT CANNOT BE CHANGED,
+AND LIVE BY YOUR VALUES.
+CHANGE WHAT CAN BE CHANGED…
+Many difficult
+thoughts and
+feelings appear
+when you face
+difficult situations
+– especially if you
+cannot improve
+them!
+ACCEPT THE PAIN THAT CANNOT BE CHANGED…
+Use your arms and legs and hands and
+feet and mouth to TAKE ACTION: to do
+whatever you can, no matter how small it
+might be, to improve the situation.
+56A
+56B
+56C
+56D
+56E
+56F
+But I do not like to
+give up and move
+away from my
+values.
+Nor me.
+My values are
+important
+to me.
+So we
+unhook…
+…and
+ground
+ourselves.
+Part 3: ACTING ON YOUR VALUES
+
+[Page 100]
+98
+CHANGE
+WHAT CAN
+BE CHANGED,
+ACCEPT THE
+PAIN THAT
+CANNOT BE
+CHANGED,
+AND LIVE BY
+YOUR VALUES.
+So if there is
+nothing you can
+do to improve
+the situation…
+AND LIVE BY YOUR VALUES.
+There IS something
+you can do that will
+improve any difficult
+situation, at least a
+little bit.
+Good question! That is what we will explore in
+the next section. But first, remember to take a
+day or two to practise what we've covered in this
+section. You can use the summaries at the end
+of the book to remind yourself of how to use the
+tools we've learned so far.
+57A
+57B
+57C
+57D 57E
+57F
+We find other
+ways to live
+by our values.
+GOOD
+NEWS
+What
+is it?
+Yes! So
+commit this
+to memory,
+and use it
+to help deal
+with your
+problems.
+And now, it is
+time for some
+Part 3: ACTING ON YOUR VALUES
+
+[Page 101]
+Part 4
+BEING KIND
+99
+
+[Page 102]
+100
+Someone who says kind things
+when you are in pain.
+Whether you are in danger…
+Yet many of us are not kind
+to ourselves when we are in
+difficult situations.
+No matter
+how bad your
+situation
+58A
+58B
+58C 58D
+58E
+58F
+58G
+58H
+Part 4: BEING KIND
+Or in a family argument…
+…you are always better off if you
+have a friend by your side.
+Or without income…
+Someone who is kind and
+caring and helpful…
+I can see this is
+hard for you.
+Let me help.
+
+[Page 103]
+101
+Often, we
+get hooked
+by unkind
+thoughts.
+59A
+Part 4: BEING KIND
+59B
+I am weak I am
+crazy
+I am
+bad
+I did
+the wrong
+thing.
+59C
+It is my fault
+I can
+never
+forgive
+myself
+I should
+not have
+done that
+
+[Page 104]
+102
+…when we get hooked by these
+unkind thoughts, we get pulled
+away from our values.
+59E
+UNKIND
+THOUGHTS
+TOWARDS VALUES
+AWAY FROM VALUES
+Try this now. Choose an unkind
+thought about yourself.So we need to
+NOTICE and
+NAME them, to
+unhook from
+them.
+60A
+60B
+I am a bad
+mother. I am
+weak.
+Unkind thoughts are natural and
+may happen often; that is OK. But it
+is not helpful to be hooked by them,
+because…
+59D
+Part 4: BEING KIND
+
+[Page 105]
+103
+And silently say to yourself…
+Then add the words "I notice" .
+Or…
+60C
+60D
+60E
+Then GROUND yourself and ENGAGE with the world around you.
+
+Y ou can go to this LINK and listen to, or
+download the Unhooking from Unkind
+Thoughts exercise. Or, you can simply follow
+the pictures and instructions in this book.
+Here is an
+unkind
+thought.
+Here is
+a harsh
+selfjudgement.
+I notice
+here is an
+unkind
+thought.
+I notice
+here is
+a harsh
+self-judgement.
+60F
+SEE HEAR TASTE SMELL TOUCH
+Part 4: BEING KIND
+
+[Page 106]
+104
+How do you feel when you are
+struggling, suffering, in pain,
+and someone reaches out to
+you with kindness, caring and
+understanding?
+Even in the most difficult
+situations, there are ways we can
+act on our values of kindness and
+caring.
+Even tiny
+little actions
+of kindness
+can make a
+difference.
+This includes
+kind words.
+Every small,
+kind action
+makes a
+difference.
+When you see
+someone in pain,
+suffering and
+struggling, what
+are small acts of
+kindness that you
+could do?
+61A
+61B
+61C
+61D
+61E
+61F
+This is really
+painful. I am here
+for you.
+Part 4: BEING KIND
+
+[Page 107]
+105105
+So unhook from thoughts like…
+And we
+should be
+kind to
+ourselves,
+too.
+Remember: like all values, kindness goes both ways.
+62A
+62B
+62D
+62E
+62F
+Everyone needs a friend. Everyone
+needs kindness.
+62C
+…you will have more energy
+to help others, and more
+motivation
+to be kind
+to others,
+so everyone
+benefits.
+And if you are kind to yourself…
+I do not
+deserve
+kindness.
+My needs
+do not
+matter.
+KINDNESS
+BE KIND
+OTHERS SELF
+Part 4: BEING KIND
+
+[Page 108]
+106
+So speak to yourself kindly.
+Yes! That is correct! And now
+in the final section of the
+book, we will learn one more
+really useful skill to help with
+stress.
+62G
+62I
+Before continuing with the final section, please
+remember to take at least a day or two to practise what
+we've covered in this section. The summaries at the end
+of the book will also remind you how to practise all of
+the skills you've learned so far.
+This is hard.
+This hurts.
+62H
+I can still
+be caring to myself
+and others.
+Part 4: BEING KIND
+
+[Page 109]
+107
+Part 5
+MAKING ROOM
+107
+
+[Page 110]
+108
+So UNHOOKING is one way
+to stop struggling with our thoughts
+and feelings.
+On pages 56–57, we looked at the common
+problems that happen when we struggle
+with our thoughts and feelings: trying to
+push them away, avoid them or get rid
+of them. If you have forgotten, please
+read them again now, before reading any
+further.
+There is another way to do this,
+called MAKING ROOM.
+63A
+63B
+63C
+Part 5: MAKING ROOM
+
+[Page 111]
+109
+To learn this skill, it is useful to
+think about the sky.
+…the sky has room for it!
+…or freezing cold.
+And we can learn to be like the
+sky, and make room for the "bad
+weather" of our difficult thoughts
+and feelings without being hurt
+by it.
+No matter how severe the
+weather…
+And the sky can never be hurt or
+harmed by the weather; whether it
+is intense heat …
+And sooner or later, the weather
+always changes.
+64A
+64B
+64C
+64D
+64E 64F
+64G
+64H
+Part 5: MAKING ROOM
+Our thoughts
+and feelings
+are like the
+weather.
+Yes! Always
+changing! MAKING
+ROOM
+
+[Page 112]
+110
+Notice these
+thoughts and
+feelings with
+CURIOSITY .
+And imagine these thoughts and
+feelings are like the weather …
+And you are like the sky…
+…for the
+weather.
+Focus your attention on a difficult
+thought or feeling.
+NOTICE and NAME
+it, then observe it
+with curiosity.
+And as you do this, breathe out
+slowly. Then once
+your lungs are
+empty, pause for
+a count of three.
+Then breathe in slowly, and
+imagine your breath flows into
+and around your pain.
+65A
+65B
+65C 65D
+65E
+65F
+65G 65H
+So try this
+now. First,
+silently
+NOTICE
+and
+NAME.
+MAKING
+ROOM
+I am
+noticing
+a pain in
+my chest
+and belly.
+Here
+are
+difficult
+thoughts.
+FEARS
+FEELINGS
+MEMORIES
+THOUGHTS
+PAIN
+Part 5: MAKING ROOM
+
+[Page 113]
+111
+Imagine this any way you like.
+Breathing in slowly…
+Opening up and making room
+for it…
+Breathing out, emptying
+your lungs…
+Breathing into and around
+your pain…
+Allowing it to be there…
+66A 66B
+66C
+66D
+66E 66F
+PAINFUL
+FEELING
+DIFFICULT
+THOUGHT
+Part 5: MAKING ROOM
+
+[Page 114]
+112
+Imagine it has a size and a
+shape and a colour and a
+temperature.
+And imagine breathing into
+and around this object –
+making room for it.
+…as words or pictures on the
+pages of a book.
+Notice your difficult thought…
+And it often
+helps to imagine
+a difficult
+thought…
+Please
+try
+this
+now.
+67A
+67B
+67C
+67D
+67E
+67F
+67G
+67H
+It often helps
+to imagine a
+painful feeling
+as an object.
+
+Y ou can go to this
+LINK and listen to, or
+download the Making Room
+exercise. Or, you can simply
+follow the pictures and
+instructions in this book.
+Like a heavy cold brown
+brick on my chest.
+I am weak
+Part 5: MAKING ROOM
+
+[Page 115]
+113
+…and imagine it as words
+and pictures on the pages
+of a book.
+… and ENGAGE with the world
+around you.
+So the thought is still
+with you, but you
+can ENGAGE with the
+world around you.
+…and imagine it gently resting it
+on your lap…
+You can also imagine tucking the
+book under your arm, and taking
+it with you.
+67I
+67J
+67K
+67L
+67M
+Part 5: MAKING ROOM
+
+[Page 116]
+114
+And after you MAKE ROOM,
+you then ENGAGE with the world
+around you.
+NOTICE where you are,
+who is with you, and give
+your full attention to the activity
+you are doing.
+Remember: it is like
+learning any new skill. So please go back and
+practise these exercises
+now, before reading
+further. You can also
+practise during your day,
+whenever you experience
+difficult thoughts and
+feelings.
+68A
+68B
+68C 68D
+68E
+68F
+To begin with,
+this exercise
+might take a
+few minutes.
+But like
+learning any
+new skill…
+With practice
+it gets
+easier!
+And much
+quicker!
+SEE
+HEAR
+TASTE
+SMELL
+TOUCH
+Part 5: MAKING ROOM
+
+[Page 117]
+115
+Especially if you are in bed and can't sleep;
+you can combine MAKING ROOM with your breathing exercises.
+And remember: practise,
+practise, practise.
+69A
+69B
+69C
+So now you have
+another tool for
+your toolkit.
+TOOL #5
+MAKE ROOM
+FOR DIFFICULT
+THOUGHTS AND
+FEELINGS
+Part 5: MAKING ROOM
+
+[Page 118]
+116
+You breathe into the difficult thoughts and feelings…
+…and let the breath flow
+into and around them.
+If you feel pain
+in your body,
+notice it with
+curiosity.
+70A
+70B
+70C
+THOUGHTS
+AND
+FEELINGS
+Part 5: MAKING ROOM
+
+[Page 119]
+117
+Notice its shape, size, and temperature …
+And whenever you get HOOKED and pulled out of the exercise …
+70D
+70E
+70F
+…and notice with curiosity what happens.
+Your pain might get bigger or smaller; it might stay or it might go.
+Your aim is simply to make room for it; to allow it to be there;
+to stop fighting it and give it space.
+THOUGHTS
+
+AND
+FEELINGS
+Notice
+and name…
+…and refocus on
+breathing and
+making room.
+Part 5: MAKING ROOM
+
+[Page 120]
+118
+An exercise in being kind
+to yourself
+and making
+room for
+your pain.
+So now we are
+nearing the end
+of the book.
+We have time for
+one last
+exercise.
+This is a good exercise to practise
+in bed or when you are alone.
+Take one of your hands and
+imagine filling it with kindness…
+Now place this hand gently somewhere on your body:
+over your heart, your belly, your forehead or anywhere you feel pain.
+Feel the warmth flowing from
+your hand into your body, and
+see if you can be kind to yourself
+through this hand.
+71A
+71B
+71C 71D
+71E
+71F
+KINDNESS
+KINDNESS
+Part 5: MAKING ROOM
+
+[Page 121]
+119
+You can use two hands,
+if you prefer.
+Place a hand over the painful feeling. See if you can be kind to yourself
+by imagining you are breathing through your hand to this
+painful feeling.
+Hold yourself kindly…
+72A 72B
+72C
+72D
+If you are in bed and cannot sleep, it can be helpful to add this to your
+breathing and MAKING ROOM exercises.
+
+Y ou can go to this LINK and
+listen to, or download the
+Being Kind to Y ourself exercise. Or,
+you can simply follow the pictures
+and instructions in this book.
+Part 5: MAKING ROOM
+
+[Page 122]
+120
+And the journey
+of 1000 miles begins
+with one step.
+Remember, too:
+it is like building muscles. The more
+you practise, the better.
+73A
+73B
+73C
+73D
+And every tiny step matters.
+A tiny seed grows into
+a mighty tree.
+And of
+course every
+time you do
+anything
+from this
+book…
+…it is an act
+of kindness
+to ourselves
+and to
+others!
+Part 5: MAKING ROOM
+
+[Page 123]
+121
+Enjoy your ongoing journey!
+Try to practise and consider re-reading
+this book again to help you understand
+the ideas and skills even more. Thank you
+for your time and please share this book
+if you found it useful.
+73E
+
+[Page 124]
+122
+Tool 1: GROUNDING
+GROUND YOURSELF during emotional storms by NOTICING your
+thoughts and feelings, SLOWING DOWN and CONNECTING with
+your body by slowly pushing your feet into the floor, stretching and
+breathing, and then REFOCUSING and ENGAGING with the world
+around you.
+What can you see, hear, touch, taste and smell? Pay attention with
+curiosity to what is in front of you. Notice where you are, who is with
+you and what you are doing.
+Practice tip:
+Grounding is especially useful during stressful situations or emotional
+storms. You can also practise grounding when you simply have one or
+two minutes available, like when you're waiting for something, or before
+or after an activity you do every day, like washing, eating, cooking or
+sleeping. If you practise during these times, you may find that boring
+activities become more enjoyable, and it will be easier to use grounding
+later in more difficult situations.
+
+Y ou can download or listen
+to Grounding exercises of
+different lengths at this LINK.
+Summary
+
+[Page 125]
+123
+Tool 2: UNHOOKING
+UNHOOK YOURSELF with these three steps:
+1) NOTICE that a difficult thought or feeling has hooked you. Realize
+that you are distracted by a difficult thought or feeling, and notice it
+with curiosity.
+2) Then silently NAME the difficult thought or feeling; for example:
+"Here is a difficult feeling"
+"Here is tightness in my chest"
+"Here is a feeling of anger"
+"Here is a difficult thought about the past"
+"I notice here is a difficult thought"
+"I notice here are fears about the future"
+3) Then, REFOCUS on what you are doing. Pay full attention to whoever
+is with you and whatever you are doing.
+
+Y ou can download or listen
+to the Notice and Name
+exercise at this LINK.
+Summary
+
+[Page 126]
+124
+Tool 3: ACTING ON YOUR VALUES
+Choose the values that are most important to you. For example:
+• being kind and caring
+• being helpful
+• being brave
+• being hardworking.
+You get to decide which values are most important to you!
+Then pick one small way that you can act according to these values in
+the next week. What will you do? What will you say? Even tiny actions
+matter!
+Remember that there are three approaches to any difficult situation:
+1. LEAVE
+2. CHANGE WHAT CAN BE CHANGED, ACCEPT THE PAIN THAT CANNOT
+BE CHANGED, AND LIVE BY YOUR VALUES
+3. GIVE UP AND MOVE AWAY FROM YOUR VALUES.
+TOWARDS VALUES
+AWAY FROM VALUES
+Summary
+
+[Page 127]
+125
+Tool 4: BEING KIND
+BE KIND. Notice pain in yourself and others and respond with kindness.
+Unhook from unkind thoughts by NOTICING and NAMING them. Then,
+try speaking to yourself kindly. If you are kind to yourself you will have
+more energy to help others and more motivation to be kind to others, so
+everyone benefits.
+You can also take one of your hands and imagine filling it with kindness.
+Place this hand gently somewhere on your body where you feel pain.
+Feel the warmth flowing from your hand into your body. See if you can
+be kind to yourself through this hand.
+
+Y ou can download or listen
+to the Unhooking from
+Unkind Thoughts and the Being
+Kind to Y ourself exercises at this
+LINK.
+Summary
+
+[Page 128]
+126
+Tool 5: MAKING ROOM
+Trying to push away difficult thoughts and feelings often does not work
+very well. So instead, MAKE ROOM for them:
+1) NOTICE the difficult thought or feeling with curiosity. Focus your
+attention on it. Imagine the painful feeling as an object, and notice its
+size, shape, colour and temperature.
+2) NAME the difficult thought or feeling. For example:
+"Here is a difficult feeling"
+"Here is a difficult thought about the past"
+"I notice here is sadness"
+"I notice here is a thought that I am weak"
+3) Allow the painful feeling or thought to come and go like the weather.
+As you breathe, imagine your breath flowing into and around your
+pain to make room for it. Instead of fighting with the thought or
+feeling, allow it to move through you, just like the weather moves
+through the sky. If you are not fighting with the weather, then you
+will have more time and energy to engage with the world around you
+and do things that are important to you.
+
+Y ou can download or
+listen to the Making Room
+exercises at this LINK.
+Summary
+
+[Page 132]
+Doing What Matters
+in Times of Stress:
+An Illustrated Guide
+If you are experiencing stress,
+this guide is for you.
+The guide contains information
+and practical skills to help you cope.
+Even in the face of tremendous adversity,
+you can find meaning, purpose
+and vitality in your life.
+World Health Organization
+Department of Mental Health and Substance Use
+20, avenue Appia
+1211 Geneva 27
+Switzerland
+
+E-mail: psych_interventions@who.int
+
+www.who.int/mental_health

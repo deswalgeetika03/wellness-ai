@@ -1,0 +1,81 @@
+strategy,batch,question,expected_source_id,retrieved_source_ids,retrieved_titles,top1_success,top3_success
+PLAIN SIMILARITY,textbook,How can I manage daily stress?,01,01;02;01,Doing What Matters in Times of Stress;Managing Stress;Doing What Matters in Times of Stress,True,True
+PLAIN SIMILARITY,textbook,What can I do when I feel overwhelmed?,01,06;01;06,Caring for Your Mental Health;Doing What Matters in Times of Stress;Caring for Your Mental Health,False,True
+PLAIN SIMILARITY,textbook,What are healthy ways to cope with stress?,02,01;02;06,Doing What Matters in Times of Stress;Managing Stress;Caring for Your Mental Health,False,True
+PLAIN SIMILARITY,textbook,What are symptoms of anxiety?,04,08;04;04,Panic Disorder: What You Need to Know;Anxiety Disorders;Anxiety Disorders,False,True
+PLAIN SIMILARITY,textbook,Why do I feel constantly worried?,04,04;04;08,Anxiety Disorders;Anxiety Disorders;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,What are anxiety disorders?,04,04;10;04,Anxiety Disorders;Mental Disorders (fact sheet);Anxiety Disorders,True,True
+PLAIN SIMILARITY,textbook,What is a panic attack?,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,Why do panic attacks happen?,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,How is panic disorder treated?,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,How can I sleep better?,05,05;05;05,Healthy Sleep Habits;Healthy Sleep Habits;Healthy Sleep Habits,True,True
+PLAIN SIMILARITY,textbook,What habits improve sleep?,05,05;05;01,Healthy Sleep Habits;Healthy Sleep Habits;Doing What Matters in Times of Stress,True,True
+PLAIN SIMILARITY,textbook,Why should I avoid caffeine before bed?,05,05;05;05,Healthy Sleep Habits;Healthy Sleep Habits;Healthy Sleep Habits,True,True
+PLAIN SIMILARITY,textbook,What are eating disorders?,09,09;09;09,Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,What are common types of eating disorders?,09,09;09;09,Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,Where can someone with an eating disorder get help?,09,09;10;09,Eating Disorders: What You Need to Know;Mental Disorders (fact sheet);Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,textbook,What is depression?,12,12;12;10,Depressive Disorder (Depression);Depressive Disorder (Depression);Mental Disorders (fact sheet),True,True
+PLAIN SIMILARITY,textbook,What are symptoms of depression?,12,10;12;08,Mental Disorders (fact sheet);Depressive Disorder (Depression);Panic Disorder: What You Need to Know,False,True
+PLAIN SIMILARITY,textbook,How is depression treated?,12,12;12;12,Depressive Disorder (Depression);Depressive Disorder (Depression);Depressive Disorder (Depression),True,True
+PLAIN SIMILARITY,textbook,What does it mean to have good mental health?,03,03;03;03,Mental Health (fact sheet);Mental Health (fact sheet);Mental Health (fact sheet),True,True
+PLAIN SIMILARITY,textbook,What are common mental disorders?,10,09;10;08,Eating Disorders: What You Need to Know;Mental Disorders (fact sheet);Panic Disorder: What You Need to Know,False,True
+PLAIN SIMILARITY,casual,i have so much to do and i dont know where to start,01,01;06;01,Doing What Matters in Times of Stress;Caring for Your Mental Health;Doing What Matters in Times of Stress,True,True
+PLAIN SIMILARITY,casual,everything feels like too much right now,01,01;01;01,Doing What Matters in Times of Stress;Doing What Matters in Times of Stress;Doing What Matters in Times of Stress,True,True
+PLAIN SIMILARITY,casual,how do i chill out after a rough day,02,02;06;02,Managing Stress;Caring for Your Mental Health;Managing Stress,True,True
+PLAIN SIMILARITY,casual,why do i feel nervous and on edge all the time,04,04;08;08,Anxiety Disorders;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,casual,my mind wont stop racing with worry,04,01;01;01,Doing What Matters in Times of Stress;Doing What Matters in Times of Stress;Doing What Matters in Times of Stress,False,False
+PLAIN SIMILARITY,casual,is it normal to worry about everything,04,04;04;01,Anxiety Disorders;Anxiety Disorders;Doing What Matters in Times of Stress,True,True
+PLAIN SIMILARITY,casual,"my heart was pounding and i couldnt breathe, what was that",08,01;01;01,Doing What Matters in Times of Stress;Doing What Matters in Times of Stress;Doing What Matters in Times of Stress,False,False
+PLAIN SIMILARITY,casual,i felt like i was dying but the doctor said i was fine,08,09;01;01,Eating Disorders: What You Need to Know;Doing What Matters in Times of Stress;Doing What Matters in Times of Stress,False,False
+PLAIN SIMILARITY,casual,how do you stop a panic attack once it starts,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+PLAIN SIMILARITY,casual,i cant fall asleep no matter what i try,05,06;05;05,Caring for Your Mental Health;Healthy Sleep Habits;Healthy Sleep Habits,False,True
+PLAIN SIMILARITY,casual,why am i so tired even after sleeping 8 hours,05,05;05;05,Healthy Sleep Habits;Healthy Sleep Habits;Healthy Sleep Habits,True,True
+PLAIN SIMILARITY,casual,does scrolling my phone in bed mess up my sleep,05,01;06;05,Doing What Matters in Times of Stress;Caring for Your Mental Health;Healthy Sleep Habits,False,True
+PLAIN SIMILARITY,casual,i cant stop thinking about food and calories,09,09;01;09,Eating Disorders: What You Need to Know;Doing What Matters in Times of Stress;Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,casual,"my friend barely eats anything, should i be worried",09,09;09;09,Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,casual,is it normal to binge eat when stressed,09,09;09;09,Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know;Eating Disorders: What You Need to Know,True,True
+PLAIN SIMILARITY,casual,i just feel empty and dont enjoy anything anymore,12,01;01;06,Doing What Matters in Times of Stress;Doing What Matters in Times of Stress;Caring for Your Mental Health,False,False
+PLAIN SIMILARITY,casual,why do i feel sad for no reason,12,01;10;12,Doing What Matters in Times of Stress;Mental Disorders (fact sheet);Depressive Disorder (Depression),False,True
+PLAIN SIMILARITY,casual,can therapy actually help with feeling low all the time,12,12;02;12,Depressive Disorder (Depression);Managing Stress;Depressive Disorder (Depression),True,True
+PLAIN SIMILARITY,casual,what does being mentally healthy even mean,03,03;03;10,Mental Health (fact sheet);Mental Health (fact sheet);Mental Disorders (fact sheet),True,True
+PLAIN SIMILARITY,casual,what kinds of mental health problems are common in students,10,11;10;03,Adolescent Mental Health;Mental Disorders (fact sheet);Mental Health (fact sheet),False,True
+SOURCE-DIVERSITY,textbook,How can I manage daily stress?,01,01;02;06,Doing What Matters in Times of Stress;Managing Stress;Caring for Your Mental Health,True,True
+SOURCE-DIVERSITY,textbook,What can I do when I feel overwhelmed?,01,06;01;02,Caring for Your Mental Health;Doing What Matters in Times of Stress;Managing Stress,False,True
+SOURCE-DIVERSITY,textbook,What are healthy ways to cope with stress?,02,01;02;06,Doing What Matters in Times of Stress;Managing Stress;Caring for Your Mental Health,False,True
+SOURCE-DIVERSITY,textbook,What are symptoms of anxiety?,04,08;04;10,Panic Disorder: What You Need to Know;Anxiety Disorders;Mental Disorders (fact sheet),False,True
+SOURCE-DIVERSITY,textbook,Why do I feel constantly worried?,04,04;08;02,Anxiety Disorders;Panic Disorder: What You Need to Know;Managing Stress,True,True
+SOURCE-DIVERSITY,textbook,What are anxiety disorders?,04,04;10;08,Anxiety Disorders;Mental Disorders (fact sheet);Panic Disorder: What You Need to Know,True,True
+SOURCE-DIVERSITY,textbook,What is a panic attack?,08,08;04;08,Panic Disorder: What You Need to Know;Anxiety Disorders;Panic Disorder: What You Need to Know,True,True
+SOURCE-DIVERSITY,textbook,Why do panic attacks happen?,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+SOURCE-DIVERSITY,textbook,How is panic disorder treated?,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+SOURCE-DIVERSITY,textbook,How can I sleep better?,05,05;06;01,Healthy Sleep Habits;Caring for Your Mental Health;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,textbook,What habits improve sleep?,05,05;01;06,Healthy Sleep Habits;Doing What Matters in Times of Stress;Caring for Your Mental Health,True,True
+SOURCE-DIVERSITY,textbook,Why should I avoid caffeine before bed?,05,05;06;01,Healthy Sleep Habits;Caring for Your Mental Health;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,textbook,What are eating disorders?,09,09;11;10,Eating Disorders: What You Need to Know;Adolescent Mental Health;Mental Disorders (fact sheet),True,True
+SOURCE-DIVERSITY,textbook,What are common types of eating disorders?,09,09;10;11,Eating Disorders: What You Need to Know;Mental Disorders (fact sheet);Adolescent Mental Health,True,True
+SOURCE-DIVERSITY,textbook,Where can someone with an eating disorder get help?,09,09;10;09,Eating Disorders: What You Need to Know;Mental Disorders (fact sheet);Eating Disorders: What You Need to Know,True,True
+SOURCE-DIVERSITY,textbook,What is depression?,12,12;10;12,Depressive Disorder (Depression);Mental Disorders (fact sheet);Depressive Disorder (Depression),True,True
+SOURCE-DIVERSITY,textbook,What are symptoms of depression?,12,10;12;08,Mental Disorders (fact sheet);Depressive Disorder (Depression);Panic Disorder: What You Need to Know,False,True
+SOURCE-DIVERSITY,textbook,How is depression treated?,12,12;08;10,Depressive Disorder (Depression);Panic Disorder: What You Need to Know;Mental Disorders (fact sheet),True,True
+SOURCE-DIVERSITY,textbook,What does it mean to have good mental health?,03,03;10;11,Mental Health (fact sheet);Mental Disorders (fact sheet);Adolescent Mental Health,True,True
+SOURCE-DIVERSITY,textbook,What are common mental disorders?,10,09;10;08,Eating Disorders: What You Need to Know;Mental Disorders (fact sheet);Panic Disorder: What You Need to Know,False,True
+SOURCE-DIVERSITY,casual,i have so much to do and i dont know where to start,01,01;06;02,Doing What Matters in Times of Stress;Caring for Your Mental Health;Managing Stress,True,True
+SOURCE-DIVERSITY,casual,everything feels like too much right now,01,01;01;01,Doing What Matters in Times of Stress;Doing What Matters in Times of Stress;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,casual,how do i chill out after a rough day,02,02;06;12,Managing Stress;Caring for Your Mental Health;Depressive Disorder (Depression),True,True
+SOURCE-DIVERSITY,casual,why do i feel nervous and on edge all the time,04,04;08;01,Anxiety Disorders;Panic Disorder: What You Need to Know;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,casual,my mind wont stop racing with worry,04,01;08;04,Doing What Matters in Times of Stress;Panic Disorder: What You Need to Know;Anxiety Disorders,False,True
+SOURCE-DIVERSITY,casual,is it normal to worry about everything,04,04;01;10,Anxiety Disorders;Doing What Matters in Times of Stress;Mental Disorders (fact sheet),True,True
+SOURCE-DIVERSITY,casual,"my heart was pounding and i couldnt breathe, what was that",08,01;08;01,Doing What Matters in Times of Stress;Panic Disorder: What You Need to Know;Doing What Matters in Times of Stress,False,True
+SOURCE-DIVERSITY,casual,i felt like i was dying but the doctor said i was fine,08,09;01;12,Eating Disorders: What You Need to Know;Doing What Matters in Times of Stress;Depressive Disorder (Depression),False,False
+SOURCE-DIVERSITY,casual,how do you stop a panic attack once it starts,08,08;08;08,Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know;Panic Disorder: What You Need to Know,True,True
+SOURCE-DIVERSITY,casual,i cant fall asleep no matter what i try,05,06;05;01,Caring for Your Mental Health;Healthy Sleep Habits;Doing What Matters in Times of Stress,False,True
+SOURCE-DIVERSITY,casual,why am i so tired even after sleeping 8 hours,05,05;06;01,Healthy Sleep Habits;Caring for Your Mental Health;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,casual,does scrolling my phone in bed mess up my sleep,05,01;06;05,Doing What Matters in Times of Stress;Caring for Your Mental Health;Healthy Sleep Habits,False,True
+SOURCE-DIVERSITY,casual,i cant stop thinking about food and calories,09,09;01;06,Eating Disorders: What You Need to Know;Doing What Matters in Times of Stress;Caring for Your Mental Health,True,True
+SOURCE-DIVERSITY,casual,"my friend barely eats anything, should i be worried",09,09;11;09,Eating Disorders: What You Need to Know;Adolescent Mental Health;Eating Disorders: What You Need to Know,True,True
+SOURCE-DIVERSITY,casual,is it normal to binge eat when stressed,09,09;02;01,Eating Disorders: What You Need to Know;Managing Stress;Doing What Matters in Times of Stress,True,True
+SOURCE-DIVERSITY,casual,i just feel empty and dont enjoy anything anymore,12,01;06;12,Doing What Matters in Times of Stress;Caring for Your Mental Health;Depressive Disorder (Depression),False,True
+SOURCE-DIVERSITY,casual,why do i feel sad for no reason,12,01;10;12,Doing What Matters in Times of Stress;Mental Disorders (fact sheet);Depressive Disorder (Depression),False,True
+SOURCE-DIVERSITY,casual,can therapy actually help with feeling low all the time,12,12;02;06,Depressive Disorder (Depression);Managing Stress;Caring for Your Mental Health,True,True
+SOURCE-DIVERSITY,casual,what does being mentally healthy even mean,03,03;10;11,Mental Health (fact sheet);Mental Disorders (fact sheet);Adolescent Mental Health,True,True
+SOURCE-DIVERSITY,casual,what kinds of mental health problems are common in students,10,11;10;03,Adolescent Mental Health;Mental Disorders (fact sheet);Mental Health (fact sheet),False,True

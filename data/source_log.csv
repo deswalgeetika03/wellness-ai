@@ -1,0 +1,13 @@
+ID,Title,Organization,URL,Type,RAG_Retrieval,Usage_Notes,Accessed_Date,Local_Filename
+1,Doing What Matters in Times of Stress,WHO,https://www.who.int/publications-detail-redirect/9789240003927,PDF,Yes,Core stress guide,18-08-2026,01_who_stress_guide.pdf
+2,Managing Stress,CDC,https://www.cdc.gov/mental-health/living-with/index.html,HTML,Yes,,,02_cdc_managing_stress.html
+3,Mental Health (fact sheet),WHO,https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response,HTML,Yes,Oct 2025 version,18-08-2026,03_who_mental_health_factsheet.html
+4,Anxiety Disorders,WHO,https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders,HTML,Yes,Sep 2025 version,18-08-2026,04_who_anxiety_disorders.html
+5,Healthy Sleep Habits,NIH/NHLBI,https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits,HTML,Yes,,18-08-2026,05_nhlbi_sleep_habits.html
+6,Caring for Your Mental Health,NIMH,https://www.nimh.nih.gov/mymentalhealth,HTML,Yes,NIMH content may be static/not regularly updated (HHS restructuring) - verify URL still resolves before download,18-08-2026,06_nimh_caring_mental_health.html
+7,Warning Signs of Suicide,NIMH,https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide,PDF,No,"SAFETY-LAYER SOURCE ONLY - excluded from general RAG retrieval index; used to inform crisis-response wording, not surfaced via retriever. Lists US 988 line, not Indian helplines - use only for warning-sign content, keep Tele MANAS/KIRAN numbers from your own verified source",18-08-2026,07_nimh_warning_signs_suicide.pdf
+8,Panic Disorder: What You Need to Know,NIMH,https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms,HTML,Yes,,18-08-2026,08_nimh_panic_disorder.html
+9,Eating Disorders: What You Need to Know,NIMH,https://www.nimh.nih.gov/health/publications/eating-disorders,HTML,Yes,RESTRICTED - same numeric-guidance rule as safety layer; bot must not generate calorie/weight/meal-plan specifics from this source,18-08-2026,09_nimh_eating_disorders.html
+10,Mental Disorders (fact sheet),WHO,https://www.who.int/news-room/fact-sheets/detail/mental-disorders,HTML,Yes,Broad overview; overlaps with #03 - candidate for trimming if list needs to shrink,18-08-2026,10_who_mental_disorders.html
+11,Adolescent Mental Health,WHO,https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health,HTML,Yes,,18-08-2026,11_who_adolescent_mental_health.html
+12,Depressive Disorder (Depression),WHO,https://www.who.int/news-room/fact-sheets/detail/depression,HTML,Yes,"Added later - most common condition alongside anxiety, earlier gap",18-08-2026,12_who_depression.html
