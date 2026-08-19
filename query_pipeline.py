@@ -304,12 +304,6 @@ def answer_query(vector_db, question: str) -> dict:
             "sources": [],
         }
 
-    if check_medication_request(question):
-        return {
-            "route": "medication_restricted",
-            "answer": MEDICATION_RESPONSE,
-            "sources": [],
-        }
 
     # --------------------------------------------------------
     # STEP 2 — RETRIEVAL
