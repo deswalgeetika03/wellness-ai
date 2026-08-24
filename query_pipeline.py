@@ -302,6 +302,7 @@ def answer_query(vector_db, question: str) -> dict:
             "route": safety_result["route"],
             "answer": safety_result["response"],
             "sources": [],
+            "context_chunks": [],
         }
 
 
@@ -326,6 +327,7 @@ def answer_query(vector_db, question: str) -> dict:
                 "knowledge base to answer that."
             ),
             "sources": [],
+            "context_chunks": [],
         }
 
     # --------------------------------------------------------
@@ -373,6 +375,7 @@ def answer_query(vector_db, question: str) -> dict:
         "route": "normal",
         "answer": answer,
         "sources": sources,
+        "context_chunks": chunks,
     }
 
 
