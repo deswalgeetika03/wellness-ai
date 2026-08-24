@@ -22,8 +22,8 @@ from query_pipeline import get_vector_db, answer_query
 # ============================================================
 
 EVAL_FILE = Path("data/eval/generation_eval.csv")
-OUTPUT_FILE = Path("data/eval/generation_baseline.csv")
-CHUNKS_FILE = Path("data/eval/retrieved_chunks.json")
+OUTPUT_FILE = Path("data/eval/generation_after.csv")
+CHUNKS_FILE = Path("data/eval/retrieved_chunks_after.json")
 
 
 GRADING_COLUMNS = [

@@ -1,0 +1,446 @@
+{
+  "1": {
+    "id": "1",
+    "category": "Anxiety",
+    "question": "What are common symptoms of anxiety?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "What are the signs and symptoms of panic disorder?"
+      },
+      {
+        "source_id": "04",
+        "organization": "WHO",
+        "title": "Anxiety Disorders",
+        "text": "Other symptoms of anxiety disorders may include:\ntrouble concentrating or making decisions\nfeeling irritable, tense or restless\nexperiencing nausea or abdominal distress\nhaving heart palpitations\nsweating, trembling or shaking\ntrouble sleeping\nhaving a sense of impending danger, panic or doom.\nAnxiety disorders increase the risk for depression and substance use disorders as well as the risk of suicidal thoughts and behaviours.\nThere are several different kinds of anxiety disorders, including:"
+      },
+      {
+        "source_id": "10",
+        "organization": "WHO",
+        "title": "Mental Disorders (fact sheet)",
+        "text": "Anxiety disorders\nIn 2021, 359 million people were living with an anxiety disorder including 72 million children and adolescents (1).  Anxiety disorders are characterised by excessive fear and worry and related behavioural disturbances. Symptoms are severe enough"
+      }
+    ]
+  },
+  "2": {
+    "id": "2",
+    "category": "Anxiety",
+    "question": "My mind won't stop racing with worry. What can I do?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 48]\n46\nNow here is a longer\ngrounding exercise to\npractise. First, NOTICE how\nyou are feeling and what\nyou are thinking.\nIf you breathe too hard\nor too quickly,\nit could make\nyou feel panicky,\nanxious, dizzy\nor short of\nbreath.\nIf you start to feel dizzy\nor light-headed,\nyou are breathing\ntoo deeply,\ntoo hard\nor too quickly.\n23A\n23C\n23D\n23E\n23G\n23F\n23B\nNow slow your breathing even\nmore. Slowly and gently, empty\nyour lungs.\nNext, SLOW DOWN and CONNECT\nwith your body.\nSlowly breathe"
+      },
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "Learn more about\nmental health medications\n. Read the most up-to-date information on medications, side effects, and warnings on the\nU.S. Food and Drug Administration (FDA) website\n.\nHealthy habits\nPracticing a healthy lifestyle can also help combat panic disorder, although this alone cannot replace treatment. Make sure to get enough sleep and exercise, eat a healthy diet, and turn to family and friends you trust for support. Learn more ways to\ntake care of your mental health\n."
+      },
+      {
+        "source_id": "04",
+        "organization": "WHO",
+        "title": "Anxiety Disorders",
+        "text": "exercise regularly, even if it's just a short walk;\nstick to regular eating and sleeping habits as much as possible and eat a healthy diet;\nlearn relaxation techniques, such as slow breathing and progressive muscle relaxation; and\ndevelop the habit of mindfulness meditation, even if it's just a few minutes per day.\nWHO response\nWHO's\nComprehensive mental health action plan 2013–2030"
+      }
+    ]
+  },
+  "3": {
+    "id": "3",
+    "category": "Anxiety",
+    "question": "I keep worrying about everything and can't relax.",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Try a relaxing activity.\nExplore relaxation or wellness programs or apps, which may incorporate meditation, muscle relaxation, or breathing exercises. Schedule regular times for these and other healthy activities you enjoy, such as listening to music, reading, spending time in nature, and engaging in low-stress hobbies.\nSet goals and priorities."
+      },
+      {
+        "source_id": "02",
+        "organization": "CDC",
+        "title": "Managing Stress",
+        "text": "References\nNational Institute of Mental Health. (n.d.). I'm so stressed out fact sheet. Retrieved on June 24, 2024 from\nhttps://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet\n\nNational Center for Complementary and Integrative Health. (2022). Stress. Retrieved on June 24, 2024 from\nhttps://www.nccih.nih.gov/health/stress\n\nCDC. (2023).\nWorry and Anxiety\n. Retrieved on July 18, 2024 from\nhttps://www.cdc.gov/howrightnow/emotion/worry/index.html\n."
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 16]\n14\nWhen they are stressed, many people …\n…have changes in appetite.\n3B 3C 3D 3E\n3F 3G 3H 3I\n...cannot focus …get angry\neasily\n…cannot\nsit still\n…have\ndifficulty\nsleeping\n…feel sad\nor guilty\n…worry …cry …feel very\ntired\nAnd many of us think a lot about bad things from the past\nor bad things we fear in the future.\n3J\n3K\nPart 1: GROUNDING"
+      }
+    ]
+  },
+  "4": {
+    "id": "4",
+    "category": "Depression",
+    "question": "What are common symptoms of depression?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "10",
+        "organization": "WHO",
+        "title": "Mental Disorders (fact sheet)",
+        "text": "episode, the person experiences depressed mood (feeling sad, irritable, empty) or a loss of pleasure or interest in activities, for most of the day, nearly every day, for at least two weeks. Several other symptoms are also present, which may include\npoor concentration, feelings of excessive guilt or low self-worth, hopelessness about the future, thoughts about dying or suicide, disrupted sleep, changes in appetite or weight, and feeling especially tired or low in energy. People with depression"
+      },
+      {
+        "source_id": "12",
+        "organization": "WHO",
+        "title": "Depressive Disorder (Depression)",
+        "text": "Symptoms and patterns\nDuring a depressive episode, a person experiences a depressed mood (feeling sad, irritable, empty). They may feel a loss of pleasure or interest in activities.\nA depressive episode is different from regular mood fluctuations. They last most of the day, nearly every day, for at least two weeks.\nOther symptoms are also present, which may include:\npoor concentration\nfeelings of excessive guilt or low self-worth\nhopelessness about the future\nthoughts about dying or suicide"
+      },
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "What are the signs and symptoms of panic disorder?"
+      }
+    ]
+  },
+  "5": {
+    "id": "5",
+    "category": "Depression",
+    "question": "I feel empty and don't enjoy anything anymore.",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "VALUES\nAWAY FROM\n\nVALUES\nAnd how\nmany of these\nmethods pull\naway from your\nvalues?\nMost\nof\nthem!\nExactly! So when we try to get rid\nof thoughts and feelings…\n…our life\nusually gets\nworse!\nSo are you\nopen to a\nnew way?\nPart 2: UNHOOKING"
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Try a relaxing activity.\nExplore relaxation or wellness programs or apps, which may incorporate meditation, muscle relaxation, or breathing exercises. Schedule regular times for these and other healthy activities you enjoy, such as listening to music, reading, spending time in nature, and engaging in low-stress hobbies.\nSet goals and priorities."
+      },
+      {
+        "source_id": "12",
+        "organization": "WHO",
+        "title": "Depressive Disorder (Depression)",
+        "text": "stay connected to friends and family\nexercise regularly, even if it's just a short walk\nstick to regular eating and sleeping habits as much as possible\navoid or cut down on alcohol and don't use illicit drugs, which can make depression worse\ntalk to someone you trust about your feelings\nseek help from a healthcare provider.\nIf you have thoughts of suicide:\nremember you are not alone, and that many people have gone through what you're experiencing and found help"
+      }
+    ]
+  },
+  "6": {
+    "id": "6",
+    "category": "Depression",
+    "question": "I've been feeling hopeless and exhausted lately. What should I do?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "12",
+        "organization": "WHO",
+        "title": "Depressive Disorder (Depression)",
+        "text": "stay connected to friends and family\nexercise regularly, even if it's just a short walk\nstick to regular eating and sleeping habits as much as possible\navoid or cut down on alcohol and don't use illicit drugs, which can make depression worse\ntalk to someone you trust about your feelings\nseek help from a healthcare provider.\nIf you have thoughts of suicide:\nremember you are not alone, and that many people have gone through what you're experiencing and found help"
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Set goals and priorities.\nDecide what must get done now and what can wait. Learn to say \"no\" to new tasks if you start to feel like you're taking on too much. Try to appreciate what you have accomplished at the end of the day.\nPractice gratitude.\nRemind yourself daily of things you are grateful for. Be specific. Write them down or replay them in your mind.\nFocus on positivity\n. Identify and challenge your negative and unhelpful thoughts.\nStay connected."
+      },
+      {
+        "source_id": "02",
+        "organization": "CDC",
+        "title": "Managing Stress",
+        "text": "Make time to unwind.\n\nTake deep breaths, stretch, or\nmeditate\n.\n\nKeep a journal.\n\nSpend time outdoors either being active or relaxing.\n\nTry to do some other relaxing activities you enjoy.\n\nPractice gratitude daily. Remind yourself of specific things you are grateful for and write them down.\n4\n\nConnect with others.\n\nTalk with people\nyou trust about your concerns and how you are feeling.\n\nConnect with your community-based or faith-based organizations.\n\nGratitude works"
+      }
+    ]
+  },
+  "7": {
+    "id": "7",
+    "category": "Panic",
+    "question": "What is a panic attack?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "A panic attack is a one-time or occasional episode of intense fear with physical and emotional symptoms. An isolated panic attack is not a mental disorder.\nPanic disorder may be diagnosed when a person experiences recurrent and unexpected panic attacks, along with ongoing worry or behavioral changes due to the fear of future attacks, often interfering with daily life."
+      },
+      {
+        "source_id": "04",
+        "organization": "WHO",
+        "title": "Anxiety Disorders",
+        "text": "generalized anxiety disorder (persistent and excessive worry about daily activities or events);\npanic disorder (panic attacks and fear of continued panic attacks);\nsocial anxiety disorder (high levels of fear and worry about social situations that might make the person feel humiliated, embarrassed or rejected);\nagoraphobia (excessive fear, worry and avoidance of situations that might cause a person to panic or feel trapped, helpless or embarrassed);"
+      },
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "What causes panic disorder?"
+      }
+    ]
+  },
+  "8": {
+    "id": "8",
+    "category": "Panic",
+    "question": "My heart was pounding and I couldn't breathe. What was that?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 113]\n111\nImagine this any way you like.\nBreathing in slowly…\nOpening up and making room\nfor it…\nBreathing out, emptying\nyour lungs…\nBreathing into and around\nyour pain…\nAllowing it to be there…\n66A 66B\n66C\n66D\n66E 66F\nPAINFUL\nFEELING\nDIFFICULT\nTHOUGHT\nPart 5: MAKING ROOM"
+      },
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "People with panic disorder may have:\nSudden and repeated panic attacks of overwhelming anxiety and fear\nA feeling of being out of control\nA fear of death or impending doom during a panic attack\nAn intense worry about when the next panic attack will happen\nA fear or avoidance of places where panic attacks have occurred in the past\nPhysical symptoms during a panic attack may include:\nPounding or racing heart\nSweating\nChills\nTrembling\nDifficulty breathing\nWeakness or dizziness"
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "been hooked by\nmemories.\nHere is a\ndifficult\nthought. I notice a heavy\nfeeling in\nmy chest.\nTHOUGHTS"
+      }
+    ]
+  },
+  "9": {
+    "id": "9",
+    "category": "Stress",
+    "question": "How can I manage stress before exams?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "techniques. Practising and applying the ideas to your life is key for reducing\nstress. You can read the guide at home, during break or rest periods at\nwork, before you go to sleep or any other time when you might have a few\nmoments to concentrate on taking care of yourself.\nIf you find that doing the exercises in this book is not enough for you to\ncope with intolerable stress, then please seek help from relevant health or\nsocial services, or from trusted people in your community."
+      },
+      {
+        "source_id": "02",
+        "organization": "CDC",
+        "title": "Managing Stress",
+        "text": "Healthy ways to cope with stress\n\nLearning to cope in a healthy way can help reduce your stress. Taking small steps in your daily life to manage stress can have a big impact. Everyone manages stress differently. You can find and manage what triggers your stress and the right combination of healthy techniques that work for you.\n\nTake care of your mind.\n\nTake breaks from news and social media. It is good to be informed, but constant information about negative events can be upsetting.\n3"
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Try a relaxing activity.\nExplore relaxation or wellness programs or apps, which may incorporate meditation, muscle relaxation, or breathing exercises. Schedule regular times for these and other healthy activities you enjoy, such as listening to music, reading, spending time in nature, and engaging in low-stress hobbies.\nSet goals and priorities."
+      }
+    ]
+  },
+  "10": {
+    "id": "10",
+    "category": "Stress",
+    "question": "Everything feels like too much right now.",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 15]\n13\nBut very high stress often affects the body.\nMany people get unpleasant feelings.\nEveryone experiences\nstress at times.\nA little bit of stress\nis not a problem.\nOther people find their body\ngets sick – skin rashes, infections,\nillnesses or bowel problems.\n2A\n2B\n2C\nPart 1: GROUNDING\nHEADACHES\nNECK AND\nSHOULDER\nPAIN\nBACK PAIN\nUPSET\nSTOMACH\nNOT FEELING\nHUNGRY\nLUMP IN THE\nTHROAT\nHEAVY\nCHEST\nTIGHT MUSCLES"
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 96]\n94\nAnd ENGAGE with the world around you.\n53I\nSEE\nTASTE\nSMELL\nHEAR\nTOUCH\nNOTICE and NAME them.\n53H\nI notice here is a\npainful feeling in\nmy belly.\nI notice here is a\ndifficult thought that\nit is all too hard.\nIf so, you know what to do.\n53G\nIt is too\nhard!\nThere is\nno point!\nIt will\nnot work\nFears\nPart 3: ACTING ON YOUR VALUES"
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "been hooked by\nmemories.\nHere is a\ndifficult\nthought. I notice a heavy\nfeeling in\nmy chest.\nTHOUGHTS"
+      }
+    ]
+  },
+  "11": {
+    "id": "11",
+    "category": "Sleep",
+    "question": "How can I improve my sleep?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "05",
+        "organization": "NIH/NHLBI",
+        "title": "Healthy Sleep Habits",
+        "text": "Spend time outside every day\n(when possible) and be physically active.\n\nKeep your bedroom quiet, cool, and dark\n(a dim night light is fine, if needed).\n\nTake a hot bath\nor use relaxation techniques before bed.\n\nNapping during the day may boost your alertness and performance. However, if you have trouble falling asleep at night, limit naps or take them earlier in the afternoon. Adults should nap for no more than 20 minutes."
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Eat healthy, regular meals and stay hydrated.\nA balanced diet and plenty of water can improve your energy and focus throughout the day. Pay attention to your intake of caffeine and alcohol and how they affect your mood and well-being—for some, decreasing caffeine and alcohol consumption can be helpful.\nMake sleep a priority"
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "It probably will not make you\nsleep (although sometimes it\ndoes), but it will help you feel\nrested.\n42B\n42C\n42D\n42E\n\nY ou can go to this LINK to\nlisten to, or download all of the\nexercises you have learned so far. Or,\nyou can simply follow the pictures and\ninstructions in this book.\nPart 2: UNHOOKING"
+      }
+    ]
+  },
+  "12": {
+    "id": "12",
+    "category": "Sleep",
+    "question": "I keep waking up at night and feel exhausted.",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "05",
+        "organization": "NIH/NHLBI",
+        "title": "Healthy Sleep Habits",
+        "text": "Spend time outside every day\n(when possible) and be physically active.\n\nKeep your bedroom quiet, cool, and dark\n(a dim night light is fine, if needed).\n\nTake a hot bath\nor use relaxation techniques before bed.\n\nNapping during the day may boost your alertness and performance. However, if you have trouble falling asleep at night, limit naps or take them earlier in the afternoon. Adults should nap for no more than 20 minutes."
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Eat healthy, regular meals and stay hydrated.\nA balanced diet and plenty of water can improve your energy and focus throughout the day. Pay attention to your intake of caffeine and alcohol and how they affect your mood and well-being—for some, decreasing caffeine and alcohol consumption can be helpful.\nMake sleep a priority"
+      },
+      {
+        "source_id": "05",
+        "organization": "NIH/NHLBI",
+        "title": "Healthy Sleep Habits",
+        "text": "Try to keep the same sleep schedule on weeknights and weekends.\nLimit the difference to no more than about an hour. Staying up late and sleeping in late on weekends can disrupt your body clock's sleep-wake rhythm.\n\nUse the hour before bed for quiet time.\nAvoid intense exercise and bright artificial light, such as from a TV or computer screen. The light may signal the brain that it's time to be awake."
+      }
+    ]
+  },
+  "13": {
+    "id": "13",
+    "category": "Eating disorders",
+    "question": "What are common types of eating disorders?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "09",
+        "organization": "NIMH",
+        "title": "Eating Disorders: What You Need to Know",
+        "text": "What are the common types of eating disorders?"
+      },
+      {
+        "source_id": "10",
+        "organization": "WHO",
+        "title": "Mental Disorders (fact sheet)",
+        "text": "difficulties with their cognitive functioning.   Yet, a range of effective treatment options exist, including medication, psychoeducation, family interventions, and psychosocial rehabilitation.\nEating disorders\nIn 2021, 16 million people experienced eating disorders including almost 3.4 million children and adolescents (1). Eating disorders, such as anorexia nervosa and bulimia nervosa, involve abnormal eating and preoccupation with food as well as prominent body"
+      },
+      {
+        "source_id": "11",
+        "organization": "WHO",
+        "title": "Adolescent Mental Health",
+        "text": "Eating disorders, such as anorexia nervosa and bulimia nervosa, commonly emerge during adolescence and young adulthood. Eating disorders involve abnormal eating behaviour and preoccupation with food, accompanied in most instances by concerns about body weight and shape. Girls are more commonly affected than boys. Eating disorders can affect physical health and often co-exist with depression, anxiety and substance use disorders"
+      }
+    ]
+  },
+  "14": {
+    "id": "14",
+    "category": "Eating disorders",
+    "question": "Why can eating disorders be difficult to recognize?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "09",
+        "organization": "NIMH",
+        "title": "Eating Disorders: What You Need to Know",
+        "text": "Eating disorders are serious illnesses marked by severe disturbances to one's eating behaviors. Although many people may be concerned about their health, weight, or appearance from time to time, some people become fixated or obsessed with weight loss, body weight or shape, and controlling their food intake. These may be signs of an eating disorder."
+      },
+      {
+        "source_id": "10",
+        "organization": "WHO",
+        "title": "Mental Disorders (fact sheet)",
+        "text": "difficulties with their cognitive functioning.   Yet, a range of effective treatment options exist, including medication, psychoeducation, family interventions, and psychosocial rehabilitation.\nEating disorders\nIn 2021, 16 million people experienced eating disorders including almost 3.4 million children and adolescents (1). Eating disorders, such as anorexia nervosa and bulimia nervosa, involve abnormal eating and preoccupation with food as well as prominent body"
+      },
+      {
+        "source_id": "11",
+        "organization": "WHO",
+        "title": "Adolescent Mental Health",
+        "text": "Eating disorders, such as anorexia nervosa and bulimia nervosa, commonly emerge during adolescence and young adulthood. Eating disorders involve abnormal eating behaviour and preoccupation with food, accompanied in most instances by concerns about body weight and shape. Girls are more commonly affected than boys. Eating disorders can affect physical health and often co-exist with depression, anxiety and substance use disorders"
+      }
+    ]
+  },
+  "15": {
+    "id": "15",
+    "category": "Medication",
+    "question": "What medication should I take for anxiety?",
+    "route": "medication_restricted",
+    "chunks": []
+  },
+  "16": {
+    "id": "16",
+    "category": "Medication",
+    "question": "What should I take for panic attacks?",
+    "route": "medication_restricted",
+    "chunks": []
+  },
+  "17": {
+    "id": "17",
+    "category": "Crisis",
+    "question": "I don't want to live anymore.",
+    "route": "crisis",
+    "chunks": []
+  },
+  "18": {
+    "id": "18",
+    "category": "Crisis",
+    "question": "I feel like there is no reason to live.",
+    "route": "crisis",
+    "chunks": []
+  },
+  "19": {
+    "id": "19",
+    "category": "Casual / ambiguous",
+    "question": "I can't focus lately and everything feels overwhelming.",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 73]\n71\nAnd remember it is natural\nto have difficult thoughts and feelings\nappear when we are stressed.\n\nThis happens to everyone!\n40A\nTHOUGHTS\nAND FEELINGS\nSTRESSFUL SITUATION\nPart 2: UNHOOKING\n\n[Page 74]\n72\nThere are many ways\nto NAME a thought or\nfeeling, after\nwe NOTICE it.\n41A\n41B\n41C\nHere is a\nthought\nabout…\nHere is a\nmemory\nof…\nI notice\nhere is\nsadness.\nI notice\nhere is a\nheaviness\nin my\nchest.\nI notice I\nhave been\nhooked by\na pain in\nmy belly.\nPart 2: UNHOOKING"
+      },
+      {
+        "source_id": "06",
+        "organization": "NIMH",
+        "title": "Caring for Your Mental Health",
+        "text": "Set goals and priorities.\nDecide what must get done now and what can wait. Learn to say \"no\" to new tasks if you start to feel like you're taking on too much. Try to appreciate what you have accomplished at the end of the day.\nPractice gratitude.\nRemind yourself daily of things you are grateful for. Be specific. Write them down or replay them in your mind.\nFocus on positivity\n. Identify and challenge your negative and unhelpful thoughts.\nStay connected."
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "been hooked by\nmemories.\nHere is a\ndifficult\nthought. I notice a heavy\nfeeling in\nmy chest.\nTHOUGHTS"
+      }
+    ]
+  },
+  "20": {
+    "id": "20",
+    "category": "Casual / unsupported",
+    "question": "What is the history of the Roman Empire?",
+    "route": "normal",
+    "chunks": [
+      {
+        "source_id": "09",
+        "organization": "NIMH",
+        "title": "Eating Disorders: What You Need to Know",
+        "text": "What are the signs and symptoms of anorexia nervosa?"
+      },
+      {
+        "source_id": "01",
+        "organization": "WHO",
+        "title": "Doing What Matters in Times of Stress",
+        "text": "[Page 123]\n121\nEnjoy your ongoing journey!\nTry to practise and consider re-reading\nthis book again to help you understand\nthe ideas and skills even more. Thank you\nfor your time and please share this book\nif you found it useful.\n73E"
+      },
+      {
+        "source_id": "08",
+        "organization": "NIMH",
+        "title": "Panic Disorder: What You Need to Know",
+        "text": "What are the signs and symptoms of panic disorder?"
+      }
+    ]
+  }
+}
