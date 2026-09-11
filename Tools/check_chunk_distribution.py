@@ -1,8 +1,7 @@
 import chromadb
 from collections import Counter
 
-CHROMA_DIR = r"C:\Users\preet\Projects\wellness_chroma"
-COLLECTION_NAME = "wellness_knowledge"
+from rag_config import CHROMA_DIR, COLLECTION_NAME
 
 client = chromadb.PersistentClient(path=CHROMA_DIR)
 collection = client.get_collection(COLLECTION_NAME)

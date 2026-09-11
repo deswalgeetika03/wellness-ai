@@ -11,11 +11,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-CHROMA_DIR = Path(
-    r"C:\Users\preet\Projects\wellness_chroma"
-)
-
-COLLECTION_NAME = "wellness_knowledge"
+from rag_config import CHROMA_DIR, COLLECTION_NAME
 
 
 # ---------------------------------------------------------

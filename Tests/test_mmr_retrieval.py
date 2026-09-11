@@ -26,9 +26,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 # Configuration
 # ------------------------------------------------------------
 
-CHROMA_DIR = r"C:\Users\preet\Projects\wellness_chroma"
-
-COLLECTION_NAME = "wellness_knowledge"
+from rag_config import CHROMA_DIR, COLLECTION_NAME
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
