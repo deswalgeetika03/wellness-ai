@@ -140,6 +140,10 @@ MEDICATION_PATTERNS = [
     r"\bcan\s+i\s+take\s+(?:antidepressants?|anti[-\s]?anxiety\s+(?:medication|meds?|drugs?))\b",
     r"\bshould\s+i\s+take\s+(?:xanax|alprazolam|prozac|fluoxetine|sertraline|zoloft)\b",
     r"\bcan\s+i\s+take\s+(?:xanax|alprazolam|prozac|fluoxetine|sertraline|zoloft)\b",
+    r"\bwhat\s+should\s+i\s+take\s+for\s+(?:anxiety|panic\s+attacks?|panic\s+disorder|depression)\b",
+    r"\bwhat\s+can\s+i\s+take\s+for\s+(?:anxiety|panic\s+attacks?|panic\s+disorder|depression)\b",
+    r"\bwhat\s+should\s+i\s+take\s+for\s+(?:stress|sleep|insomnia)\b",
+    r"\bwhat\s+can\s+i\s+take\s+for\s+(?:stress|sleep|insomnia)\b",
 ]
 
 _MEDICATION_REGEX = re.compile(

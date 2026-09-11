@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   WELLNESS AI — DESIGN TOKENS
+   Frozen Phase 3A decision: Grounded Earth, soft green variant.
+   Change values here only — components should never hardcode
+   hex colors directly.
+   ========================================================== */
+
+:root {
+  --wa-canvas-top: #f1f3e9;
+  --wa-canvas-bottom: #e3e9d2;
+  --wa-sidebar-bg: #e9eedd;
+  --wa-surface: #ffffff;
+  --wa-border: #d6e0c4;
+
+  --wa-text: #31402a;
+  --wa-muted: #758760;
+  --wa-accent: #57784a;
+  --wa-accent-soft: #a9c08d;
+
+  --wa-hill: #6e8b54;
+  --wa-trunk: #7a6a4a;
+  --wa-ground: #7a6a4a;
+
+  --wa-radius: 14px;
+  --wa-radius-sm: 10px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--wa-text);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background: linear-gradient(180deg, var(--wa-canvas-top), var(--wa-canvas-bottom));
+}
+
+/* Respect the person's motion preference throughout the app. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thinking indicator */
+.thinking-dots {
+  display: inline-flex;
+  min-width: 1.2em;
+}
+
+.thinking-dots span {
+  display: inline-block;
+  opacity: 0.55;
+  animation: thinkingDot 1s ease-in-out infinite;
+}
+
+.thinking-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.thinking-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.thinking-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes thinkingDot {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+/* Keep the rest of the app's reduced-motion behavior,
+   but allow the Thinking indicator to remain visible. */
+@media (prefers-reduced-motion: reduce) {
+  .thinking-dots span {
+    animation-duration: 1s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+/* ==========================================================
+   WELLNESS SCROLLBARS
+   Applies to sidebar, conversation area, and textareas.
+   ========================================================== */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 135, 105, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(120, 135, 105, 0.5);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 135, 105, 0.65);
+}

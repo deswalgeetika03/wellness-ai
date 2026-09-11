@@ -422,25 +422,6 @@
     "category": "Casual / unsupported",
     "question": "What is the history of the Roman Empire?",
     "route": "normal",
-    "chunks": [
-      {
-        "source_id": "09",
-        "organization": "NIMH",
-        "title": "Eating Disorders: What You Need to Know",
-        "text": "What are the signs and symptoms of anorexia nervosa?"
-      },
-      {
-        "source_id": "01",
-        "organization": "WHO",
-        "title": "Doing What Matters in Times of Stress",
-        "text": "[Page 123]\n121\nEnjoy your ongoing journey!\nTry to practise and consider re-reading\nthis book again to help you understand\nthe ideas and skills even more. Thank you\nfor your time and please share this book\nif you found it useful.\n73E"
-      },
-      {
-        "source_id": "08",
-        "organization": "NIMH",
-        "title": "Panic Disorder: What You Need to Know",
-        "text": "What are the signs and symptoms of panic disorder?"
-      }
-    ]
+    "chunks": []
   }
 }

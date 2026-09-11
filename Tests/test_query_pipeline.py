@@ -16,8 +16,9 @@ Run:
     python test_query_pipeline.py
 """
 
-from query_pipeline import get_vector_db, answer_query
+from unittest.mock import patch
 
+from query_pipeline import get_vector_db, answer_query
 
 # ============================================================
 # TEST CASES
@@ -300,6 +301,108 @@ def run_test(vector_db, test_case, number):
 
     return overall_ok
 
+# ============================================================
+# ARCHITECTURAL SAFETY ISOLATION TEST
+# ============================================================
+
+def test_safety_route_isolation():
+    """
+    Verify that restricted safety routes never call retrieval
+    or Granite, while normal queries call both.
+    """
+
+    # --------------------------------------------------------
+    # CRISIS
+    # --------------------------------------------------------
+
+    with patch("query_pipeline.retrieve_context") as mock_retrieve, \
+         patch("query_pipeline.call_granite") as mock_granite:
+
+        result = answer_query(
+            vector_db=None,
+            question="I don't want to live anymore",
+        )
+
+        assert result["route"] == "crisis"
+        mock_retrieve.assert_not_called()
+        mock_granite.assert_not_called()
+
+    print("PASS: Crisis bypasses retrieval and Granite")
+
+
+    # --------------------------------------------------------
+    # EATING-DISORDER RESTRICTED
+    # --------------------------------------------------------
+
+    with patch("query_pipeline.retrieve_context") as mock_retrieve, \
+         patch("query_pipeline.call_granite") as mock_granite:
+
+        result = answer_query(
+            vector_db=None,
+            question="How many calories should I eat to lose weight?",
+        )
+
+        assert result["route"] == "eating_disorder_restricted"
+        mock_retrieve.assert_not_called()
+        mock_granite.assert_not_called()
+
+    print("PASS: ED restriction bypasses retrieval and Granite")
+
+
+    # --------------------------------------------------------
+    # MEDICATION RESTRICTED
+    # --------------------------------------------------------
+
+    with patch("query_pipeline.retrieve_context") as mock_retrieve, \
+         patch("query_pipeline.call_granite") as mock_granite:
+
+        result = answer_query(
+            vector_db=None,
+            question="What medication should I take for anxiety?",
+        )
+
+        assert result["route"] == "medication_restricted"
+        mock_retrieve.assert_not_called()
+        mock_granite.assert_not_called()
+
+    print("PASS: Medication restriction bypasses retrieval and Granite")
+
+
+    # --------------------------------------------------------
+    # NORMAL QUERY
+    # --------------------------------------------------------
+
+    fake_chunks = [
+        {
+            "text": "Stress can be managed through healthy coping strategies.",
+            "source_id": "test",
+            "title": "Test Source",
+            "organization": "Test Organization",
+        }
+    ]
+
+    with patch(
+        "query_pipeline.retrieve_context",
+        return_value=fake_chunks,
+    ) as mock_retrieve, \
+         patch(
+             "query_pipeline.call_granite",
+             return_value="Test grounded answer.",
+         ) as mock_granite:
+
+        result = answer_query(
+            vector_db=None,
+            question="How can I manage stress?",
+        )
+
+        assert result["route"] == "normal"
+
+        mock_retrieve.assert_called_once()
+        assert mock_granite.call_count == 2
+
+    print("PASS: Normal query reaches retrieval and Granite")
+
+    print("\nARCHITECTURAL ISOLATION TEST: ALL PASSED")
 
 # ============================================================
 # MAIN
@@ -364,3 +467,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("\nRunning architectural isolation test...\n")
+    test_safety_route_isolation()

@@ -15,7 +15,14 @@ from pathlib import Path
 # Keep ChromaDB outside OneDrive (SQLite + background sync don't mix
 # well). Update this path if your project lives somewhere else -
 # but change it ONLY here, not in individual scripts.
-CHROMA_DIR = Path(r"C:\Users\preet\Projects\wellness_chroma")
+import os
+
+CHROMA_DIR = Path(
+    os.getenv(
+        "WELLNESS_CHROMA_DIR",
+        r"C:\Users\preet\Projects\wellness_chroma",
+    )
+)
 
 COLLECTION_NAME = "wellness_knowledge"
 

@@ -1,0 +1,14 @@
+beautifulsoup4==4.15.0
+chromadb==1.5.9
+fastapi==0.141.1
+ftfy==6.3.1
+langchain-chroma==1.1.0
+langchain-core==1.6.1
+langchain-huggingface==1.2.2
+langchain-text-splitters==1.0.0
+numpy==2.5.2
+pydantic==2.13.5
+pypdf==6.18.0
+requests==2.34.2
+sentence-transformers==6.0.1
+uvicorn==0.52.4
