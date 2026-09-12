@@ -4,7 +4,7 @@ __pycache__/
 # Local vector database
 data/chroma/
 data/chroma_db/
-C:\Users\preet\Projects\wellness_chroma/
+wellness_chroma/
 
 # Python environment
 .venv/
