@@ -197,31 +197,19 @@ These are internal prototype evaluation results and should not be interpreted as
 
 ### Main Interface
 
-Add the latest project screenshot here:
-
-```text
-docs/screenshots/home.png
-```
+![Wellness AI main interface](docs/screenshots/home.png)
 
 ### AI Conversation
 
-```text
-docs/screenshots/conversation.png
-```
+![Wellness AI conversation](docs/screenshots/conversation.png)
 
 ### Breathing Exercise
 
-```text
-docs/screenshots/breathing.png
-```
+![Wellness AI breathing exercise](docs/screenshots/breathing.png)
 
 ### Responsible Use / About Assistant
 
-```text
-docs/screenshots/about.png
-```
-
-> Screenshots can be added to this section once the image files are placed in the repository.
+![Wellness AI about assistant](docs/screenshots/about.png)
 
 ---
 
