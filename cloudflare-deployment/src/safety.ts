@@ -57,6 +57,7 @@ const NUMERIC_ASK_PATTERNS = [
   /\bcalorie\s+(count|target|limit|goal)\b/i,
   /\bideal\s+weight\b/i,
   /\bhow\s+little\s+can\s+i\s+eat\b/i,
+  /\beat(?:ing)?\s+as\s+little\s+as\s+possible\b/i,
 ];
 
 const EATING_DISORDER_RESTRICTED_RESPONSE =
@@ -88,6 +89,7 @@ const MEDICATION_PATTERNS = [
   /\bwhat\s+can\s+i\s+take\s+for\s+(?:anxiety|panic\s+attacks?|panic\s+disorder|depression)\b/i,
   /\bwhat\s+should\s+i\s+take\s+for\s+(?:stress|sleep|insomnia)\b/i,
   /\bwhat\s+can\s+i\s+take\s+for\s+(?:stress|sleep|insomnia)\b/i,
+  /\bwhat\s+(?:prescription\s+)?(?:medication|medicine|drug)\s+should\s+i\s+take\s+for\b/i,
 ];
 
 const MEDICATION_RESPONSE =
