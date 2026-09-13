@@ -14,8 +14,28 @@ export async function sendChatMessage(question, history = []) {
   });
 
   if (!response.ok) {
-    throw new Error(`API request failed: ${response.status}`);
+    let errorMessage = `API request failed: ${response.status}`;
+
+    try {
+      const errorData = await response.json();
+
+      if (typeof errorData?.error === "string") {
+        errorMessage = errorData.error;
+      }
+    } catch {
+      // Keep the fallback error message if the response
+      // does not contain valid JSON.
+    }
+
+    const error = new Error(errorMessage);
+    error.status = response.status;
+    throw error;
   }
 
-  return response.json();
+  const data = await response.json();
+
+  return {
+    ...data,
+    answer: data.answer ?? data.response,
+  };
 }

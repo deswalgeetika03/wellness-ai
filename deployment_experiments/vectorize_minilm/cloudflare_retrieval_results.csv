@@ -1,0 +1,41 @@
+question_id,question,expected_source,rank1_id,rank1_source,rank2_id,rank2_source,rank3_id,rank3_source,top1_correct,top3_correct
+1,How can I manage daily stress?,01,01_0033,01,02_0005,02,06_0006,06,True,True
+2,What can I do when I feel overwhelmed?,01,06_0007,06,01_0031,01,02_0006,02,False,True
+3,What are healthy ways to cope with stress?,02,01_0033,01,02_0005,02,06_0006,06,False,True
+4,What are symptoms of anxiety?,04,08_0005,08,04_0007,04,10_0006,10,False,True
+5,Why do I feel constantly worried?,04,04_0003,04,08_0009,08,02_0004,02,True,True
+6,What are anxiety disorders?,04,04_0008,04,10_0007,10,08_0009,08,True,True
+7,What is a panic attack?,08,08_0008,08,04_0008,04,,,True,True
+8,Why do panic attacks happen?,08,08_0009,08,,,,,True,True
+9,How is panic disorder treated?,08,08_0019,08,,,,,True,True
+10,How can I sleep better?,05,05_0005,05,06_0004,06,01_0165,01,True,True
+11,What habits improve sleep?,05,05_0003,05,01_0107,01,06_0004,06,True,True
+12,Why should I avoid caffeine before bed?,05,05_0005,05,06_0004,06,01_0107,01,True,True
+13,What are eating disorders?,09,09_0005,09,11_0015,11,10_0017,10,True,True
+14,What are common types of eating disorders?,09,09_0005,09,10_0017,10,11_0015,11,True,True
+15,Where can someone with an eating disorder get help?,09,09_0023,09,10_0017,10,,,True,True
+16,What is depression?,12,12_0002,12,10_0010,10,,,True,True
+17,What are symptoms of depression?,12,10_0010,10,12_0006,12,08_0005,08,False,True
+18,How is depression treated?,12,12_0013,12,08_0019,08,10_0009,10,True,True
+19,What does it mean to have good mental health?,03,03_0003,03,10_0003,10,11_0006,11,True,True
+20,What are common mental disorders?,10,09_0005,09,10_0004,10,08_0015,08,False,True
+21,i have so much to do and i dont know where to start,01,01_0185,01,06_0007,06,02_0002,02,True,True
+22,everything feels like too much right now,01,01_0036,01,,,,,True,True
+23,how do i chill out after a rough day,02,02_0007,02,06_0006,06,12_0017,12,True,True
+24,why do i feel nervous and on edge all the time,04,04_0003,04,08_0009,08,01_0104,01,True,True
+25,my mind wont stop racing with worry,04,01_0073,01,08_0009,08,04_0008,04,False,True
+26,is it normal to worry about everything,04,04_0003,04,01_0045,01,10_0006,10,True,True
+27,"my heart was pounding and i couldnt breathe, what was that",08,01_0159,01,08_0006,08,,,False,True
+28,i felt like i was dying but the doctor said i was fine,08,09_0011,09,01_0157,01,12_0007,12,False,False
+29,how do you stop a panic attack once it starts,08,08_0019,08,,,,,True,True
+30,i cant fall asleep no matter what i try,05,06_0005,06,05_0005,05,01_0107,01,False,True
+31,why am i so tired even after sleeping 8 hours,05,05_0004,05,06_0005,06,01_0109,01,True,True
+32,does scrolling my phone in bed mess up my sleep,05,01_0108,01,06_0005,06,05_0005,05,False,True
+33,i cant stop thinking about food and calories,09,09_0014,09,01_0049,01,06_0004,06,True,True
+34,"my friend barely eats anything, should i be worried",09,09_0019,09,11_0015,11,,,True,True
+35,is it normal to binge eat when stressed,09,09_0014,09,02_0004,02,01_0036,01,True,True
+36,i just feel empty and dont enjoy anything anymore,12,01_0090,01,06_0007,06,12_0017,12,False,True
+37,why do i feel sad for no reason,12,01_0184,01,10_0010,10,12_0007,12,False,True
+38,can therapy actually help with feeling low all the time,12,12_0013,12,02_0007,02,06_0006,06,True,True
+39,what does being mentally healthy even mean,03,03_0003,03,10_0003,10,11_0006,11,True,True
+40,what kinds of mental health problems are common in students,10,11_0005,11,10_0004,10,03_0005,03,False,True

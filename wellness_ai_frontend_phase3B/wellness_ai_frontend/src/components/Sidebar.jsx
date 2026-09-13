@@ -7,7 +7,7 @@ import {
   Archive,
   Trash2,
 } from "lucide-react";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Sidebar({
   chats,
@@ -28,6 +28,11 @@ export default function Sidebar({
   const [editingTitle, setEditingTitle] = useState("");
   const [showArchived, setShowArchived] = useState(false);
   const menuRef = useRef(null);
+
+  useEffect(() => {
+  setOpenMenu(null);
+  setMenuPosition(null);
+}, [activeChat]);
 
   const [sidebarWidth, setSidebarWidth] = useState(() => {
   const savedWidth = localStorage.getItem("wellness-sidebar-width");
@@ -179,7 +184,7 @@ requestAnimationFrame(() => {
 
   return (
     <aside
-  className="relative flex h-full shrink-0 flex-col border-r border-wa-border bg-wa-sidebar"
+  className="relative hidden h-full shrink-0 flex-col border-r border-wa-border bg-wa-sidebar sm:flex"
   style={{ width: sidebarWidth }}
 >
       {/* Header */}
@@ -297,28 +302,30 @@ requestAnimationFrame(() => {
   </button>
 )}
 
-                {/* Three-dot button */}
-                <button
-                  type="button"
-                  onClick={(event) =>
-                    toggleMenu(chat.id, event)
-                  }
-                  aria-label={`Conversation options for ${chat.title}`}
-                  aria-expanded={menuOpen}
-                  className={`mr-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-wa-sm text-wa-muted transition ${
-                    menuOpen
-                      ? "bg-wa-sidebar text-wa-text"
-                      : "opacity-0 group-hover:opacity-100 hover:bg-wa-sidebar hover:text-wa-text"
-                  }`}
-                >
-                  <MoreHorizontal
-                    size={17}
-                    strokeWidth={1.8}
-                  />
-                </button>
+                {/* Three-dot button — selected conversation only */}
+{selected && (
+  <button
+    type="button"
+    onClick={(event) =>
+      toggleMenu(chat.id, event)
+    }
+    aria-label={`Conversation options for ${chat.title}`}
+    aria-expanded={menuOpen}
+    className={`mr-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-wa-sm text-wa-muted transition ${
+      menuOpen
+        ? "bg-wa-sidebar text-wa-text"
+        : "opacity-0 group-hover:opacity-100 hover:bg-wa-sidebar hover:text-wa-text"
+    }`}
+  >
+    <MoreHorizontal
+      size={17}
+      strokeWidth={1.8}
+    />
+  </button>
+)}
 
                 {/* Context menu */}
-                {menuOpen && menuPosition && (
+                {selected && menuOpen && menuPosition && (
                   <div
                   ref={menuRef}
                    className="fixed z-[100] w-[190px] rounded-[14px] border border-wa-border bg-wa-surface p-1.5 shadow-[0_14px_40px_rgba(50,65,50,0.16)]"
@@ -508,28 +515,30 @@ requestAnimationFrame(() => {
                           </button>
                         )}
 
-                        {/* Three-dot button */}
-                        <button
-                          type="button"
-                          onClick={(event) =>
-                            toggleMenu(chat.id, event)
-                          }
-                          aria-label={`Conversation options for ${chat.title}`}
-                          aria-expanded={menuOpen}
-                          className={`mr-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-wa-sm text-wa-muted transition ${
-                            menuOpen
-                              ? "bg-wa-sidebar text-wa-text"
-                              : "opacity-0 group-hover:opacity-100 hover:bg-wa-sidebar hover:text-wa-text"
-                          }`}
-                        >
-                          <MoreHorizontal
-                            size={17}
-                            strokeWidth={1.8}
-                          />
-                        </button>
+                       {/* Three-dot button — selected conversation only */}
+{selected && (
+  <button
+    type="button"
+    onClick={(event) =>
+      toggleMenu(chat.id, event)
+    }
+    aria-label={`Conversation options for ${chat.title}`}
+    aria-expanded={menuOpen}
+    className={`mr-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-wa-sm text-wa-muted transition ${
+      menuOpen
+        ? "bg-wa-sidebar text-wa-text"
+        : "opacity-0 group-hover:opacity-100 hover:bg-wa-sidebar hover:text-wa-text"
+    }`}
+  >
+    <MoreHorizontal
+      size={17}
+      strokeWidth={1.8}
+    />
+  </button>
+)}
 
                         {/* Context menu */}
-                        {menuOpen && menuPosition && (
+                        {selected && menuOpen && menuPosition && (
                           <div
                           ref={menuRef}
                             className="fixed z-[100] w-[190px] rounded-[14px] border border-wa-border bg-wa-surface p-1.5 shadow-[0_14px_40px_rgba(50,65,50,0.16)]"

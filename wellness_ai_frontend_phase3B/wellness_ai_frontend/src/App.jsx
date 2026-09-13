@@ -13,6 +13,8 @@ function generateChatTitle(text) {
     .replace(/\s+/g, " ")
     .trim()
     .replace(/[?.!,]+$/, "");
+  
+  const MAX_TITLE_LENGTH = 34;
 
   const lower = cleaned.toLowerCase();
 
@@ -96,7 +98,12 @@ function generateChatTitle(text) {
 
   const title = words.join(" ");
 
-  return title.charAt(0).toUpperCase() + title.slice(1);
+  const finalTitle =
+    title.length > MAX_TITLE_LENGTH
+      ? `${title.slice(0, MAX_TITLE_LENGTH)}…`
+      : title;
+
+  return finalTitle.charAt(0).toUpperCase() + finalTitle.slice(1);
 }
 
 function getConversationHistory(messages) {
@@ -105,6 +112,14 @@ function getConversationHistory(messages) {
   }
 
   return messages;
+}
+
+function getChatErrorMessage(error) {
+  if (error?.status === 400 && error?.message) {
+    return error.message;
+  }
+
+  return "I’m having trouble connecting right now. Please try again in a moment.";
 }
 
 export default function App() {
@@ -349,8 +364,7 @@ return {
             },
             {
   role: "assistant",
-  content:
-    "I’m having trouble connecting right now. Please try again in a moment.",
+ content: getChatErrorMessage(error),
   retryText: text,
 },
           ],
@@ -442,8 +456,7 @@ return {
                   ...item.messages,
                   {
                     role: "assistant",
-                    content:
-                      "I’m having trouble connecting right now. Please try again in a moment.",
+                    content: getChatErrorMessage(error),
                     retryText: text,
                   },
                 ],
@@ -525,8 +538,7 @@ return {
                 ...item.messages,
                 {
   role: "assistant",
-  content:
-    "I’m having trouble connecting right now. Please try again in a moment.",
+  content: getChatErrorMessage(error),
   retryText: text,
 },
               ],
@@ -706,8 +718,7 @@ function cancelEdit() {
                     index === messageIndex
                       ? {
                           role: "assistant",
-                          content:
-                            "I’m having trouble connecting right now. Please try again in a moment.",
+                          content: getChatErrorMessage(error),
                           retryText,
                         }
                       : message
@@ -725,20 +736,23 @@ function cancelEdit() {
    return (
     <div className="h-screen overflow-hidden bg-wellness-bg text-wellness-text">
       <div className="flex h-full">
+        
         {/* Sidebar */}
-        <Sidebar
-         chats={chats}
-          activeChat={activeChat}
-          onNewChat={newChat}
-          onSelectChat={selectChat}
-          onRename={renameChat}
-          onDelete={deleteChat}
-          onPin={togglePinChat}
-          onArchive={toggleArchiveChat}
-          onConversationDetails={() => setShowConversationDetails(true)}
-          onAboutAssistant={() => setShowAboutAssistant(true)}
-          onTakeABreath={() => setShowBreathingGuide(true)}
-        />
+{!showBreathingGuide && (
+  <Sidebar
+    chats={chats}
+    activeChat={activeChat}
+    onNewChat={newChat}
+    onSelectChat={selectChat}
+    onRename={renameChat}
+    onDelete={deleteChat}
+    onPin={togglePinChat}
+    onArchive={toggleArchiveChat}
+    onConversationDetails={() => setShowConversationDetails(true)}
+    onAboutAssistant={() => setShowAboutAssistant(true)}
+    onTakeABreath={() => setShowBreathingGuide(true)}
+  />
+)}
 
         {/* Main application area */}
         <main className="relative min-w-0 flex-1 overflow-hidden bg-[#F5F3EE]">
@@ -769,7 +783,7 @@ function cancelEdit() {
                         Wellness AI
                       </div>
 
-                      <h1 className="mt-2 text-xl font-semibold tracking-[-0.02em]">
+                      <h1 className="mt-2 break-words text-xl font-semibold tracking-[-0.02em]">
                         {currentChat.title}
                       </h1>
                     </div>

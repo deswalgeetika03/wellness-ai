@@ -126,7 +126,7 @@ export default function ChatMessage({
               You
             </div>
 
-            <p className="m-0 whitespace-pre-wrap text-[15px] leading-7 text-wa-text">
+            <p className="m-0 whitespace-pre-wrap [overflow-wrap:anywhere] text-[15px] leading-7 text-wa-text">
               {content}
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function ChatMessage({
     Wellness AI
   </div>
 
-  <p className="mt-4 whitespace-pre-wrap text-[15px] leading-7 text-wa-text">
+  <p className="mt-4 whitespace-pre-wrap [overflow-wrap:anywhere] text-[15px] leading-7 text-wa-text">
   {content}
 </p>
 
