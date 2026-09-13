@@ -11,6 +11,10 @@ export interface Env {
 
 interface ChatRequest {
   question?: string;
+  history?: Array<{
+    role: "user" | "assistant";
+    content: string;
+  }>;
 }
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -26,6 +30,38 @@ function jsonResponse(
     status,
     headers: CORS_HEADERS,
   });
+}
+
+function isFollowUpQuestion(question: string): boolean {
+  const normalized = question.toLowerCase().trim();
+
+  const followUpPatterns = [
+    /\bwhat should i try first\b/,
+    /\bwhat should i try\b/,
+    /\bwhat should i do first\b/,
+    /\bwhat can i try first\b/,
+    /\bhow do i start\b/,
+    /\bwhere should i start\b/,
+    /\bwhat are the main signs\b/,
+    /\bwhat about this\b/,
+    /\bwhat about that\b/,
+    /\bcan you explain more\b/,
+    /\btell me more\b/,
+    /\bcan you give me more\b/,
+    /\bwhat else\b/,
+    /\bhow about\b/,
+    /\bwhat do you mean\b/,
+    /\bwhy is that\b/,
+    /\bhow does that work\b/,
+    /\bcan you explain that\b/,
+    /\bwhat about it\b/,
+    /\bhow can i do that\b/,
+    /\bhow can i try that\b/,
+  ];
+
+  return followUpPatterns.some((pattern) =>
+    pattern.test(normalized),
+  );
 }
 
 export default {
@@ -92,7 +128,18 @@ if (question.length > 2000) {
     // Normal RAG pipeline
     // ---------------------------------------------------------------
     try {
-      const retrieval = await retrieve(question, env);
+      const previousUserMessage = body.history
+  ?.slice()
+  .reverse()
+  .find((message) => message.role === "user")?.content?.trim();
+
+const retrievalQuery =
+  previousUserMessage && isFollowUpQuestion(question)
+    ? `${previousUserMessage} ${question}`
+    : question;
+
+const retrieval = await retrieve(retrievalQuery, env);
+  
 
       if (retrieval.selected.length === 0) {
         return jsonResponse({
@@ -151,6 +198,7 @@ if (question.length > 2000) {
           ),
         })),
         verifiedEvidence: evidence,
+        history: body.history,
       },
 );
 
