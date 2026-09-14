@@ -75,6 +75,19 @@ _ED_CONTEXT_PATTERNS = [
     r"\banorexi", r"\bbulimi", r"\beating\s+disorder\b", r"\bweight\s+loss\b", r"\blose\s+weight\b",
     r"\bskip(ping)?\s+meals\b", r"\bfast(ing)?\s+for\b",
 ]
+
+_RESTRICTIVE_INTENT_PATTERNS = [
+    r"\b(?:how\s+can|how\s+do|ways\s+to|want\s+to|trying\s+to|need\s+to)\s+(?:severely\s+|extremely\s+|strictly\s+)?restrict\s+(?:my\s+)?(?:food|eating)\b",
+    r"\b(?:i\s+am|i'm|ive|i've)\s+(?:severely\s+|extremely\s+|strictly\s+)?restrict(?:ing)?\s+(?:my\s+)?(?:food|eating)\b",
+    r"\b(?:restrict|restricting)\s+(?:my\s+)?(?:food|eating)\s+(?:intake|as\s+much\s+as\s+possible)\b",
+    r"\beat(?:ing)?\s+as\s+little\s+as\s+possible\b",
+]
+
+_RESTRICTIVE_INTENT_REGEX = re.compile(
+    "|".join(_RESTRICTIVE_INTENT_PATTERNS),
+    re.IGNORECASE,
+)
+
 # These phrasings are specific and risky enough (a request for an exact
 # calorie/weight number, or a bounded meal plan) to trigger the
 # restricted route on their own, without also requiring a separate
@@ -99,17 +112,18 @@ EATING_DISORDER_RESTRICTED_RESPONSE = (
 
 
 def check_eating_disorder_numeric(user_input: str) -> bool:
-    """Returns True if the message either:
-      (a) matches a specific numeric-ask phrase directly (e.g. "how many
-          calories", "meal plan", "ideal weight") - these are risky
-          enough to trigger on their own, or
-      (b) combines general ED-adjacent context with an actual digit in
-          the message (e.g. "restricting food, only eating 300 a day").
+    """Returns True for specific eating-disorder-related restriction requests
+    or numeric food/weight requests.
     """
+    if _RESTRICTIVE_INTENT_REGEX.search(user_input):
+        return True
+
     if _NUMERIC_ASK_REGEX.search(user_input):
         return True
+
     if _ED_CONTEXT_REGEX.search(user_input) and _HAS_DIGIT_REGEX.search(user_input):
         return True
+
     return False
 
 # ---------------------------------------------------------------------

@@ -49,6 +49,13 @@ const ED_CONTEXT_PATTERNS = [
   /\bfast(ing)?\s+for\b/i,
 ];
 
+const RESTRICTIVE_INTENT_PATTERNS = [
+  /\b(?:how\s+can|how\s+do|ways\s+to|want\s+to|trying\s+to|need\s+to)\s+(?:severely\s+|extremely\s+|strictly\s+)?restrict\s+(?:my\s+)?(?:food|eating)\b/i,
+  /\b(?:i\s+am|i'm|ive|i've)\s+(?:severely\s+|extremely\s+|strictly\s+)?restrict(?:ing)?\s+(?:my\s+)?(?:food|eating)\b/i,
+  /\b(?:restrict|restricting)\s+(?:my\s+)?(?:food|eating)\s+(?:intake|as\s+much\s+as\s+possible)\b/i,
+  /\beat(?:ing)?\s+as\s+little\s+as\s+possible\b/i,
+];
+
 const NUMERIC_ASK_PATTERNS = [
   /\bhow\s+many\s+calories\b/i,
   /\bhow\s+much\s+should\s+i\s+(eat|weigh)\b/i,
@@ -57,7 +64,6 @@ const NUMERIC_ASK_PATTERNS = [
   /\bcalorie\s+(count|target|limit|goal)\b/i,
   /\bideal\s+weight\b/i,
   /\bhow\s+little\s+can\s+i\s+eat\b/i,
-  /\beat(?:ing)?\s+as\s+little\s+as\s+possible\b/i,
 ];
 
 const EATING_DISORDER_RESTRICTED_RESPONSE =
@@ -116,6 +122,10 @@ function checkMedication(input: string): boolean {
 }
 
 function checkEatingDisorderNumeric(input: string): boolean {
+  if (matchesAny(input, RESTRICTIVE_INTENT_PATTERNS)) {
+    return true;
+  }
+
   if (matchesAny(input, NUMERIC_ASK_PATTERNS)) {
     return true;
   }

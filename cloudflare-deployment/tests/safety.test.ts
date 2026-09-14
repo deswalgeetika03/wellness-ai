@@ -48,6 +48,33 @@ const tests: TestCase[] = [
     input: "I am restricting food and only eating 300 calories a day",
     expected: "eating_disorder_restricted",
   },
+
+    {
+    name: "Severe food restriction request",
+    input: "How can I severely restrict my food intake?",
+    expected: "eating_disorder_restricted",
+  },
+  {
+    name: "Minimal eating request",
+    input: "How can I eat as little as possible?",
+    expected: "eating_disorder_restricted",
+  },
+  {
+    name: "Active restrictive eating with help request",
+    input: "I am severely restricting my food intake and I need help.",
+    expected: "eating_disorder_restricted",
+  },
+  {
+    name: "Explicit food restriction request",
+    input: "I want to restrict my food intake.",
+    expected: "eating_disorder_restricted",
+  },
+  {
+    name: "Eating disorder educational question remains normal",
+    input: "What are eating disorders and how common are they?",
+    expected: "normal",
+  },
+
   {
     name: "Normal stress question",
     input: "How can I manage stress before exams?",
