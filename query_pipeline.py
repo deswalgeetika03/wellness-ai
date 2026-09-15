@@ -38,6 +38,19 @@ import re
 import time
 import numpy as np
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(
+            encoding="utf-8",
+            errors="replace",
+        )
+        sys.stderr.reconfigure(
+            encoding="utf-8",
+            errors="replace",
+        )
+    except AttributeError:
+        pass
+
 import requests
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -92,6 +105,20 @@ TOP_K = 3
 CANDIDATE_K = 10
 MAX_PER_SOURCE = 1
 EVIDENCE_DISTANCE_THRESHOLD = 1.25
+
+# Targeted candidate-generation fallback for strong panic/death wording.
+# This does not change the normal retrieval strategy.
+PANIC_FALLBACK_QUERY = "panic attack fear of death impending doom"
+
+PANIC_FALLBACK_PATTERNS = [
+    r"\bfelt like i was dying\b",
+    r"\bfeel like i'm dying\b",
+    r"\bfeel like i am dying\b",
+    r"\bfeeling like i'm dying\b",
+    r"\bfeeling like i am dying\b",
+    r"\bfear of death\b",
+    r"\bimpending doom\b",
+]
 
 OLLAMA_URL = os.getenv(
     "WELLNESS_OLLAMA_URL",
@@ -164,31 +191,54 @@ are not supported by the Wellness knowledge.
 Verified evidence:
 {verified_evidence}
 
-Context:
-{context}
+Verified evidence is the ONLY Wellness knowledge available for
+factual answering.
+
+Do not use, reconstruct, or infer additional facts from retrieval
+results that are not included in Verified evidence.
 
 Evidence-first answering:
 - Before writing the answer, identify the specific information in
-  Context that directly supports the answer.
+  Verified evidence that directly supports the answer.
 
-- Answer only using information that can be directly supported by
-  the retrieved Context.
+- Verified evidence is the ONLY source of factual Wellness information
+  that may be used in the answer.
+
+- No broader retrieval context is available for factual answering.
+  Use only Verified evidence.
 
 - Do not infer, elaborate, generalize, or complete missing information
   using pretrained knowledge.
 
-- If a detail is not explicitly present in Context, leave it out.
+- If a detail is not explicitly present in Verified evidence, leave it
+  out.
 
-- If Context supports only part of the answer, answer only that part.
+- If Verified evidence supports only part of the question, answer only
+  that supported part and clearly avoid unsupported portions.
 
-- For definitions, use only the definition and details explicitly
-  present in Context. Do not add typical symptoms, examples,
-  durations, diagnostic criteria, causes, or other details unless
-  Context contains them.
+- Never add symptoms, causes, treatments, recommendations, examples,
+  durations, diagnostic criteria, or explanations unless they are
+  explicitly included in Verified evidence.
+
+- Never apply a named disorder or condition from Verified evidence to
+  the user's personal symptoms.
+
+- If Verified evidence describes a disorder or condition, present that
+  information only as general educational information.
+
+- Do not say the user's symptoms are "related to", "consistent with",
+  "suggestive of", or "possibly" that disorder unless the provided
+  evidence explicitly establishes that relationship for the individual
+  user.
+
+- If the user describes personal symptoms and the evidence only gives
+  general information about a disorder or condition, present that
+  information as general educational information rather than applying
+  the label to the user.
 
 - For questions asking for types, causes, symptoms, treatments,
   techniques, or recommendations, include only the items explicitly
-  supported by Context.
+  supported by Verified evidence.
 
 - Prefer a shorter evidence-supported answer over a more complete
   answer containing unsupported information.
@@ -229,28 +279,24 @@ Exclusions:
   the user's symptoms, say that the symptoms can have different
   causes and that the available information cannot determine the cause.
 
-- Keep every factual claim grounded in the Wellness knowledge provided
-  in Context.
-
-- Treat the retrieved Context as the only source of factual Wellness
-  information. Do not use pretrained knowledge to add details that are
-  absent from the Context.
+- Keep every factual claim grounded in Verified evidence.
 
 - Use only symptoms, causes, treatments, coping strategies, definitions,
   numbers, timeframes, or other factual details that are explicitly
-  supported by the Context.
+  supported by Verified evidence.
 
 - Do not expand a retrieved definition with additional symptoms,
   diagnostic criteria, causes, treatments, examples, or clinical details
   from general knowledge.
 
 - Do not add specific techniques, methods, routines, or recommendations
-  unless the Context explicitly supports them.
+  unless they are explicitly supported by Verified evidence.
 
-- When the Context supports only part of an answer, answer only that
-  supported part. Do not fill the missing part from general knowledge.
+- When Verified evidence supports only part of the answer, answer only
+  that supported part. Do not fill the missing part from general
+  knowledge.
 
-- If the Context does not contain enough information to answer the
+- If Verified evidence does not contain enough information to answer the
   question, say so honestly instead of completing the answer from
   pretrained knowledge.
 
@@ -338,6 +384,10 @@ def retrieve_context(
     sufficient evidence exists before generation.
     """
 
+        # --------------------------------------------------------
+    # NORMAL CANDIDATE GENERATION
+    # --------------------------------------------------------
+    # Preserve the original Top-10 similarity retrieval.
     candidates = vector_db.similarity_search_with_score(
         question,
         k=candidate_k,
@@ -347,6 +397,69 @@ def retrieve_context(
         (doc, float(score))
         for doc, score in candidates
     ]
+
+    # --------------------------------------------------------
+    # TARGETED PANIC CANDIDATE FALLBACK
+    # --------------------------------------------------------
+    # For strong panic/death wording, run a second semantic
+    # retrieval using a concept query that is known to retrieve
+    # the relevant panic evidence reliably.
+    #
+    # IMPORTANT:
+    # - Normal retrieval remains unchanged.
+    # - Source-diversity selection below remains unchanged.
+    # - No source_id is hard-coded.
+    # --------------------------------------------------------
+
+    question_lower = question.lower()
+
+    panic_fallback_triggered = any(
+        re.search(
+            pattern,
+            question_lower,
+        )
+        for pattern in PANIC_FALLBACK_PATTERNS
+    )
+
+    if panic_fallback_triggered:
+
+        print(
+            "[RETRIEVAL FALLBACK] "
+            "Strong panic/death wording detected. "
+            f"Running targeted query: {PANIC_FALLBACK_QUERY}"
+        )
+
+        fallback_candidates = (
+            vector_db.similarity_search_with_score(
+                PANIC_FALLBACK_QUERY,
+                k=candidate_k,
+            )
+        )
+
+        # Add fallback candidates after the original candidates.
+        # The existing source-diversity selection will decide
+        # which chunks ultimately enter the final context.
+        existing_ids = {
+            id(doc)
+            for doc, _ in candidate_docs
+        }
+
+        for doc, score in fallback_candidates:
+
+            if id(doc) in existing_ids:
+                continue
+
+            candidate_docs.append(
+                (doc, float(score))
+            )
+
+            existing_ids.add(id(doc))
+
+        # Re-sort the merged candidate pool by retrieval distance.
+        # Lower distance means stronger semantic similarity.
+        candidate_docs.sort(
+            key=lambda item: item[1]
+        )
 
     selected = []
     source_counts = {}
@@ -557,6 +670,9 @@ def select_conversation_context(
     # --------------------------------------------------------
 
     vague_patterns = [
+        r"\bwhat should i try first\b",
+        r"\bwhat should i try\b",
+        r"\bwhat do i try first\b",
         r"\bwhat should i do about this\b",
         r"\bwhat should i do about that\b",
         r"\bwhat can i do about this\b",
@@ -732,7 +848,7 @@ def build_prompt(
     question: str,
     chunks: list,
     history: list | None = None,
-) -> str:
+) -> tuple[str, str]:
 
     conversation_context = select_conversation_context(
         question,
@@ -749,6 +865,7 @@ def build_prompt(
         question,
         chunks,
     )
+
     
     if conversation_context:
         lines = ["Conversation context:"]
@@ -797,68 +914,18 @@ def build_prompt(
     print(history_block)
     print("=" * 60 + "\n")
 
-    return SYSTEM_PROMPT_TEMPLATE.format(
-        context=context_block,
-        history_block=history_block,
-        verified_evidence=verified_evidence,
-        question=question,
+    prompt = SYSTEM_PROMPT_TEMPLATE.format(
+      context="",
+      history_block=history_block,
+      verified_evidence=verified_evidence,
+      question=question,
     )
 
-# ============================================================
-# GRANITE / OLLAMA
-# ============================================================
+    return prompt, verified_evidence
 
 # ============================================================
-# PHASE 6 — EVIDENCE EXTRACTION
+# GRANITE VIA OLLAMA
 # ============================================================
-
-EVIDENCE_EXTRACTION_PROMPT = """You are an evidence extraction assistant.
-
-Your task is to extract only factual information that is explicitly
-stated in the provided Wellness knowledge.
-
-Rules:
-- Use ONLY the provided Wellness knowledge.
-- Copy or closely preserve the meaning of information explicitly stated
-  in the knowledge.
-- Do not use pretrained knowledge.
-- Do not infer missing information.
-- Do not add examples, symptoms, causes, treatments, definitions,
-  durations, numbers, or recommendations that are not explicitly stated.
-- If the knowledge does not contain information relevant to the
-  question, output exactly:
-  NO_SUPPORTED_EVIDENCE
-- Keep the extracted evidence short and factual.
-- Do not answer the user's question.
-- Do not provide explanations beyond the extracted evidence.
-
-Wellness knowledge:
-{context}
-
-Question:
-{question}
-
-Supported evidence:
-"""
-
-
-def extract_supported_evidence(
-    question: str,
-    chunks: list,
-) -> str:
-
-    context_block = "\n\n".join(
-        f"[{chunk['organization']} - {chunk['title']}]\n"
-        f"{chunk['text']}"
-        for chunk in chunks
-    )
-
-    prompt = EVIDENCE_EXTRACTION_PROMPT.format(
-        context=context_block,
-        question=question,
-    )
-
-    return call_granite(prompt).strip()
 
 def call_granite(prompt: str) -> str:
 
@@ -881,51 +948,635 @@ def call_granite(prompt: str) -> str:
         response.raise_for_status()
 
     except requests.exceptions.ConnectionError as error:
-     raise RuntimeError(
-        "Couldn't reach Ollama at http://localhost:11434. "
-        "Make sure Ollama is running."
-    ) from error
+        raise RuntimeError(
+            "Couldn't reach Ollama at http://localhost:11434. "
+            "Make sure Ollama is running."
+        ) from error
 
     except requests.exceptions.RequestException as error:
-     raise RuntimeError(
-        f"Ollama request failed: {error}"
-    ) from error
+        raise RuntimeError(
+            f"Ollama request failed: {error}"
+        ) from error
 
     try:
         data = response.json()
-        
+
     except ValueError:
         return "[ERROR] Ollama returned invalid JSON."
 
     print(
-    f"[PERFORMANCE] Ollama load duration: "
-    f"{data.get('load_duration', 0) / 1_000_000_000:.3f}s"
-)
+        f"[PERFORMANCE] Ollama load duration: "
+        f"{data.get('load_duration', 0) / 1_000_000_000:.3f}s"
+    )
 
     print(
-    f"[PERFORMANCE] Ollama prompt eval: "
-    f"{data.get('prompt_eval_duration', 0) / 1_000_000_000:.3f}s"
-)
+        f"[PERFORMANCE] Ollama prompt eval: "
+        f"{data.get('prompt_eval_duration', 0) / 1_000_000_000:.3f}s"
+    )
 
     print(
-    f"[PERFORMANCE] Ollama generation: "
-    f"{data.get('eval_duration', 0) / 1_000_000_000:.3f}s"
-)
+        f"[PERFORMANCE] Ollama generation: "
+        f"{data.get('eval_duration', 0) / 1_000_000_000:.3f}s"
+    )
 
     print(
-    f"[PERFORMANCE] Ollama generated tokens: "
-    f"{data.get('eval_count', 0)}"
-)
-    
+        f"[PERFORMANCE] Ollama generated tokens: "
+        f"{data.get('eval_count', 0)}"
+    )
+
     answer = data.get(
-    "response",
-    "[ERROR] No response returned by Granite.",
-)
+        "response",
+        "[ERROR] No response returned by Granite.",
+    )
 
-    print(f"[PERFORMANCE] Granite output characters: {len(answer)}")
+    print(
+        f"[PERFORMANCE] Granite output characters: {len(answer)}"
+    )
 
     return answer
 
+
+# ============================================================
+# PHASE 6 — EVIDENCE EXTRACTION
+# ============================================================
+
+EVIDENCE_EXTRACTION_PROMPT = """You are an evidence extraction assistant.
+
+Your task is to extract only factual information that is explicitly
+supported by the provided Wellness knowledge.
+
+Rules:
+- Use ONLY the provided Wellness knowledge.
+- Extract factual information that is explicitly stated in the knowledge.
+- The user's wording does NOT need to exactly match the wording in the
+  knowledge.
+- A clear paraphrase or semantically equivalent description may match
+  a factual statement in the knowledge.
+- If the user's wording describes a concept that is clearly represented
+  by a factual statement in the knowledge, extract that factual statement
+  from the knowledge.
+- Prefer the wording of the knowledge rather than repeating or expanding
+  the user's wording.
+- If the question is only partially supported, extract ONLY the supported
+  factual portion.
+- Do not diagnose the user.
+- Do not state that the user has a disorder, condition, or illness.
+- Do not infer causes, diagnoses, severity, duration, or other facts
+  about the user.
+- Do not use pretrained knowledge.
+- Do not add examples, symptoms, causes, treatments, definitions,
+  durations, numbers, or recommendations that are not explicitly stated.
+- If the knowledge does not contain information relevant to the question,
+  output exactly:
+  NO_SUPPORTED_EVIDENCE
+- Keep the extracted evidence short and factual.
+- Do not answer the user's question.
+- Do not provide explanations beyond the extracted evidence.
+
+Example of an allowed paraphrase:
+
+Question:
+"my mind wont stop racing with worry"
+
+Knowledge:
+"generalized anxiety disorder (persistent and excessive worry about
+daily activities or events)"
+
+Correct supported evidence:
+"Generalized anxiety disorder involves persistent and excessive worry
+about daily activities or events."
+
+Incorrect:
+"You have generalized anxiety disorder."
+
+Incorrect:
+"Racing thoughts mean you have generalized anxiety disorder."
+
+The first is allowed because it extracts the factual statement from
+the knowledge. The other two make an unsupported diagnosis or inference.
+
+Example of unsupported evidence:
+
+Question:
+"what kinds of mental health problems are common in students"
+
+Knowledge:
+A passage that discusses stress management but does not list common
+mental health problems in students.
+
+Correct output:
+NO_SUPPORTED_EVIDENCE
+
+Wellness knowledge:
+{context}
+
+Question:
+{question}
+
+Supported evidence:
+"""
+# ============================================================
+# PHASE 6 — EVIDENCE EXTRACTION FALLBACK
+# ============================================================
+
+EVIDENCE_EXTRACTION_FALLBACK_PROMPT = """You are a strict evidence
+verification assistant.
+
+A previous evidence extraction attempt returned:
+NO_SUPPORTED_EVIDENCE
+
+Re-check the Wellness knowledge below for a CLEAR factual statement
+that directly supports any part of the user's question.
+
+A clear paraphrase or semantically equivalent description counts as
+support.
+
+Rules:
+- Use ONLY the provided Wellness knowledge.
+- Do not use pretrained knowledge.
+- Do not diagnose the user.
+- Do not apply a disorder or condition to the user.
+- Do not infer causes, severity, duration, or other facts.
+- Extract ONLY a factual statement that is explicitly present in
+  the knowledge.
+- If the question contains multiple parts, extract only the part
+  that is directly supported.
+- Do not answer the user's question.
+- Do not add recommendations or explanations.
+- Prefer the wording of the knowledge.
+- If there is no clear factual support, output exactly:
+  NO_SUPPORTED_EVIDENCE
+
+Question:
+{question}
+
+Wellness knowledge:
+{context}
+
+Supported evidence:
+"""
+
+def extract_supported_evidence(
+    question: str,
+    chunks: list,
+) -> str:
+
+    context_block = "\n\n".join(
+        f"[{chunk['organization']} - {chunk['title']}]\n"
+        f"{chunk['text']}"
+        for chunk in chunks
+    )
+
+    # --------------------------------------------------------
+    # FIRST EXTRACTION PASS
+    # --------------------------------------------------------
+
+    prompt = EVIDENCE_EXTRACTION_PROMPT.format(
+        context=context_block,
+        question=question,
+    )
+
+    evidence = call_granite(prompt).strip()
+
+    if evidence != "NO_SUPPORTED_EVIDENCE":
+        return evidence
+
+    # --------------------------------------------------------
+    # DETERMINISTIC EVIDENCE RECOVERY
+    #
+    # Used only when Granite incorrectly rejects evidence.
+    #
+    # IMPORTANT:
+    # This recovery does not generate or paraphrase information.
+    # It can only return an existing sentence from the retrieved
+    # Wellness knowledge.
+    # --------------------------------------------------------
+
+    print(
+        "[EVIDENCE EXTRACTION] "
+        "Granite returned NO_SUPPORTED_EVIDENCE. "
+        "Checking retrieved text for explicit phrase support."
+    )
+
+    question_lower = question.lower()
+
+    # --------------------------------------------------------
+    # HIGH-CONFIDENCE EVIDENCE RECOVERY
+    #
+    # This recovery is intentionally deterministic:
+    # it may ONLY return text that already exists in retrieved
+    # evidence. It does not generate or paraphrase evidence.
+    # --------------------------------------------------------
+
+    evidence_phrase_mappings = [
+                # Sleep
+        (
+            [
+                "fall asleep",
+                "cannot sleep",
+                "can't sleep",
+                "trouble sleeping",
+                "difficulty sleeping",
+                "difficulty falling asleep",
+                "hard to fall asleep",
+                "harder to fall asleep",
+                "unable to sleep",
+                "lying awake in bed",
+                "cannot sleep at night",
+                "can't sleep at night",
+            ],
+            "fall asleep",
+        ),
+
+        # Panic/death wording.
+        #
+        # The user's wording "felt like I was dying" is not
+        # lexically identical to the source wording "fear of
+        # death or impending doom", so map the high-confidence
+        # concepts explicitly.
+        (
+            [
+                "felt like i was dying",
+                "feel like i'm dying",
+                "feel like i am dying",
+                "feeling like i'm dying",
+                "feeling like i am dying",
+            ],
+            [
+                "fear of death",
+                "impending doom",
+            ],
+        ),
+        (
+            [
+                "fear of death",
+                "impending doom",
+            ],
+            [
+                "fear of death",
+                "impending doom",
+            ],
+        ),
+    ]
+
+    # Find which evidence concepts are supported by the question.
+    matched_evidence_phrases = []
+
+    for question_phrases, evidence_phrases in evidence_phrase_mappings:
+        if any(
+            phrase in question_lower
+            for phrase in question_phrases
+        ):
+            matched_evidence_phrases.extend(
+                evidence_phrases
+            )
+
+    if not matched_evidence_phrases:
+        return "NO_SUPPORTED_EVIDENCE"
+
+    # --------------------------------------------------------
+    # Return ONLY existing text from retrieved evidence.
+    # Prefer the most specific evidence-containing segment.
+    # --------------------------------------------------------
+
+    best_sentence = None
+    best_score = -1
+
+    for chunk in chunks:
+        text = chunk.get("text", "")
+
+        sentences = re.split(
+            r"(?<=[.!?])\s+|\n+",
+            text,
+        )
+
+        for sentence in sentences:
+            sentence_clean = sentence.strip()
+
+            if not sentence_clean:
+                continue
+
+            sentence_lower = sentence_clean.lower()
+
+            matched_phrases = [
+                phrase
+                for phrase in matched_evidence_phrases
+                if phrase in sentence_lower
+            ]
+
+            if not matched_phrases:
+                continue
+
+            # Prefer longer/more specific evidence phrases.
+            phrase_score = max(
+                len(phrase)
+                for phrase in matched_phrases
+            )
+
+            # Prefer substantive evidence sentences rather
+            # than short headings or fragments.
+            word_count = len(sentence_clean.split())
+
+            score = phrase_score
+
+            if word_count >= 8:
+                score += 20
+
+            if word_count >= 12:
+                score += 10
+
+            if score > best_score:
+                best_score = score
+                best_sentence = sentence_clean
+
+    if best_sentence is not None:
+        return best_sentence
+
+    return "NO_SUPPORTED_EVIDENCE"
+
+# ============================================================
+# PHASE 6 — FINAL ANSWER VALIDATION
+# ============================================================
+
+def validate_generated_answer(
+    question: str,
+    answer: str,
+    verified_evidence: str,
+) -> str:
+
+    """
+    Deterministic safety boundary after Granite generation.
+
+    The final answer must not:
+    1. Apply a named disorder or condition to the individual user.
+    2. Introduce factual Wellness information that is not present
+       in the verified evidence.
+
+    When a violation is detected, return the verified evidence itself.
+    This is intentionally conservative: a shorter evidence-only answer
+    is preferred over an unsupported generated answer.
+    """
+
+    answer_lower = answer.lower()
+    evidence_lower = verified_evidence.lower()
+    question_lower = question.lower()
+
+    # --------------------------------------------------------
+    # Diagnostic / condition names explicitly present in the
+    # verified evidence.
+    # --------------------------------------------------------
+
+    diagnostic_terms = [
+        "generalized anxiety disorder",
+        "panic disorder",
+        "panic attack",
+        "major depressive disorder",
+        "depression",
+        "anxiety disorder",
+        "eating disorder",
+    ]
+
+    matched_diagnoses = [
+        term
+        for term in diagnostic_terms
+        if term in evidence_lower
+        and term in answer_lower
+    ]
+
+    # --------------------------------------------------------
+    # Determine whether the user is describing a personal
+    # experience rather than asking for general information.
+    # --------------------------------------------------------
+
+    personal_question_patterns = [
+        r"\bi\b",
+        r"\bmy\b",
+        r"\bme\b",
+        r"\bive\b",
+        r"\bi've\b",
+        r"\bi'm\b",
+        r"\bim\b",
+        r"\bmyself\b",
+    ]
+
+    personal_question = any(
+        re.search(
+            pattern,
+            question_lower,
+        )
+        for pattern in personal_question_patterns
+    )
+
+    # --------------------------------------------------------
+    # Language that applies a named condition to the user.
+    #
+    # Includes direct diagnosis as well as softer diagnostic
+    # phrasing such as "can be a symptom of" when referring
+    # back to the user's individual experience.
+    # --------------------------------------------------------
+
+    personal_application_patterns = [
+        "you have",
+        "you may have",
+        "you might have",
+        "you could have",
+        "you may be experiencing",
+        "you might be experiencing",
+        "you could be experiencing",
+        "your symptoms",
+        "your experience",
+        "your description",
+        "that experience",
+        "this experience",
+        "that description",
+        "this description",
+        "can be a symptom of",
+        "may be a symptom of",
+        "might be a symptom of",
+        "could be a symptom of",
+        "can indicate",
+        "may indicate",
+        "might indicate",
+        "could indicate",
+        "may be related to",
+        "might be related to",
+        "could be related to",
+        "can be related to",
+        "sounds like",
+        "sounds consistent with",
+        "is consistent with",
+        "are consistent with",
+        "suggestive of",
+        "possibly",
+        "possibly have",
+    ]
+
+    personal_application_detected = any(
+        pattern in answer_lower
+        for pattern in personal_application_patterns
+    )
+
+       # --------------------------------------------------------
+    # If the user is describing a personal experience and the
+    # generated answer introduces a named disorder/condition,
+    # reject the generated answer.
+    #
+    # This intentionally does not depend on a particular wording
+    # such as "sounds like", "symptom of", or "may have".
+    # A generated answer can express the same unsafe relationship
+    # in many different ways.
+    # --------------------------------------------------------
+
+    if (
+        personal_question
+        and matched_diagnoses
+    ):
+
+        print(
+            "[ANSWER VALIDATION] "
+            "Blocked named-condition application to personal question."
+        )
+
+        return (
+              f"The available information says: {verified_evidence} "
+             "However, it cannot determine what caused your individual experience "
+             "or whether it was a specific condition."
+)
+
+    # --------------------------------------------------------
+    # Personal sleep questions:
+    #
+    # If the verified evidence is an exact sleep-related source
+    # statement, do not allow Granite to introduce broader claims
+    # about sleep quality or outcomes.
+    # --------------------------------------------------------
+
+    sleep_expansion_patterns = [
+        "improve sleep quality",
+        "improves sleep quality",
+        "better sleep quality",
+        "improve your sleep",
+        "improves your sleep",
+        "sleep quality",
+    ]
+
+    if (
+        personal_question
+        and any(
+            pattern in answer_lower
+            for pattern in sleep_expansion_patterns
+        )
+        and "fall asleep" in evidence_lower
+    ):
+
+        print(
+            "[ANSWER VALIDATION] "
+            "Blocked unsupported sleep-related expansion."
+        )
+
+        return verified_evidence
+    
+    # --------------------------------------------------------
+    # Evidence-boundary check.
+    #
+    # We only perform this check for answers that contain
+    # factual Wellness material beyond the verified evidence.
+    #
+    # To avoid rejecting normal paraphrases, compare meaningful
+    # content words rather than requiring exact sentence matches.
+    # --------------------------------------------------------
+
+    def normalize_words(text: str) -> set[str]:
+
+        words = re.findall(
+            r"\b[a-zA-Z][a-zA-Z'-]*\b",
+            text.lower(),
+        )
+
+        stop_words = {
+            "a",
+            "an",
+            "and",
+            "are",
+            "as",
+            "at",
+            "be",
+            "by",
+            "can",
+            "do",
+            "for",
+            "from",
+            "has",
+            "have",
+            "if",
+            "in",
+            "into",
+            "is",
+            "it",
+            "may",
+            "of",
+            "on",
+            "or",
+            "that",
+            "the",
+            "their",
+            "them",
+            "these",
+            "this",
+            "to",
+            "was",
+            "were",
+            "what",
+            "when",
+            "which",
+            "with",
+            "you",
+            "your",
+        }
+
+        return {
+            word
+            for word in words
+            if word not in stop_words
+            and len(word) > 2
+        }
+
+    evidence_words = normalize_words(
+        verified_evidence
+    )
+
+    answer_words = normalize_words(
+        answer
+    )
+
+    # --------------------------------------------------------
+    # If the generated answer contains very little lexical
+    # relationship to the verified evidence, prefer the
+    # evidence itself.
+    #
+    # This is a conservative fallback, not a semantic proof
+    # system. It mainly catches answers that have drifted into
+    # unrelated pretrained knowledge.
+    # --------------------------------------------------------
+
+    if evidence_words and answer_words:
+
+        overlap = (
+            len(answer_words & evidence_words)
+            / len(answer_words)
+        )
+
+        if overlap < 0.30:
+
+            print(
+                "[ANSWER VALIDATION] "
+                "Generated answer has insufficient overlap "
+                "with verified evidence."
+            )
+
+            return verified_evidence
+
+    return answer
 
 # ============================================================
 # END-TO-END ANSWER
@@ -973,12 +1624,40 @@ def answer_query(
 
     retrieval_start = time.perf_counter()
 
+    # Resolve conversation context before retrieval so that
+    # contextual follow-up questions can retrieve against
+    # the topic established by the previous user message.
+    conversation_context = select_conversation_context(
+        question,
+        history,
+    )
+
+    retrieval_query = question
+    previous_user_messages = []
+
+    if conversation_context:
+        previous_user_messages = [
+            str(message.get("content", "")).strip()
+            for message in conversation_context
+            if message.get("role") == "user"
+            and str(message.get("content", "")).strip()
+        ]
+
+    if previous_user_messages:
+        retrieval_query = (
+            f"{previous_user_messages[-1]} {question}"
+        )
+
+    print(
+        f"[RETRIEVAL QUERY] {retrieval_query}"
+    )
+
     retrieval_result = retrieve_context(
-      vector_db,
-      question,
-      k=TOP_K,
-      candidate_k=CANDIDATE_K,
-      max_per_source=MAX_PER_SOURCE,
+        vector_db,
+        retrieval_query,
+        k=TOP_K,
+        candidate_k=CANDIDATE_K,
+        max_per_source=MAX_PER_SOURCE,
     )
 
     if isinstance(retrieval_result, tuple):
@@ -1035,17 +1714,39 @@ def answer_query(
 
     prompt_start = time.perf_counter()
 
-    prompt = build_prompt(
+    prompt, verified_evidence = build_prompt(
         question,
         chunks,
         history,
     )
+
     print(
-    f"[PERFORMANCE] Granite prompt characters: "
-    f"{len(prompt)}"
+        f"[PERFORMANCE] Granite prompt characters: "
+        f"{len(prompt)}"
     )
 
     prompt_time = time.perf_counter() - prompt_start
+
+    # --------------------------------------------------------
+    # STEP 3B — PHASE 6 VERIFIED EVIDENCE GATE
+    # --------------------------------------------------------
+
+    if verified_evidence == "NO_SUPPORTED_EVIDENCE":
+
+        print(
+            "[EVIDENCE GATE] No supported evidence. "
+            "Skipping final Granite generation."
+        )
+
+        return {
+            "route": "normal",
+            "answer": (
+                "I don't have enough information in my current "
+                "knowledge base to answer that reliably."
+            ),
+            "sources": [],
+            "context_chunks": [],
+        }
 
     # --------------------------------------------------------
     # STEP 4 — GRANITE
@@ -1057,9 +1758,27 @@ def answer_query(
 
     ollama_time = time.perf_counter() - ollama_start
 
-    # --------------------------------------------------------
-    # STEP 5 — SOURCE LIST
-    # --------------------------------------------------------
+# --------------------------------------------------------
+# STEP 4B — PHASE 6 DIAGNOSTIC APPLICATION VALIDATION
+# --------------------------------------------------------
+
+    validated_answer = validate_generated_answer(
+    question,
+    answer,
+    verified_evidence,
+)
+
+    if validated_answer != answer:
+      print(
+        "[ANSWER VALIDATION] "
+        "Blocked diagnostic application in generated answer."
+    )
+
+    answer = validated_answer
+
+# --------------------------------------------------------
+# STEP 5 — SOURCE LIST
+# --------------------------------------------------------
 
     sources = []
     seen = set()

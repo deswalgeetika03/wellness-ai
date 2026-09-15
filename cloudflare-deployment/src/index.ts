@@ -156,10 +156,10 @@ const retrieval = await retrieve(retrievalQuery, env);
       // Evidence extraction
       // -------------------------------------------------------------
             const evidence = await extractEvidence(
-        question,
-        retrieval.selected,
-        env,
-      );
+              retrievalQuery,
+              retrieval.context,
+              env,
+            );
 
       // -------------------------------------------------------------
       // Evidence sufficiency gate
@@ -183,24 +183,24 @@ const retrieval = await retrieve(retrievalQuery, env);
       // Final answer generation
       // -------------------------------------------------------------
       const answer = await generateFinalAnswer(
-  env.AI,
-  {
-        question,
-        chunks: retrieval.selected.map((match) => ({
-          organization: String(
-            match.metadata?.organization ?? "Unknown"
-          ),
-          title: String(
-            match.metadata?.title ?? "Unknown"
-          ),
-          text: String(
-            match.metadata?.text ?? ""
-          ),
-        })),
-        verifiedEvidence: evidence,
-        history: body.history,
-      },
-);
+        env.AI,
+        {
+          question,
+          chunks: retrieval.context.map((match) => ({
+            organization: String(
+             match.metadata?.organization ?? "Unknown"
+            ),
+            title: String(
+              match.metadata?.title ?? "Unknown"
+            ),
+            text: String(
+              match.metadata?.text ?? ""
+            ),
+         })),
+         verifiedEvidence: evidence,
+         history: body.history,
+       },
+     );
 
       // -------------------------------------------------------------
       // Source list — same deduplication strategy as local pipeline

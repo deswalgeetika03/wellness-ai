@@ -1,4 +1,4 @@
-# Wellness AI — Known Limitations
+﻿# Wellness AI â€” Known Limitations
 
 ## Overview
 
@@ -33,14 +33,21 @@ Further retrieval ranking and knowledge-base improvements could target Top-1 per
 
 ---
 
-## 2. Follow-Up Evidence-Gate Limitation
+## 2. Follow-Up Verification
 
-A known production limitation occurs with some context-dependent follow-up questions.
+The previously documented production limitation involved a context-dependent follow-up question. The exact scenario was subsequently re-tested against the deployed production system.
 
-For example:
+The exact tested interaction was:
 
 ```text
 User: How can I manage daily stress?
 
 User: What should I try first?
 ```
+
+
+The deployed API and frontend successfully used the preceding user message as conversational context and returned a grounded response with verified evidence and sources.
+
+The limitation is therefore considered **resolved for this tested scenario**.
+
+This does not establish exhaustive coverage of all possible conversational follow-up patterns. Broader adversarial and paraphrase testing remains future evaluation work.

@@ -254,6 +254,26 @@ interface WorkersAIResponse {
   }>;
 }
 
+function isInvalidGeneratedAnswer(answer: string): boolean {
+  const normalized = answer.trim().toLowerCase();
+
+  if (!normalized) {
+    return true;
+  }
+
+  const metaPatterns = [
+    /^please give me\b/,
+    /^please provide\b/,
+    /^give me\b/,
+    /^provide me\b/,
+    /^i can provide\b/,
+    /^i'll provide\b/,
+    /^sure[,!:]?\s*(here|below)\b/,
+  ];
+
+  return metaPatterns.some((pattern) => pattern.test(normalized));
+}
+
 export async function generateFinalAnswer(
   ai: Ai,
   input: GenerationInput
@@ -262,12 +282,23 @@ export async function generateFinalAnswer(
 
   const start = Date.now();
 
-  const response = (await ai.run(GENERATION_MODEL, {
+  let response: WorkersAIResponse;
+
+try {
+  response = (await ai.run(GENERATION_MODEL, {
     prompt,
     stream: false,
     temperature: TEMPERATURE,
     max_tokens: MAX_TOKENS,
   })) as WorkersAIResponse;
+} catch (error) {
+  console.error(
+    "[GENERATION] Final generation failed; using verified evidence fallback.",
+    error,
+  );
+
+  return input.verifiedEvidence.trim();
+}
 
   console.log(
     "[DEBUG] Final Workers AI response:",
@@ -303,5 +334,22 @@ if (!answer.trim()) {
 }
 
  
-  return answer.trim();
+  let cleanedAnswer = answer.trim();
+
+// Remove model-generated output labels.
+cleanedAnswer = cleanedAnswer
+  .replace(/^Answer:\s*/i, "")
+  .replace(/^Evidence:\s*/i, "")
+  .replace(/<extra_conversation_turns>[\s\S]*?<\/extra_conversation_turns>/gi, "")
+  .trim();
+
+if (!cleanedAnswer || isInvalidGeneratedAnswer(cleanedAnswer)) {
+  console.warn(
+    "[GENERATION] Invalid/meta final answer detected; using verified evidence fallback.",
+  );
+
+  return input.verifiedEvidence.trim();
+}
+
+return cleanedAnswer;
 }

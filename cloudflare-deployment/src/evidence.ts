@@ -59,6 +59,36 @@ function buildContext(chunks: EvidenceChunk[]): string {
  * - It only returns sentences already present in the retrieved chunks.
  * - It requires overlap between meaningful question terms and the sentence.
  */
+function normalizeEvidenceTerm(term: string): string {
+  let normalized = term.toLowerCase();
+
+  if (normalized.endsWith("ies") && normalized.length > 5) {
+    normalized = `${normalized.slice(0, -3)}y`;
+  } else if (
+    normalized.endsWith("ing") &&
+    normalized.length > 6
+  ) {
+    normalized = normalized.slice(0, -3);
+  } else if (
+    normalized.endsWith("ed") &&
+    normalized.length > 5
+  ) {
+    normalized = normalized.slice(0, -2);
+  } else if (
+    normalized.endsWith("es") &&
+    normalized.length > 5
+  ) {
+    normalized = normalized.slice(0, -2);
+  } else if (
+    normalized.endsWith("s") &&
+    normalized.length > 4
+  ) {
+    normalized = normalized.slice(0, -1);
+  }
+
+  return normalized;
+}
+
 function extractDeterministicEvidence(
   question: string,
   chunks: EvidenceChunk[],
@@ -102,7 +132,8 @@ function extractDeterministicEvidence(
       (term) =>
         term.length >= 4 &&
         !stopWords.has(term),
-    );
+    )
+    .map(normalizeEvidenceTerm);
 
   if (questionTerms.length === 0) {
     return "NO_SUPPORTED_EVIDENCE";
@@ -112,6 +143,7 @@ function extractDeterministicEvidence(
     sentence: string;
     score: number;
     chunkIndex: number;
+    overlapCount: number;
   }> = [];
 
   chunks.forEach((chunk, chunkIndex) => {
@@ -126,6 +158,30 @@ function extractDeterministicEvidence(
       .map((sentence) => sentence.trim())
       .filter(Boolean);
 
+    const chunkTerms = new Set(
+      sentences
+        .flatMap((sentence) =>
+          sentence
+            .toLowerCase()
+            .replace(/[^a-z0-9\s]/g, " ")
+            .split(/\s+/)
+            .filter(
+              (term) =>
+                term.length >= 4 &&
+                !stopWords.has(term),
+            )
+            .map(normalizeEvidenceTerm),
+        ),
+    );
+
+    const chunkOverlapCount = questionTerms.filter((term) =>
+      chunkTerms.has(term),
+    ).length;
+
+    if (chunkOverlapCount === 0) {
+      return;
+    }
+
     sentences.forEach((sentence) => {
       const sentenceTerms = new Set(
         sentence
@@ -136,53 +192,100 @@ function extractDeterministicEvidence(
             (term) =>
               term.length >= 4 &&
               !stopWords.has(term),
-          ),
+          )
+          .map(normalizeEvidenceTerm),
       );
 
-      const overlap = questionTerms.filter((term) =>
+      const overlapCount = questionTerms.filter((term) =>
         sentenceTerms.has(term),
       ).length;
 
-      if (overlap === 0) {
+      if (overlapCount === 0) {
         return;
       }
 
       candidates.push({
         sentence,
-        score: overlap / questionTerms.length,
+        score:
+          overlapCount / questionTerms.length +
+          chunkOverlapCount / questionTerms.length,
         chunkIndex,
+        overlapCount,
       });
     });
   });
 
   if (candidates.length === 0) {
+  const actionIntentPatterns = [
+    /\bwhat can i do\b/i,
+    /\bwhat should i do\b/i,
+    /\bwhat can i try\b/i,
+    /\bwhat should i try\b/i,
+    /\bhow can i\b/i,
+    /\bhow do i\b/i,
+    /\bways to\b/i,
+    /\bways of\b/i,
+    /\btips (to|for|on)\b/i,
+  ];
+
+  const hasActionIntent = actionIntentPatterns.some(
+    (pattern) => pattern.test(question),
+  );
+
+  if (!hasActionIntent) {
     return "NO_SUPPORTED_EVIDENCE";
   }
+
+  const actionPatterns = [
+    /\btry\b/i,
+    /\bexplore\b/i,
+    /\bschedule\b/i,
+    /\bpractice\b/i,
+    /\bengage\b/i,
+    /\buse\b/i,
+    /\bset\b/i,
+    /\bseek\b/i,
+  ];
+
+  for (const chunk of chunks) {
+    const text = String(chunk.metadata.text ?? "").trim();
+
+    if (!text) {
+      continue;
+    }
+
+    const sentences = text
+      .split(/(?<=[.!?])\s+|\n+/)
+      .map((sentence) => sentence.trim())
+      .filter(Boolean);
+
+    const actionableSentence = sentences.find((sentence) =>
+      actionPatterns.some((pattern) =>
+        pattern.test(sentence),
+      ),
+    );
+
+    if (actionableSentence) {
+      return actionableSentence;
+    }
+  }
+
+  return "NO_SUPPORTED_EVIDENCE";
+}
 
   candidates.sort((a, b) => {
     if (b.score !== a.score) {
       return b.score - a.score;
     }
 
+    if (b.overlapCount !== a.overlapCount) {
+      return b.overlapCount - a.overlapCount;
+    }
+
     return a.chunkIndex - b.chunkIndex;
   });
 
-  const best = candidates[0];
-
-  // Require at least two meaningful overlapping terms.
-  const overlapCount = questionTerms.filter((term) =>
-    best.sentence
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, " ")
-      .split(/\s+/)
-      .includes(term),
-  ).length;
-
-  if (overlapCount < 2) {
-    return "NO_SUPPORTED_EVIDENCE";
-  }
-
-  return best.sentence;
+  return candidates[0].sentence;
 }
 
 export async function extractEvidence(
@@ -265,11 +368,11 @@ export async function extractEvidence(
   }
 
   if (evidence === "NO_SUPPORTED_EVIDENCE") {
-    return extractDeterministicEvidence(
-      question,
-      chunks,
-    );
-  }
+  return extractDeterministicEvidence(
+    question,
+    chunks,
+  );
+}
 
   return evidence;
 }

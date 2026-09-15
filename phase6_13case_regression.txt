@@ -1,0 +1,769 @@
+
+============================================================
+CASE 1 / 13
+QUESTION: What can I do when I feel overwhelmed?
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 5289.16it/s]
+[PERFORMANCE] Embedding model initialization: 14.820s
+[PERFORMANCE] Chroma initialization: 0.201s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] What can I do when I feel overwhelmed?
+[PERFORMANCE] Ollama load duration: 0.009s
+[PERFORMANCE] Ollama prompt eval: 0.221s
+[PERFORMANCE] Ollama generation: 0.220s
+[PERFORMANCE] Ollama generated tokens: 12
+[PERFORMANCE] Granite output characters: 40
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7235
+[PERFORMANCE] Ollama load duration: 0.006s
+[PERFORMANCE] Ollama prompt eval: 0.153s
+[PERFORMANCE] Ollama generation: 0.366s
+[PERFORMANCE] Ollama generated tokens: 12
+[PERFORMANCE] Granite output characters: 40
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.263s
+Prompt:          3.541s
+Ollama/Granite:  2.762s
+------------------------------------------------------------
+TOTAL:           6.566s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+Take deep breaths, stretch, or meditate.
+
+SOURCES:
+  - NIMH: Caring for Your Mental Health
+  - WHO: Doing What Matters in Times of Stress
+  - CDC: Managing Stress
+
+
+============================================================
+CASE 2 / 13
+QUESTION: What are healthy ways to cope with stress?
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3499.53it/s]
+[PERFORMANCE] Embedding model initialization: 14.598s
+[PERFORMANCE] Chroma initialization: 0.165s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] What are healthy ways to cope with stress?
+[PERFORMANCE] Ollama load duration: 0.006s
+[PERFORMANCE] Ollama prompt eval: 0.297s
+[PERFORMANCE] Ollama generation: 1.448s
+[PERFORMANCE] Ollama generated tokens: 76
+[PERFORMANCE] Granite output characters: 428
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7627
+[PERFORMANCE] Ollama load duration: 0.009s
+[PERFORMANCE] Ollama prompt eval: 0.561s
+[PERFORMANCE] Ollama generation: 1.743s
+[PERFORMANCE] Ollama generated tokens: 89
+[PERFORMANCE] Granite output characters: 426
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.198s
+Prompt:          4.817s
+Ollama/Granite:  4.549s
+------------------------------------------------------------
+TOTAL:           9.565s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+Traceback (most recent call last):
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1961, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1921, in main
+    print_result(result)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1865, in print_result
+    print(result["answer"])
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2011' in position 418: character maps to <undefined>
+
+============================================================
+CASE 3 / 13
+QUESTION: What are symptoms of anxiety?
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 4474.32it/s]
+[PERFORMANCE] Embedding model initialization: 15.369s
+[PERFORMANCE] Chroma initialization: 0.136s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] What are symptoms of anxiety?
+[PERFORMANCE] Ollama load duration: 0.004s
+[PERFORMANCE] Ollama prompt eval: 0.241s
+[PERFORMANCE] Ollama generation: 1.003s
+[PERFORMANCE] Ollama generated tokens: 53
+[PERFORMANCE] Granite output characters: 245
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7431
+[PERFORMANCE] Ollama load duration: 0.046s
+[PERFORMANCE] Ollama prompt eval: 0.579s
+[PERFORMANCE] Ollama generation: 1.283s
+[PERFORMANCE] Ollama generated tokens: 66
+[PERFORMANCE] Granite output characters: 281
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.196s
+Prompt:          3.979s
+Ollama/Granite:  4.114s
+------------------------------------------------------------
+TOTAL:           8.290s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+1. Trouble concentrating or making decisions
+2. Feeling irritable, tense, or restless
+3. Experiencing nausea or abdominal distress
+4. Having heart palpitations
+5. Sweating, trembling, or shaking
+6. Trouble sleeping
+7. Having a sense of impending danger, panic, or doom.
+
+SOURCES:
+  - NIMH: Panic Disorder: What You Need to Know
+  - WHO: Anxiety Disorders
+  - WHO: Mental Disorders (fact sheet)
+
+
+============================================================
+CASE 4 / 13
+QUESTION: my mind wont stop racing with worry
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 4036.34it/s]
+[PERFORMANCE] Embedding model initialization: 14.182s
+[PERFORMANCE] Chroma initialization: 0.172s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] my mind wont stop racing with worry
+[PERFORMANCE] Ollama load duration: 0.007s
+[PERFORMANCE] Ollama prompt eval: 0.281s
+[PERFORMANCE] Ollama generation: 0.297s
+[PERFORMANCE] Ollama generated tokens: 16
+[PERFORMANCE] Granite output characters: 94
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7286
+[PERFORMANCE] Ollama load duration: 0.010s
+[PERFORMANCE] Ollama prompt eval: 0.485s
+[PERFORMANCE] Ollama generation: 0.491s
+[PERFORMANCE] Ollama generated tokens: 25
+[PERFORMANCE] Granite output characters: 146
+[ANSWER VALIDATION] Blocked named-condition application to personal question.
+[ANSWER VALIDATION] Blocked diagnostic application in generated answer.
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.195s
+Prompt:          3.646s
+Ollama/Granite:  3.213s
+------------------------------------------------------------
+TOTAL:           7.055s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+The available information says: generalized anxiety disorder (persistent and excessive worry about daily activities or events) However, it cannot determine what caused your individual experience or whether it was a specific condition.
+
+SOURCES:
+  - WHO: Doing What Matters in Times of Stress
+  - NIMH: Panic Disorder: What You Need to Know
+  - WHO: Anxiety Disorders
+
+
+============================================================
+CASE 5 / 13
+QUESTION: my heart was pounding and i couldnt breathe, what was that
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 5633.76it/s]
+[PERFORMANCE] Embedding model initialization: 13.531s
+[PERFORMANCE] Chroma initialization: 0.165s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] my heart was pounding and i couldnt breathe, what was that
+[PERFORMANCE] Ollama load duration: 0.007s
+[PERFORMANCE] Ollama prompt eval: 0.339s
+[PERFORMANCE] Ollama generation: 0.638s
+[PERFORMANCE] Ollama generated tokens: 34
+[PERFORMANCE] Granite output characters: 152
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7367
+[PERFORMANCE] Ollama load duration: 0.007s
+[PERFORMANCE] Ollama prompt eval: 0.530s
+[PERFORMANCE] Ollama generation: 1.403s
+[PERFORMANCE] Ollama generated tokens: 72
+[PERFORMANCE] Granite output characters: 374
+[ANSWER VALIDATION] Blocked named-condition application to personal question.
+[ANSWER VALIDATION] Blocked diagnostic application in generated answer.
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.234s
+Prompt:          4.034s
+Ollama/Granite:  4.133s
+------------------------------------------------------------
+TOTAL:           8.402s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+The available information says: Physical symptoms during a panic attack may include: Pounding or racing heart, Sweating, Chills, Trembling, Difficulty breathing, Weakness or dizziness. However, it cannot determine what caused your individual experience or whether it was a specific condition.
+
+SOURCES:
+  - WHO: Doing What Matters in Times of Stress
+  - NIMH: Panic Disorder: What You Need to Know
+
+
+============================================================
+CASE 6 / 13
+QUESTION: i felt like i was dying but the doctor said i was fine
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 4175.17it/s]
+[PERFORMANCE] Embedding model initialization: 14.423s
+[PERFORMANCE] Chroma initialization: 0.163s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] i felt like i was dying but the doctor said i was fine
+[RETRIEVAL FALLBACK] Strong panic/death wording detected. Running targeted query: panic attack fear of death impending doom
+[PERFORMANCE] Ollama load duration: 0.006s
+[PERFORMANCE] Ollama prompt eval: 0.289s
+[PERFORMANCE] Ollama generation: 0.107s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7266
+[PERFORMANCE] Ollama load duration: 0.012s
+[PERFORMANCE] Ollama prompt eval: 0.470s
+[PERFORMANCE] Ollama generation: 2.011s
+[PERFORMANCE] Ollama generated tokens: 103
+[PERFORMANCE] Granite output characters: 579
+[ANSWER VALIDATION] Blocked named-condition application to personal question.
+[ANSWER VALIDATION] Blocked diagnostic application in generated answer.
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.210s
+Prompt:          3.439s
+Ollama/Granite:  4.734s
+------------------------------------------------------------
+TOTAL:           8.383s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+The available information says: A fear of death or impending doom during a panic attack However, it cannot determine what caused your individual experience or whether it was a specific condition.
+
+SOURCES:
+  - NIMH: Panic Disorder: What You Need to Know
+  - WHO: Anxiety Disorders
+  - NIMH: Eating Disorders: What You Need to Know
+
+
+============================================================
+CASE 7 / 13
+QUESTION: i cant fall asleep no matter what i try
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 5592.55it/s]
+[PERFORMANCE] Embedding model initialization: 14.163s
+[PERFORMANCE] Chroma initialization: 0.142s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] i cant fall asleep no matter what i try
+[PERFORMANCE] Ollama load duration: 0.003s
+[PERFORMANCE] Ollama prompt eval: 0.299s
+[PERFORMANCE] Ollama generation: 0.106s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7217
+[PERFORMANCE] Ollama load duration: 0.006s
+[PERFORMANCE] Ollama prompt eval: 0.457s
+[PERFORMANCE] Ollama generation: 1.034s
+[PERFORMANCE] Ollama generated tokens: 53
+[PERFORMANCE] Granite output characters: 273
+[ANSWER VALIDATION] Generated answer has insufficient overlap with verified evidence.
+[ANSWER VALIDATION] Blocked diagnostic application in generated answer.
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.187s
+Prompt:          3.446s
+Ollama/Granite:  3.762s
+------------------------------------------------------------
+TOTAL:           7.396s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+Make sleep a priority
+
+SOURCES:
+  - NIMH: Caring for Your Mental Health
+  - NIH/NHLBI: Healthy Sleep Habits
+  - WHO: Doing What Matters in Times of Stress
+
+
+============================================================
+CASE 8 / 13
+QUESTION: does scrolling my phone in bed mess up my sleep
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 7627.62it/s]
+[PERFORMANCE] Embedding model initialization: 14.938s
+[PERFORMANCE] Chroma initialization: 0.154s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] does scrolling my phone in bed mess up my sleep
+[PERFORMANCE] Ollama load duration: 0.004s
+[PERFORMANCE] Ollama prompt eval: 0.300s
+[PERFORMANCE] Ollama generation: 0.875s
+[PERFORMANCE] Ollama generated tokens: 46
+[PERFORMANCE] Granite output characters: 202
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7406
+[PERFORMANCE] Ollama load duration: 0.005s
+[PERFORMANCE] Ollama prompt eval: 0.544s
+[PERFORMANCE] Ollama generation: 0.857s
+[PERFORMANCE] Ollama generated tokens: 44
+[PERFORMANCE] Granite output characters: 190
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.201s
+Prompt:          4.246s
+Ollama/Granite:  3.598s
+------------------------------------------------------------
+TOTAL:           8.046s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+Yes, scrolling your phone in bed can mess up your sleep. The blue light from devices and screens can make it harder to fall asleep, as noted in the NIH/NHLBI section on Healthy Sleep Habits.
+
+SOURCES:
+  - WHO: Doing What Matters in Times of Stress
+  - NIMH: Caring for Your Mental Health
+  - NIH/NHLBI: Healthy Sleep Habits
+
+
+============================================================
+CASE 9 / 13
+QUESTION: i just feel empty and dont enjoy anything anymore
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 4695.64it/s]
+[PERFORMANCE] Embedding model initialization: 14.191s
+[PERFORMANCE] Chroma initialization: 0.167s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] i just feel empty and dont enjoy anything anymore
+[PERFORMANCE] Ollama load duration: 0.015s
+[PERFORMANCE] Ollama prompt eval: 0.295s
+[PERFORMANCE] Ollama generation: 0.130s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7227
+[EVIDENCE GATE] No supported evidence. Skipping final Granite generation.
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+I don't have enough information in my current knowledge base to answer that reliably.
+
+
+============================================================
+CASE 10 / 13
+QUESTION: why do i feel sad for no reason
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3734.62it/s]
+[PERFORMANCE] Embedding model initialization: 14.304s
+[PERFORMANCE] Chroma initialization: 0.142s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] why do i feel sad for no reason
+[PERFORMANCE] Ollama load duration: 0.010s
+[PERFORMANCE] Ollama prompt eval: 1.212s
+[PERFORMANCE] Ollama generation: 0.112s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7209
+[EVIDENCE GATE] No supported evidence. Skipping final Granite generation.
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+I don't have enough information in my current knowledge base to answer that reliably.
+
+
+============================================================
+CASE 11 / 13
+QUESTION: what kinds of mental health problems are common in students
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3382.21it/s]
+[PERFORMANCE] Embedding model initialization: 14.335s
+[PERFORMANCE] Chroma initialization: 0.150s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] what kinds of mental health problems are common in students
+[PERFORMANCE] Ollama load duration: 0.006s
+[PERFORMANCE] Ollama prompt eval: 1.190s
+[PERFORMANCE] Ollama generation: 0.109s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7237
+[EVIDENCE GATE] No supported evidence. Skipping final Granite generation.
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+I don't have enough information in my current knowledge base to answer that reliably.
+
+
+============================================================
+CASE 12 / 13
+QUESTION: What are common mental disorders?
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3690.40it/s]
+[PERFORMANCE] Embedding model initialization: 14.627s
+[PERFORMANCE] Chroma initialization: 0.183s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] What are common mental disorders?
+[PERFORMANCE] Ollama load duration: 0.004s
+[PERFORMANCE] Ollama prompt eval: 0.801s
+[PERFORMANCE] Ollama generation: 0.111s
+[PERFORMANCE] Ollama generated tokens: 6
+[PERFORMANCE] Granite output characters: 21
+[EVIDENCE EXTRACTION] Granite returned NO_SUPPORTED_EVIDENCE. Checking retrieved text for explicit phrase support.
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7211
+[EVIDENCE GATE] No supported evidence. Skipping final Granite generation.
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+I don't have enough information in my current knowledge base to answer that reliably.
+
+
+============================================================
+CASE 13 / 13
+QUESTION: What are symptoms of depression?
+============================================================
+Loading Wellness RAG...
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Candidate pool: 10
+Final context chunks: 3
+Max chunks per source: 1
+Granite model: granite4.1:3b
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3725.57it/s]
+[PERFORMANCE] Embedding model initialization: 14.688s
+[PERFORMANCE] Chroma initialization: 0.134s
+
+Pipeline ready.
+
+[RETRIEVAL QUERY] What are symptoms of depression?
+[PERFORMANCE] Ollama load duration: 0.005s
+[PERFORMANCE] Ollama prompt eval: 1.188s
+[PERFORMANCE] Ollama generation: 1.531s
+[PERFORMANCE] Ollama generated tokens: 80
+[PERFORMANCE] Granite output characters: 412
+
+============================================================
+DEBUG ù SELECTED CONVERSATION CONTEXT
+============================================================
+
+============================================================
+
+[PERFORMANCE] Granite prompt characters: 7601
+[PERFORMANCE] Ollama load duration: 0.008s
+[PERFORMANCE] Ollama prompt eval: 0.541s
+[PERFORMANCE] Ollama generation: 2.104s
+[PERFORMANCE] Ollama generated tokens: 107
+[PERFORMANCE] Granite output characters: 530
+
+============================================================
+PERFORMANCE
+============================================================
+Safety:          0.000s
+Retrieval:       0.184s
+Prompt:          4.815s
+Ollama/Granite:  4.868s
+------------------------------------------------------------
+TOTAL:           9.868s
+============================================================
+
+
+============================================================
+ROUTE: normal
+============================================================
+
+ANSWER:
+Traceback (most recent call last):
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1961, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1921, in main
+    print_result(result)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\preet\OneDrive\Desktop\PROJECT\query_pipeline.py", line 1865, in print_result
+    print(result["answer"])
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2011' in position 233: character maps to <undefined>

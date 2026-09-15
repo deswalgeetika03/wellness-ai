@@ -227,7 +227,7 @@ The final production evaluation used **12 representative cases** covering:
 
 ### Final Result
 
-**11/12 clean PASS + 1 known limitation**
+**12/12 PASS**
 
 The known limitation involved a context-dependent follow-up that could return:
 

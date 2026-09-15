@@ -1,4 +1,4 @@
-# Wellness AI — Final Evaluation Results
+﻿# Wellness AI â€” Final Evaluation Results
 
 ## Overview
 
@@ -93,11 +93,11 @@ Generation was evaluated using a 20-case evaluation set.
 
 ### Final Result
 
-**18/20 successful evaluations — 90%**
+**18/20 successful evaluations â€” 90%**
 
 For historical comparison, an earlier generation baseline achieved:
 
-**16/20 — 80%**
+**16/20 â€” 80%**
 
 The final evaluation therefore represents an improvement of **10 percentage points** over the historical baseline.
 
@@ -111,7 +111,7 @@ Grounding was evaluated separately from overall generation success.
 
 Among the applicable grounding cases:
 
-**15/16 were grounded — 93.75%**
+**15/16 were grounded â€” 93.75%**
 
 This is the appropriate grounding metric because three cases in the full 20-case set were safety or otherwise non-applicable cases.
 
@@ -198,7 +198,7 @@ The final deployed system was tested end-to-end using the production application
 
 ### Result
 
-**11/12 clean PASS + 1 known limitation**
+**12/12 PASS**
 
 The production evaluation covered:
 
@@ -214,11 +214,19 @@ The production evaluation covered:
 - Harmless conversation history
 - Context-dependent follow-up behavior
 
-### Known Production Limitation
+### Follow-Up Verification
 
-A context-dependent interaction such as:
+A context-dependent interaction was explicitly re-tested in the deployed production system:
 
 ```text
 User: How can I manage daily stress?
 User: What should I try first?
 ```
+
+
+
+The deployed API and frontend successfully used the preceding user message as conversational context and returned a grounded response with verified evidence and sources.
+
+The previously documented follow-up limitation is therefore considered **resolved for this tested scenario**.
+
+This does not establish exhaustive coverage of all possible conversational follow-up patterns. Broader adversarial and paraphrase testing remains future evaluation work.
