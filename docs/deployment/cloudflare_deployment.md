@@ -27,11 +27,17 @@ Safety Routing        Retrieval
                    Evidence Processing
                           |
                           v
-                   IBM Granite 4.1 3B
+                   Workers AI Granite 4.0 H Micro
                           |
                           v
                        Response
 ```
+
+For normal requests, the Worker creates query embeddings through the Hugging Face Inference API using `sentence-transformers/all-MiniLM-L6-v2`; Cloudflare Vectorize stores the corpus vectors and performs nearest-neighbor search. Vectorize is not the embedding model/service. The Hugging Face credential is supplied as the Cloudflare `HF_TOKEN` secret.
+
+For detected follow-ups, the Worker prefixes the latest previous user message to the retrieval query. It also passes the supplied active conversation history to generation. The local Python pipeline instead selects recent turns and semantically relevant older context for retrieval and prompting.
+
+Local post-generation validation includes heuristic checks for selected diagnostic/unsupported claims and evidence overlap. The production Worker cleans generated output and has limited empty/meta-output handling and fallback behavior; it does not run the same claim-level validator. Neither provides exhaustive factual verification.
 
 
 ## Deployment Verification

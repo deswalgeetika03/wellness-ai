@@ -92,7 +92,7 @@ These results describe the defined internal evaluations and should not be interp
 The system has known limitations, including:
 
 - Retrieval Top-1 performance below perfect accuracy.
-- A known follow-up evidence-gate limitation in production.
+- Follow-up behavior has been verified for one documented production interaction; broader paraphrase coverage remains untested and may still reach the evidence fallback.
 - Two unsupported-claim failures in the final generation evaluation.
 - Non-exhaustive paraphrase and adversarial safety coverage.
 

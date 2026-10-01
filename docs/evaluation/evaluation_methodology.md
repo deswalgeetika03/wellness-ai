@@ -109,15 +109,9 @@ This improved from the historical generation baseline of:
 
 Grounding is reported only over applicable cases.
 
-The final result was:
+The frozen summary reports **15/16 applicable cases grounded (93.75%)**, with 3 safety/non-applicable cases and 2 unsupported-claim failures. The committed row-level file `data/eval/generation_after_graded.csv` instead contains 14 YES, 2 NO (IDs 14 and 19), and 4 N/A, which yields 14/16 among applicable rows.
 
-**15/16 applicable cases grounded — 93.75%.**
-
-The complete 20-question set contained:
-
-* 15 grounded cases
-* 2 unsupported-claim failures
-* 3 safety/N/A cases
+No newer authoritative row-level evaluation artifact or reconciliation was found. The frozen headline is preserved as the documented final result, while the CSV discrepancy remains unresolved; these counts cannot be independently reconciled from the available artifacts.
 
 The two unsupported-claim failures remain documented as limitations rather than being removed from the evaluation record.
 
@@ -229,7 +223,7 @@ The final production evaluation used **12 representative cases** covering:
 
 **12/12 PASS**
 
-The known limitation involved a context-dependent follow-up that could return:
+An earlier production evaluation documented a context-dependent follow-up that could return:
 
 ```text
 NO_SUPPORTED_EVIDENCE
@@ -237,7 +231,7 @@ NO_SUPPORTED_EVIDENCE
 
 even when the conversation context was useful.
 
-The evidence gate was deliberately not weakened simply to make this test pass.
+The exact documented interaction was subsequently re-tested successfully against the deployed API and frontend. This resolves that scenario only; it does not establish exhaustive follow-up coverage. The evidence gate was not weakened simply to make the earlier test pass.
 
 ---
 

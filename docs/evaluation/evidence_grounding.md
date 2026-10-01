@@ -76,9 +76,7 @@ The final applicable grounding result was:
 
 **15/16 grounded — 93.75%**
 
-Three cases in the full 20-case generation evaluation were safety or otherwise non-applicable to grounding.
-
-The project therefore reports **93.75% applicable grounding**, rather than treating 15/20 as the grounding accuracy.
+The frozen summary reports three cases in the full 20-case generation evaluation as safety or otherwise non-applicable, giving 16 applicable cases. However, the committed `data/eval/generation_after_graded.csv` contains 14 grounded, 2 ungrounded (IDs 14 and 19), and 4 N/A rows, yielding 14/16 applicable. No authoritative reconciliation is present. The frozen 15/16 headline is preserved, and the inconsistency is disclosed rather than presented as independently verified.
 
 ---
 
@@ -88,7 +86,7 @@ Two generation evaluations contained unsupported claims.
 
 These cases remain part of the final evaluation record and are documented as known limitations.
 
-The evidence-oriented architecture reduces unsupported generation risk but does not establish perfect factual accuracy or exhaustive grounding.
+Local generation applies deterministic post-generation heuristics for diagnostic claims, selected expansions, and lexical evidence overlap. Production applies output cleanup and limited empty/meta-output handling, but does not run the same claim-level validator. Neither is a comprehensive grounding verifier. The evidence-oriented architecture reduces unsupported generation risk but does not establish perfect factual accuracy or exhaustive grounding.
 
 ---
 

@@ -12,15 +12,15 @@ duplicated/drifted source-metadata dict found during review.
 
 from pathlib import Path
 
-# Keep ChromaDB outside OneDrive (SQLite + background sync don't mix
-# well). Update this path if your project lives somewhere else -
-# but change it ONLY here, not in individual scripts.
+# Keep ChromaDB outside the repository (SQLite files should not be
+# committed or synchronized with the source tree). Override this path
+# with WELLNESS_CHROMA_DIR when a different local location is needed.
 import os
 
 CHROMA_DIR = Path(
     os.getenv(
         "WELLNESS_CHROMA_DIR",
-        r"C:\Users\preet\Projects\wellness_chroma",
+        str(Path.home() / "wellness_chroma"),
     )
 )
 
@@ -34,7 +34,7 @@ COLLECTION_NAME = "wellness_knowledge"
 # to produce identical vectors).
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-# The project's data folder is still fine to keep inside OneDrive/the
-# repo - it's plain text/CSV, not a SQLite file being written to.
+# The project data folder contains source logs and cleaned text; the
+# generated vector database is kept outside the repository.
 SOURCE_LOG_CSV = Path("data/source_log.csv")
 CLEAN_DIR = Path("data/clean")

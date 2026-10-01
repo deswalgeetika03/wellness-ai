@@ -4,21 +4,21 @@
 
 Wellness AI is a responsible AI prototype designed to make general well-being information more accessible, understandable, and evidence-grounded.
 
-It combines **Retrieval-Augmented Generation (RAG)**, **deterministic safety routing**, **evidence extraction**, **conversational memory**, and **IBM Granite 4.1 3B** in a full-stack web application.
+It combines **Retrieval-Augmented Generation (RAG)**, **deterministic safety routing**, **evidence extraction**, and **conversation history** in a full-stack web application. Local generation uses IBM Granite 4.1 3B through Ollama; production generation uses Cloudflare Workers AI `@cf/ibm-granite/granite-4.0-h-micro`.
 
 > **Important:** Wellness AI is an informational/supportive prototype. It is not a medical diagnostic system, therapist, or emergency service.
 
 ---
 
-## ?? SDG Alignment
+## SDG Alignment
 
-**Primary SDG: SDG 3 — Good Health and Well-Being**
+**Primary SDG: SDG 3 - Good Health and Well-Being**
 
 The project explores how responsible AI can support access to understandable general well-being information while incorporating safety and evidence-grounding mechanisms.
 
 ---
 
-## ?? Problem
+## Problem
 
 People increasingly use online sources and generative AI for information about stress, emotional well-being, and everyday health concerns.
 
@@ -37,7 +37,7 @@ Rather than relying solely on free-form generation, the system separates safety 
 
 ---
 
-## ?? Solution
+## Solution
 
 Wellness AI follows a controlled pipeline:
 
@@ -47,28 +47,67 @@ Wellness AI follows a controlled pipeline:
 4. Relevant information is retrieved from a curated knowledge base.
 5. Evidence is extracted and prepared for generation.
 6. An evidence gate determines whether sufficient supported information is available.
-7. **IBM Granite 4.1 3B** generates the response using the permitted context.
-8. For detected follow-up questions, the most recent previous user message is combined with the current question to improve retrieval context.
+7. The environment's configured Granite model generates the response using the permitted context.
+8. Local context selection and production follow-up detection enrich retrieval with relevant conversation history. Production also passes the active conversation history to generation.
 
 This architecture is designed to reduce unsupported generation while preserving useful conversational context.
 
 ---
 
-## ?? How It Works
+## How It Works
 
 ### System Architecture
 
-![Wellness AI system architecture](docs/architecture/wellness_ai_architecture.png)
+```mermaid
+flowchart LR
+  subgraph local["Local: React/Vite and FastAPI"]
+    LUI["React/Vite UI"] --> LAPI["FastAPI"] --> LSAFE["Deterministic safety routing"]
+    LSAFE --> LEMBED["Local MiniLM embeddings"] --> LCHROMA["ChromaDB: vector storage and search"]
+    LCHROMA --> LGEN["Ollama: Granite 4.1 3B"]
+    LGEN --> LVALID["Deterministic answer checks"]
+  end
+  subgraph production["Production: Cloudflare Pages and Worker"]
+    PUI["React/Vite UI on Pages"] --> PWORKER["Cloudflare Worker"] --> PSAFE["Deterministic safety routing"]
+    PSAFE --> PHF["Hugging Face Inference API: creates query embeddings"] --> PVEC["Cloudflare Vectorize: stores vectors and searches nearest matches"]
+    PVEC --> PGEN["Workers AI: Granite 4.0 H Micro"]
+    PGEN --> PVALID["Output cleanup and limited invalid-answer fallback"]
+  end
+```
 
-The production deployment runs through Cloudflare Pages and a Cloudflare Worker, while local development uses a FastAPI backend and ChromaDB. Both environments implement the same core safety, retrieval, evidence, and generation principles using environment-specific infrastructure.
+Both paths use safety routing, retrieval, evidence checks, and generation, with different implementations and history policies. Hugging Face creates production query embeddings; Vectorize stores and searches vectors. Vectorize does not create embeddings.
 
 ### End-to-End Query Pipeline
 
-![Wellness AI end-to-end query pipeline](docs/pipeline/wellness_ai_pipeline.png)
+```mermaid
+flowchart TD
+  subgraph localflow["Local query pipeline"]
+    LQ["Current question and active-chat history"] --> LS["Safety routing"]
+    LS -->|Sensitive| LSR["Pre-written safety response"]
+    LS -->|Normal| LH["Select recent turns and semantically relevant older turns"]
+    LH --> LRQ["Build retrieval query"] --> LE["MiniLM embedding"] --> LC["ChromaDB search"]
+    LC --> LD["Select up to 3 chunks, max 1 per source"] --> LX["Extract supported evidence"] --> LGATE{"Evidence sufficient?"}
+    LGATE -->|No| LFB["Knowledge-base fallback"]
+    LGATE -->|Yes| LPROMPT["Prompt with selected conversation context"] --> LGEN["Ollama / Granite 4.1 3B"] --> LVAL["Check personal diagnosis, selected expansions, and evidence overlap"]
+    LVAL --> LO["Answer with sources"]
+  end
+  subgraph prodflow["Production query pipeline"]
+    PQ["Current question and active-chat history"] --> PS["Safety routing"]
+    PS -->|Sensitive| PSR["Pre-written safety response"]
+    PS -->|Normal| PF{"Follow-up pattern detected?"}
+    PF -->|Yes| PLAST["Prefix latest previous user message to retrieval query"]
+    PF -->|No| PCURRENT["Use current question for retrieval"]
+    PLAST --> PHF["Hugging Face Inference API embedding"]
+    PCURRENT --> PHF
+    PHF --> PV["Vectorize search: 10 candidates, up to 3 diverse sources"] --> PEX["Extract supported evidence"] --> PGATE{"Evidence sufficient?"}
+    PGATE -->|No| PFB["Knowledge-base fallback"]
+    PGATE -->|Yes| PGEN["Workers AI / Granite 4.0 H Micro"] --> POUT["Clean labels and selected meta/empty outputs; limited evidence fallback"] --> PO["Answer with sources"]
+    PHIST["Full supplied conversation history"] -. "generation context" .-> PGEN
+  end
+```
 
-The pipeline separates safety routing, retrieval, evidence validation, and generation. Sensitive queries and queries without sufficient supported evidence can terminate before generation.
+Local validation applies deterministic diagnostic and evidence-overlap heuristics after generation. Production performs output cleanup and limited empty/meta-output handling; it does not run the same claim-level post-generation checks. Neither check is a comprehensive grounding verifier.
 
-## ?? Retrieval
+## Retrieval
 
 The retrieval pipeline was evaluated experimentally rather than configured only through intuition.
 
@@ -94,11 +133,11 @@ This configuration was retained because the experiments showed a measurable impr
 
 ---
 
-## ?? Conversational Memory
+## Conversational Memory
 
-Wellness AI does not blindly send the entire conversation history to retrieval.
+The **local Python pipeline** uses selective history: it incorporates previous turns when they are useful for interpreting the current question, combining recent turns with semantically relevant older context.
 
-Instead, it uses **selective history** so that previous turns are incorporated when they are useful for interpreting the current question.
+Production uses a different policy. The Worker prefixes the latest previous user message to retrieval when its follow-up detector matches, and passes the supplied active conversation history to generation. The selective-history benchmark below measures the local retrieval strategies; it does not describe production history trimming.
 
 For example:
 
@@ -127,7 +166,7 @@ The evaluation also showed that indiscriminately including older history could i
 
 ---
 
-## ??? Safety Architecture
+## Safety Architecture
 
 Safety decisions are separated from normal generative processing.
 
@@ -152,7 +191,7 @@ Safety decisions are based on the current user question rather than allowing unr
 
 ---
 
-## ?? Evidence & Grounding
+## Evidence & Grounding
 
 A central design goal of Wellness AI is to reduce unsupported claims.
 
@@ -160,17 +199,19 @@ The generation pipeline separates retrieval, evidence validation, evidence extra
 
 The final frozen generation evaluation achieved:
 
-**18/20 successful evaluations — 90%.**
+**18/20 successful evaluations - 90%.**
 
 Among applicable grounding cases:
 
-**15/16 were grounded — 93.75%.**
+**The frozen summary reports 15/16 grounded - 93.75%.**
+
+The committed row-level file `data/eval/generation_after_graded.csv` instead records 14 grounded, 2 ungrounded (IDs 14 and 19), and 4 N/A, which yields 14/16 applicable cases. This conflicts with the frozen summary's 15/16 and 3 N/A counts. No authoritative reconciliation is present, so both records are preserved and the discrepancy remains unresolved.
 
 Two evaluations contained unsupported claims and were retained as known limitations rather than being hidden from the evaluation record.
 
 ---
 
-## ? Key Features
+## Key Features
 
 * Evidence-grounded conversational responses
 * Retrieval-Augmented Generation
@@ -192,15 +233,17 @@ Two evaluations contained unsupported claims and were retained as known limitati
 
 ---
 
-## ?? AI Technologies
+## AI Technologies
 
 | Technology                           | Role                                             |
 | ------------------------------------ | ------------------------------------------------ |
-| **IBM Granite 4.1 3B**               | Response generation and evidence processing      |
+| **Local IBM Granite 4.1 3B / Ollama** | Local response generation                        |
+| **Workers AI Granite 4.0 H Micro**  | Production response generation                  |
 | **Retrieval-Augmented Generation**   | Grounds responses in retrieved information       |
 | **Sentence Transformers**            | Semantic embeddings                              |
+| **Hugging Face Inference API**       | Creates production query embeddings              |
 | **ChromaDB**                         | Local vector database                            |
-| **Cloudflare Vectorize**             | Production vector database                       |
+| **Cloudflare Vectorize**             | Production vector storage and nearest-neighbor search |
 | **Deterministic Safety Layer**       | Routes sensitive scenarios                       |
 | **Evidence Extraction**              | Converts retrieved material into usable evidence |
 | **Selective Conversational History** | Preserves useful multi-turn context              |
@@ -208,7 +251,7 @@ Two evaluations contained unsupported claims and were retained as known limitati
 
 ---
 
-## ?? Experiment-Driven Development
+## Experiment-Driven Development
 
 The system was developed through controlled experiments rather than continuously changing the pipeline without measurement.
 
@@ -231,7 +274,7 @@ This helped maintain a controlled and reproducible system while preserving histo
 
 ---
 
-## ?? Final Evaluation
+## Final Evaluation
 
 The final evaluation covered retrieval, safety, generation, conversation behavior, and production end-to-end behavior.
 
@@ -263,8 +306,9 @@ The evaluation methodology, benchmark structure, metrics, and interpretation rul
 
 ### Grounding
 
-* **15/16 applicable evaluations grounded**
-* **93.75% applicable grounding**
+* Frozen summary headline: **15/16 (93.75%)**
+* Row-level grading file: **14/16** (14 grounded, 2 ungrounded, 4 N/A)
+* The discrepancy is unresolved; the frozen headline is retained without claiming the row-level count agrees.
 
 Two unsupported-claim failures remained and are documented as known limitations.
 
@@ -284,19 +328,17 @@ Two unsupported-claim failures remained and are documented as known limitations.
 
 ### Production End-to-End
 
-Final production testing produced:
+The final evaluation documentation records:
 
-**11/12 clean PASS + 1 known limitation**
+**12/12 PASS**
 
-The known limitation involved a context-dependent follow-up that could return `NO_SUPPORTED_EVIDENCE` even when the conversation context was useful.
-
-The evidence gate was intentionally not weakened to force an answer without sufficient retrieved evidence.
+The previously documented context-dependent follow-up was re-tested successfully for the exact documented interaction. This resolves that tested case; it does not establish exhaustive coverage of other follow-up patterns.
 
 > These are internal prototype evaluation results. They do not represent clinical validation, medical accuracy certification, or real-world health outcomes.
 
 ---
 
-## ?? Evaluation Philosophy
+## Evaluation Philosophy
 
 The project preserves historical evaluation results rather than rewriting earlier benchmarks after later improvements.
 
@@ -332,7 +374,7 @@ This distinction is important for maintaining reproducibility and honest reporti
 
 ---
 
-## ??? Responsible AI
+## Responsible AI
 
 Wellness AI was designed with responsible AI considerations as core engineering requirements.
 
@@ -362,7 +404,7 @@ The system should not be treated as a replacement for qualified medical, psychol
 
 ---
 
-## ?? Known Limitations
+## Known Limitations
 
 The project has several known limitations that remain important for future development.
 
@@ -372,9 +414,9 @@ Top-1 retrieval accuracy is **67.5%**, while Top-3 reaches **97.5%**.
 
 This indicates that the correct evidence is usually present within the candidate context, but the highest-ranked result is not always the best individual source.
 
-### 2. Follow-Up Evidence-Gate Limitation
+### 2. Follow-Up Coverage
 
-Some context-dependent follow-up questions may return:
+The previously documented follow-up scenario was re-tested successfully in production. Other context-dependent phrasings have not been exhaustively evaluated and may still reach the evidence fallback:
 
 ```text
 NO_SUPPORTED_EVIDENCE
@@ -404,7 +446,7 @@ The system has not undergone clinical validation or large-scale real-world user 
 
 ---
 
-## ??? Screenshots
+## Screenshots
 
 ### Main Interface
 
@@ -424,35 +466,24 @@ The system has not undergone clinical validation or large-scale real-world user 
 
 ---
 
-## ??? Project Structure
+## Project Structure
 
 ```text
 PROJECT/
-¦
 +-- Archive/
 +-- data/
-¦   +-- eval/
+|   +-- eval/
 +-- deployment_experiments/
 +-- docs/
 +-- Evaluation/
 +-- Tests/
 +-- Tools/
-¦
 +-- cloudflare-deployment/
-¦   +-- src/
-¦   ¦   +-- evidence.ts
-¦   ¦   +-- generation.ts
-¦   ¦   +-- grounding.ts
-¦   ¦   +-- index.ts
-¦   ¦   +-- retrieval.ts
-¦   ¦   +-- safety.ts
-¦   +-- test/
-¦   +-- tests/
-¦   +-- wrangler.jsonc
-¦
+|   +-- src/ (Worker modules)
+|   +-- tests/
+|   +-- wrangler.jsonc
 +-- wellness_ai_frontend_phase3B/
-¦   +-- wellness_ai_frontend/
-¦
+|   +-- wellness_ai_frontend/
 +-- api.py
 +-- query_pipeline.py
 +-- rag_config.py
@@ -465,7 +496,7 @@ Evaluation artifacts and archived experiments are kept separate from active appl
 
 ---
 
-## ?? Local Setup
+## Local Setup
 
 ### Requirements
 
@@ -518,11 +549,11 @@ For local development, configure:
 VITE_API_BASE_URL=http://127.0.0.1:8000
 ```
 
-Production configuration is kept outside the public repository.
+Cloudflare bindings and the Vectorize index name are public deployment configuration in `wrangler.jsonc`. Credentials such as `HF_TOKEN` are supplied as Cloudflare secrets and are not committed.
 
 ---
 
-## ?? Production Deployment
+## Production Deployment
 
 The production implementation uses Cloudflare:
 
@@ -530,8 +561,9 @@ The production implementation uses Cloudflare:
 | ----------------- | -------------------- |
 | Frontend          | Cloudflare Pages     |
 | API               | Cloudflare Workers   |
-| Vector database   | Cloudflare Vectorize |
-| Embedding model   | `all-MiniLM-L6-v2`   |
+| Embedding service | Hugging Face Inference API (`all-MiniLM-L6-v2`) |
+| Vector database   | Cloudflare Vectorize (stores and searches vectors) |
+| Generation model  | Workers AI `@cf/ibm-granite/granite-4.0-h-micro` |
 | Vector dimensions | 384                  |
 | Similarity metric | Cosine               |
 
@@ -545,7 +577,7 @@ https://wellness-ai-api.deswalgeetika.workers.dev
 
 The production Vectorize index contains the validated knowledge-base vectors used by the deployed retrieval pipeline.
 
-Local and production embedding outputs were also validated for parity, with cosine similarity approximately **0.9999999999998** and maximum absolute difference approximately **9.31 × 10?8**.
+Local and production embedding outputs were also validated for parity, with cosine similarity approximately **0.9999999999998** and maximum absolute difference approximately **9.31e-8**.
 
 Production retrieval matched the final evaluated retrieval configuration:
 
@@ -554,7 +586,7 @@ Production retrieval matched the final evaluated retrieval configuration:
 
 ---
 
-## ?? Demo
+## Demo
 
 **Live Demo:**
 https://deployment-free.wellness-ai.pages.dev
@@ -574,13 +606,13 @@ The application can be evaluated through the deployed interface.
 
 ---
 
-## ?? Demo Assets
+## Demo Assets
 
 Additional presentation and demonstration assets can be added as the project moves through the final documentation and release stages.
 
 ---
 
-## ?? Future Scope
+## Future Scope
 
 Potential future improvements include:
 
@@ -597,7 +629,7 @@ Future work should preserve the project's safety, evidence-grounding, and evalua
 
 ---
 
-## ?? Disclaimer
+## Disclaimer
 
 Wellness AI provides general informational/supportive responses.
 
@@ -612,12 +644,24 @@ For urgent or emergency situations, users should contact appropriate local emerg
 
 ---
 
-## ?? Project
+## Community and Security
 
-**Wellness AI — A Safety-Aware, Evidence-Grounded AI Assistant for Mental Well-Being**
+- [MIT License](LICENSE)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security Policy](SECURITY.md)
+- [Report a bug](.github/ISSUE_TEMPLATE/bug_report.yml) or [request a feature](.github/ISSUE_TEMPLATE/feature_request.yml)
 
-**Primary SDG:** SDG 3 — Good Health and Well-Being
+The MIT License applies to project materials owned by the repository contributors. Third-party dependencies, datasets, and models remain under their own terms.
+
+---
+
+## Project
+
+**Wellness AI - A Safety-Aware, Evidence-Grounded AI Assistant for Mental Well-Being**
+
+**Primary SDG:** SDG 3 - Good Health and Well-Being
 
 Built as an AI application exploring responsible use of:
 
-**RAG · IBM Granite · Evidence Grounding · Deterministic Safety · Conversational AI · Cloudflare**
+**RAG | IBM Granite | Evidence Grounding | Deterministic Safety | Conversational AI | Cloudflare**

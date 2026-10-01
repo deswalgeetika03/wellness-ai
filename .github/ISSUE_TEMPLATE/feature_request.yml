@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest a focused improvement to Wellness AI.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Wellness AI is a prototype for general well-being information, not a
+        clinical or emergency service. Do not include private health details.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What user need or project limitation would this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the change and how you expect it to help.
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Safety, evidence, or evaluation considerations
+      description: Note relevant risks, evidence needs, and how success might be evaluated.
+    validations:
+      required: false

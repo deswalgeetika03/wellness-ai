@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in Wellness AI.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not include private health information, secrets, or API tokens. Report
+        security vulnerabilities privately as described in SECURITY.md.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the environment (local or production) and minimal steps.
+      placeholder: 1. ...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Remove personal data, health details, and credentials before sharing.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment
+      description: OS, browser, commit or release, and relevant component.
+    validations:
+      required: false

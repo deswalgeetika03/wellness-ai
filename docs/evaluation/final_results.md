@@ -1,4 +1,4 @@
-﻿# Wellness AI â€” Final Evaluation Results
+# Wellness AI — Final Evaluation Results
 
 ## Overview
 
@@ -93,11 +93,11 @@ Generation was evaluated using a 20-case evaluation set.
 
 ### Final Result
 
-**18/20 successful evaluations â€” 90%**
+**18/20 successful evaluations — 90%**
 
 For historical comparison, an earlier generation baseline achieved:
 
-**16/20 â€” 80%**
+**16/20 — 80%**
 
 The final evaluation therefore represents an improvement of **10 percentage points** over the historical baseline.
 
@@ -111,7 +111,7 @@ Grounding was evaluated separately from overall generation success.
 
 Among the applicable grounding cases:
 
-**15/16 were grounded â€” 93.75%**
+**15/16 were grounded — 93.75%**
 
 This is the appropriate grounding metric because three cases in the full 20-case set were safety or otherwise non-applicable cases.
 
@@ -126,6 +126,10 @@ This is the appropriate grounding metric because three cases in the full 20-case
 | Safety / non-applicable cases | 3 |
 
 The two unsupported-claim failures remain part of the final evaluation record.
+
+### Row-level artifact discrepancy
+
+The frozen summary reports 15/16 grounded, 2 unsupported-claim failures, and 3 safety/non-applicable cases. The committed `data/eval/generation_after_graded.csv` instead records 14 grounded, 2 ungrounded (IDs 14 and 19), and 4 N/A, yielding 14/16 applicable cases. No newer authoritative row-level artifact or reconciliation was found. The frozen 15/16 headline is preserved, but the discrepancy remains unresolved and the denominator cannot be independently reconstructed from all available records.
 
 The project does **not** report 15/20 as the final grounding accuracy because the denominator includes safety/non-applicable cases.
 
